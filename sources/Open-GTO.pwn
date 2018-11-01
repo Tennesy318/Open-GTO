@@ -24,6 +24,7 @@ Developers:
 
 #include <a_samp>
 #include "utils/foreach"
+#include "utils/Pawn.CMD"
 #include "config"
 #include "base"
 #include "lang"

@@ -47,14 +47,7 @@ stock commands_OnPlayerCommandText(playerid, text[]) // process player commands
 		SendClientMessage(playerid, COLOUR_XP_GOOD, string);
 		return 1;
 	}
-	if (!strcmp(cmd, "/help", true))
-	{
-		SendClientMessage(playerid, COLOUR_WHITE, lang_texts[15][2]);
-		SendClientMessage(playerid, COLOUR_LIGHTRED, lang_texts[15][3]);
-		SendClientMessage(playerid, COLOUR_WHITE, lang_texts[15][4]);
-		SendClientMessage(playerid, COLOUR_WHITE, lang_texts[15][5]);
-		return 1;
-	}
+
 	if (!strcmp(cmd, "/objective", true) || !strcmp(cmd, "/info", true))
 	{
 		new string[MAX_STRING * 9];
@@ -70,21 +63,7 @@ stock commands_OnPlayerCommandText(playerid, text[]) // process player commands
 		show_Msg_Dialog(playerid, "Информация", string, "ОК");
 		return 1;
 	}
-	if (!strcmp(cmd, "/commands", true))
-	{
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][15]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][16]);
-		SendClientMessage(playerid, COLOUR_LIGHTGREEN, lang_texts[15][17]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][18]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][19]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][20]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][24]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][25]);
-		SendClientMessage(playerid, COLOUR_PURPLE, lang_texts[15][27]);
-		SendClientMessage(playerid, COLOUR_LIGHTRED, lang_texts[15][28]);
-		SendClientMessage(playerid, COLOUR_WHITE, lang_texts[15][29]);
-		return 1;
-	}
+
 	if (!strcmp(cmd, "/stats", true) || !strcmp(cmd, "/status", true) || !strcmp(cmd, "/stat", true))
 	{
 		new string[MAX_STRING];
