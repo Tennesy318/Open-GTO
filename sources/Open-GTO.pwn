@@ -81,17 +81,20 @@ Developers:
 #include "quidemsys"
 #include "usermenu"
 #include "anims"
-#include "protections/money"
-#include "protections/idle"
-#include "protections/rconhack"
-#include "protections/hightping"
-#include "protections/chatguard"
-#include "protections/jetpack"
-#include "protections/speedhack"
-#include "protections/weaponhack"
 
 // AC
 #include "ac/weapon_hack"
+#include "ac/fakekill_hack"
+#include "ac/vpn_hack"
+#include "ac/specialaction_hack"
+#include "ac/money"
+#include "ac/idle"
+#include "ac/rconhack"
+#include "ac/hightping"
+#include "ac/chatguard"
+#include "ac/jetpack"
+#include "ac/speedhack"
+#include "ac/weaponhack"
 
 // Races
 #tryinclude "races/race_monstertruck"
@@ -241,6 +244,7 @@ public OnGameModeExit()
 public OnPlayerConnect(playerid)
 {
 	if (IsPlayerNPC(playerid)) return 1;
+	vpn_OnPlayerConnect(playerid);
 	player_OnPlayerConnect(playerid);
    	account_OnPlayerConnect(playerid);
 	chatguard_OnPlayerConnect(playerid);
@@ -387,6 +391,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 	player_OnPlayerDeath(playerid, killerid, reason);
 	player_OnPlayerKill(killerid, playerid, reason);
 	trucker_OnPlayerDeath(playerid, killerid, reason);
+	fk_OnPlayerDeath(playerid, killerid, reason);
 	gang_OnPlayerDeath(playerid, killerid, reason);
 	weapon_OnPlayerDeath(playerid, killerid, reason);
 	level_HideTextDraws(playerid);
