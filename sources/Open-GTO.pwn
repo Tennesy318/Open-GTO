@@ -92,6 +92,8 @@ Developers:
 
 // AC
 #include "ac/weapon_hack"
+#include "ac/fakekill_hack"
+#include "ac/vpn_hack"
 
 // Races
 #tryinclude "races/race_monstertruck"
@@ -241,6 +243,7 @@ public OnGameModeExit()
 public OnPlayerConnect(playerid)
 {
 	if (IsPlayerNPC(playerid)) return 1;
+	vpn_OnPlayerConnect(playerid);
 	player_OnPlayerConnect(playerid);
    	account_OnPlayerConnect(playerid);
 	chatguard_OnPlayerConnect(playerid);
@@ -387,6 +390,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 	player_OnPlayerDeath(playerid, killerid, reason);
 	player_OnPlayerKill(killerid, playerid, reason);
 	trucker_OnPlayerDeath(playerid, killerid, reason);
+	fk_OnPlayerDeath(playerid, killerid, reason);
 	gang_OnPlayerDeath(playerid, killerid, reason);
 	weapon_OnPlayerDeath(playerid, killerid, reason);
 	level_HideTextDraws(playerid);
