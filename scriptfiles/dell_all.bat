@@ -1,0 +1,17 @@
+del/q Open-GTO\Account\*.*
+del/q Open-GTO\Banned\*.*
+del/q Open-GTO\Business\*.*
+del/q Open-GTO\Config\*.*
+del/q Open-GTO\Deathmatch\*.*
+del/q Open-GTO\Deathmatch\Record\*.*
+del/q Open-GTO\Gang\*.*
+del/q Open-GTO\Groundhold\*.*
+del/q Open-GTO\Housing\*.*
+del/q Open-GTO\Logging\ChatLog\*.*
+del/q Open-GTO\Logging\CMDLog\*.*
+del/q Open-GTO\Logging\GameLog\*.*
+del/q Open-GTO\Logging\DebugLog\*.*
+del/q Open-GTO\Player\*.*
+del/q Open-GTO\Race\*.*
+del/q Open-GTO\Race\Record\*.*
+del/q Open-GTO\Weapon\*.*
