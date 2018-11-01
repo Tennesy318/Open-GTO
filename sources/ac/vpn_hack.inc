@@ -1,6 +1,6 @@
 /*
 
-    Weapon hack
+    VPN hack
 
 */
 

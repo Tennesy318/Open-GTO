@@ -81,19 +81,20 @@ Developers:
 #include "quidemsys"
 #include "usermenu"
 #include "anims"
-#include "protections/money"
-#include "protections/idle"
-#include "protections/rconhack"
-#include "protections/hightping"
-#include "protections/chatguard"
-#include "protections/jetpack"
-#include "protections/speedhack"
-#include "protections/weaponhack"
 
 // AC
 #include "ac/weapon_hack"
 #include "ac/fakekill_hack"
 #include "ac/vpn_hack"
+#include "ac/specialaction_hack"
+#include "ac/money"
+#include "ac/idle"
+#include "ac/rconhack"
+#include "ac/hightping"
+#include "ac/chatguard"
+#include "ac/jetpack"
+#include "ac/speedhack"
+#include "ac/weaponhack"
 
 // Races
 #tryinclude "races/race_monstertruck"
