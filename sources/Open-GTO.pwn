@@ -89,6 +89,10 @@ Developers:
 #include "protections/jetpack"
 #include "protections/speedhack"
 #include "protections/weaponhack"
+
+// AC
+#include "ac/weapon_hack"
+
 // Races
 #tryinclude "races/race_monstertruck"
 #tryinclude "races/race_thestrip"
@@ -660,6 +664,7 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerUpdate(playerid)
 {
+	wh_OnPlayerUpdate(playerid);
 	return 1;
 }
 

@@ -1,0 +1,332 @@
+[00:32:15] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[00:32:15] SERVER: Logging module init
+[00:32:15] SERVER: Base module init
+[00:32:15] SERVER: Account module init
+[00:32:15] SERVER: Player module init
+[00:32:15] SERVER: Gang module init
+[00:32:15] SERVER: Payday module init
+[00:32:15] SERVER: Weapons module init
+[00:32:15] SERVER: Vehicles module init
+[00:32:15] SERVER: Race module init
+[00:32:15] SERVER: Deathmatch module init
+[00:32:15] SERVER: Groundhold module init
+[00:32:15] SERVER: Business module init
+[00:32:15] SERVER: Housing module init
+[00:32:15] SERVER: Interior module init
+[00:32:15] SERVER: Bank module init
+[00:32:15] SERVER: Fightstyles module init
+[00:32:15] QuidemSys v2.7 initialized.
+[00:32:15] SERVER: Lottery system init
+[00:32:15] SERVER: Swagup module init
+[00:32:15] SERVER: (missions)Trucker module init
+[00:32:15] SERVER: (services)Fastfood module init
+[00:32:15] SERVER: (services)Bar module init
+[00:32:15] SERVER: (services)SkinShop module init
+[00:32:15] SERVER: (player)Level module init
+[00:32:15] SERVER: (protections)AntiIdle module init
+[00:32:15] SERVER: (protections)AntiHightPing module init
+[00:32:15] SERVER: (player)Health module init
+[00:32:15] SERVER: (player)Armour module init
+[00:32:15] SERVER: (player)Money module init
+[00:32:15] SERVER: (protections)ChatGuard(by MX_Master) module init
+[00:32:15] SERVER: (protections)AntiJetPack module init
+[00:32:15] SERVER: (protections)AntiRconHack module init
+[00:32:15] Race: 'Burnin Down The Strip' Loaded.
+[00:32:15] Race: 'Riverside Run' Loaded.
+[00:32:15] Race: 'Flee the City' Loaded.
+[00:32:15] Race: 'Lost in Smoke' Loaded.
+[00:32:15] Race: 'Backstreet Bang' Loaded.
+[00:32:15] Race: 'Flying Free' Loaded.
+[00:32:15] Race: 'MurderHorn' Loaded.
+[00:32:15] Race: 'Airport Round We Go' Loaded.
+[00:32:15] Race: 'Strip Tease' Loaded.
+[00:32:15] Race: 'Monstertruck Madness' Loaded.
+[00:32:15] Race: 'Countryside Cruise' Loaded.
+[00:32:15] Race: 'Tearin Up The Grove' Loaded.
+[00:32:15] Race: 'Mullholland Getaway' Loaded.
+[00:32:15] Race: 'LV Julius Thruway Race' Loaded.
+[00:32:15] Race: 'LS-SF Trailers Racing' Loaded.
+[00:32:15] Race: 'SF Fuck'in Wood Race' Loaded.
+[00:32:15] Race: 'LS-SF Majestic' Loaded.
+[00:32:15] Deathmatch: 'Base Jump' Loaded.
+[00:32:15] Deathmatch: 'Area 51' Loaded.
+[00:32:15] Deathmatch: 'The Bad And The Ugly' Loaded.
+[00:32:15] Deathmatch: 'Blue Mountains' Loaded.
+[00:32:15] Deathmatch: 'Cargo Ship' Loaded.
+[00:32:15] Deathmatch: 'Dildo Farm Revenge' Loaded.
+[00:32:15] Deathmatch: 'Millitary Base' Loaded.
+[00:32:15] Deathmatch: 'Minigun Madness' Loaded.
+[00:32:15] Deathmatch: 'fy_poolday' Loaded.
+[00:32:15] Deathmatch: 'The US Navy' Loaded.
+[00:32:15] SERVER: Custom mapicons, objects and pickups init
+[00:32:15] SERVER: Timers started
+[00:32:15] SERVER: All Classes init
+[00:32:17] World save complete! Time taken: 2 seconds.
+[00:32:17] SERVER: Open-GTO v1.1.10 initialization complete. [00:32]
+[00:33:15] player: XOF(0): player_created successfully
+[00:33:15] player: XOF(0): logged in successfully.
+[00:33:15] create_account: success XOF(0)
+[00:33:16] player: XOF(0): has been kicked. Reason: Open-GTO: Weapon cheat
+[00:33:16] player: XOF(0): player_saved successfully
+[00:38:20] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[00:38:20] SERVER: Logging module init
+[00:38:20] SERVER: Base module init
+[00:38:20] SERVER: Account module init
+[00:38:20] SERVER: Player module init
+[00:38:20] SERVER: Gang module init
+[00:38:20] SERVER: Payday module init
+[00:38:20] SERVER: Weapons module init
+[00:38:20] SERVER: Vehicles module init
+[00:38:20] Race (DB): Burnin Down The Strip Loaded
+[00:38:20] Race (DB): Riverside Run Loaded
+[00:38:20] Race (DB): Flee the City Loaded
+[00:38:20] Race (DB): Lost in Smoke Loaded
+[00:38:20] Race (DB): Backstreet Bang Loaded
+[00:38:20] Race (DB): Flying Free Loaded
+[00:38:20] Race (DB): MurderHorn Loaded
+[00:38:20] Race (DB): Airport Round We Go Loaded
+[00:38:20] Race (DB): Strip Tease Loaded
+[00:38:20] Race (DB): Monstertruck Madness Loaded
+[00:38:20] Race (DB): Countryside Cruise Loaded
+[00:38:20] Race (DB): Tearin Up The Grove Loaded
+[00:38:20] Race (DB): Mullholland Getaway Loaded
+[00:38:20] Race (DB): LV Julius Thruway Race Loaded
+[00:38:20] Race (DB): LS-SF Trailers Racing Loaded
+[00:38:20] Race (DB): SF Fuck'in Wood Race Loaded
+[00:38:20] Race (DB): LS-SF Majestic Loaded
+[00:38:20] SERVER: Race module init
+[00:38:20] Deathmatch (DB): 'Base Jump' Loaded.
+[00:38:20] Deathmatch (DB): 'Area 51' Loaded.
+[00:38:20] Deathmatch (DB): 'The Bad And The Ugly' Loaded.
+[00:38:20] Deathmatch (DB): 'Blue Mountains' Loaded.
+[00:38:20] Deathmatch (DB): 'Cargo Ship' Loaded.
+[00:38:20] Deathmatch (DB): 'Dildo Farm Revenge' Loaded.
+[00:38:20] Deathmatch (DB): 'Millitary Base' Loaded.
+[00:38:20] Deathmatch (DB): 'Minigun Madness' Loaded.
+[00:38:20] Deathmatch (DB): 'fy_poolday' Loaded.
+[00:38:20] Deathmatch (DB): 'The US Navy' Loaded.
+[00:38:20] SERVER: Deathmatch module init
+[00:38:20] SERVER: Groundhold module init
+[00:38:20] SERVER: Business module init
+[00:38:21] SERVER: Housing module init
+[00:38:21] SERVER: Interior module init
+[00:38:21] SERVER: Bank module init
+[00:38:21] SERVER: Fightstyles module init
+[00:38:21] QuidemSys v2.7 initialized.
+[00:38:21] SERVER: Lottery system init
+[00:38:21] SERVER: Swagup module init
+[00:38:21] SERVER: (missions)Trucker module init
+[00:38:21] SERVER: (services)Fastfood module init
+[00:38:21] SERVER: (services)Bar module init
+[00:38:21] SERVER: (services)SkinShop module init
+[00:38:21] SERVER: (player)Level module init
+[00:38:21] SERVER: (protections)AntiIdle module init
+[00:38:21] SERVER: (protections)AntiHightPing module init
+[00:38:21] SERVER: (player)Health module init
+[00:38:21] SERVER: (player)Armour module init
+[00:38:21] SERVER: (player)Money module init
+[00:38:21] SERVER: (protections)ChatGuard(by MX_Master) module init
+[00:38:21] SERVER: (protections)AntiJetPack module init
+[00:38:21] SERVER: (protections)AntiRconHack module init
+[00:38:21] SERVER: Custom mapicons, objects and pickups init
+[00:38:21] SERVER: Timers started
+[00:38:21] SERVER: All Classes init
+[00:38:22] World save complete! Time taken: 1 seconds.
+[00:38:22] SERVER: Open-GTO v1.1.10 initialization complete. [00:38]
+[00:38:25] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[00:38:25] SERVER: Logging module init
+[00:38:25] SERVER: Base module init
+[00:38:25] SERVER: Account module init
+[00:38:25] SERVER: Player module init
+[00:38:25] SERVER: Gang module init
+[00:38:25] SERVER: Payday module init
+[00:38:25] SERVER: Weapons module init
+[00:38:25] SERVER: Vehicles module init
+[00:38:25] Race (DB): Burnin Down The Strip Loaded
+[00:38:25] Race (DB): Riverside Run Loaded
+[00:38:25] Race (DB): Flee the City Loaded
+[00:38:25] Race (DB): Lost in Smoke Loaded
+[00:38:25] Race (DB): Backstreet Bang Loaded
+[00:38:25] Race (DB): Flying Free Loaded
+[00:38:25] Race (DB): MurderHorn Loaded
+[00:38:25] Race (DB): Airport Round We Go Loaded
+[00:38:25] Race (DB): Strip Tease Loaded
+[00:38:25] Race (DB): Monstertruck Madness Loaded
+[00:38:25] Race (DB): Countryside Cruise Loaded
+[00:38:25] Race (DB): Tearin Up The Grove Loaded
+[00:38:25] Race (DB): Mullholland Getaway Loaded
+[00:38:25] Race (DB): LV Julius Thruway Race Loaded
+[00:38:25] Race (DB): LS-SF Trailers Racing Loaded
+[00:38:25] Race (DB): SF Fuck'in Wood Race Loaded
+[00:38:25] Race (DB): LS-SF Majestic Loaded
+[00:38:25] SERVER: Race module init
+[00:38:25] Deathmatch (DB): 'Base Jump' Loaded.
+[00:38:25] Deathmatch (DB): 'Area 51' Loaded.
+[00:38:25] Deathmatch (DB): 'The Bad And The Ugly' Loaded.
+[00:38:25] Deathmatch (DB): 'Blue Mountains' Loaded.
+[00:38:25] Deathmatch (DB): 'Cargo Ship' Loaded.
+[00:38:25] Deathmatch (DB): 'Dildo Farm Revenge' Loaded.
+[00:38:25] Deathmatch (DB): 'Millitary Base' Loaded.
+[00:38:25] Deathmatch (DB): 'Minigun Madness' Loaded.
+[00:38:25] Deathmatch (DB): 'fy_poolday' Loaded.
+[00:38:25] Deathmatch (DB): 'The US Navy' Loaded.
+[00:38:25] SERVER: Deathmatch module init
+[00:38:25] SERVER: Groundhold module init
+[00:38:25] SERVER: Business module init
+[00:38:25] SERVER: Housing module init
+[00:38:25] SERVER: Interior module init
+[00:38:25] SERVER: Bank module init
+[00:38:25] SERVER: Fightstyles module init
+[00:38:25] QuidemSys v2.7 initialized.
+[00:38:25] SERVER: Lottery system init
+[00:38:25] SERVER: Swagup module init
+[00:38:25] SERVER: (missions)Trucker module init
+[00:38:25] SERVER: (services)Fastfood module init
+[00:38:25] SERVER: (services)Bar module init
+[00:38:25] SERVER: (services)SkinShop module init
+[00:38:25] SERVER: (player)Level module init
+[00:38:25] SERVER: (protections)AntiIdle module init
+[00:38:25] SERVER: (protections)AntiHightPing module init
+[00:38:25] SERVER: (player)Health module init
+[00:38:25] SERVER: (player)Armour module init
+[00:38:25] SERVER: (player)Money module init
+[00:38:25] SERVER: (protections)ChatGuard(by MX_Master) module init
+[00:38:25] SERVER: (protections)AntiJetPack module init
+[00:38:25] SERVER: (protections)AntiRconHack module init
+[00:38:25] SERVER: Custom mapicons, objects and pickups init
+[00:38:25] SERVER: Timers started
+[00:38:25] SERVER: All Classes init
+[00:38:26] World save complete! Time taken: 1 seconds.
+[00:38:26] SERVER: Open-GTO v1.1.10 initialization complete. [00:38]
+[00:39:06] player: XOF(0): logged in successfully.
+[00:39:08] player: XOF(0): has been kicked. Reason: Weapon cheat
+[00:39:08] player: XOF(0): player_saved successfully
+[00:47:38] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[00:47:38] SERVER: Logging module init
+[00:47:38] SERVER: Base module init
+[00:47:38] SERVER: Account module init
+[00:47:38] SERVER: Player module init
+[00:47:38] SERVER: Gang module init
+[00:47:38] SERVER: Payday module init
+[00:47:38] SERVER: Weapons module init
+[00:47:38] SERVER: Vehicles module init
+[00:47:38] Race (DB): Burnin Down The Strip Loaded
+[00:47:38] Race (DB): Riverside Run Loaded
+[00:47:38] Race (DB): Flee the City Loaded
+[00:47:38] Race (DB): Lost in Smoke Loaded
+[00:47:38] Race (DB): Backstreet Bang Loaded
+[00:47:38] Race (DB): Flying Free Loaded
+[00:47:38] Race (DB): MurderHorn Loaded
+[00:47:38] Race (DB): Airport Round We Go Loaded
+[00:47:38] Race (DB): Strip Tease Loaded
+[00:47:38] Race (DB): Monstertruck Madness Loaded
+[00:47:38] Race (DB): Countryside Cruise Loaded
+[00:47:38] Race (DB): Tearin Up The Grove Loaded
+[00:47:38] Race (DB): Mullholland Getaway Loaded
+[00:47:38] Race (DB): LV Julius Thruway Race Loaded
+[00:47:38] Race (DB): LS-SF Trailers Racing Loaded
+[00:47:38] Race (DB): SF Fuck'in Wood Race Loaded
+[00:47:38] Race (DB): LS-SF Majestic Loaded
+[00:47:38] SERVER: Race module init
+[00:47:38] Deathmatch (DB): 'Base Jump' Loaded.
+[00:47:38] Deathmatch (DB): 'Area 51' Loaded.
+[00:47:38] Deathmatch (DB): 'The Bad And The Ugly' Loaded.
+[00:47:38] Deathmatch (DB): 'Blue Mountains' Loaded.
+[00:47:38] Deathmatch (DB): 'Cargo Ship' Loaded.
+[00:47:39] Deathmatch (DB): 'Dildo Farm Revenge' Loaded.
+[00:47:39] Deathmatch (DB): 'Millitary Base' Loaded.
+[00:47:39] Deathmatch (DB): 'Minigun Madness' Loaded.
+[00:47:39] Deathmatch (DB): 'fy_poolday' Loaded.
+[00:47:39] Deathmatch (DB): 'The US Navy' Loaded.
+[00:47:39] SERVER: Deathmatch module init
+[00:47:39] SERVER: Groundhold module init
+[00:47:39] SERVER: Business module init
+[00:47:39] SERVER: Housing module init
+[00:47:39] SERVER: Interior module init
+[00:47:39] SERVER: Bank module init
+[00:47:39] SERVER: Fightstyles module init
+[00:47:39] QuidemSys v2.7 initialized.
+[00:47:39] SERVER: Lottery system init
+[00:47:39] SERVER: Swagup module init
+[00:47:39] SERVER: (missions)Trucker module init
+[00:47:39] SERVER: (services)Fastfood module init
+[00:47:39] SERVER: (services)Bar module init
+[00:47:39] SERVER: (services)SkinShop module init
+[00:47:39] SERVER: (player)Level module init
+[00:47:39] SERVER: (protections)AntiIdle module init
+[00:47:39] SERVER: (protections)AntiHightPing module init
+[00:47:39] SERVER: (player)Health module init
+[00:47:39] SERVER: (player)Armour module init
+[00:47:39] SERVER: (player)Money module init
+[00:47:39] SERVER: (protections)ChatGuard(by MX_Master) module init
+[00:47:39] SERVER: (protections)AntiJetPack module init
+[00:47:39] SERVER: (protections)AntiRconHack module init
+[00:47:39] SERVER: Custom mapicons, objects and pickups init
+[00:47:39] SERVER: Timers started
+[00:47:39] SERVER: All Classes init
+[00:47:46] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[00:47:46] SERVER: Logging module init
+[00:47:46] SERVER: Base module init
+[00:47:46] SERVER: Account module init
+[00:47:46] SERVER: Player module init
+[00:47:46] SERVER: Gang module init
+[00:47:46] SERVER: Payday module init
+[00:47:46] SERVER: Weapons module init
+[00:47:46] SERVER: Vehicles module init
+[00:47:46] Race (DB): Burnin Down The Strip Loaded
+[00:47:46] Race (DB): Riverside Run Loaded
+[00:47:46] Race (DB): Flee the City Loaded
+[00:47:46] Race (DB): Lost in Smoke Loaded
+[00:47:46] Race (DB): Backstreet Bang Loaded
+[00:47:46] Race (DB): Flying Free Loaded
+[00:47:46] Race (DB): MurderHorn Loaded
+[00:47:46] Race (DB): Airport Round We Go Loaded
+[00:47:46] Race (DB): Strip Tease Loaded
+[00:47:46] Race (DB): Monstertruck Madness Loaded
+[00:47:46] Race (DB): Countryside Cruise Loaded
+[00:47:46] Race (DB): Tearin Up The Grove Loaded
+[00:47:46] Race (DB): Mullholland Getaway Loaded
+[00:47:46] Race (DB): LV Julius Thruway Race Loaded
+[00:47:46] Race (DB): LS-SF Trailers Racing Loaded
+[00:47:46] Race (DB): SF Fuck'in Wood Race Loaded
+[00:47:46] Race (DB): LS-SF Majestic Loaded
+[00:47:46] SERVER: Race module init
+[00:47:46] Deathmatch (DB): 'Base Jump' Loaded.
+[00:47:46] Deathmatch (DB): 'Area 51' Loaded.
+[00:47:46] Deathmatch (DB): 'The Bad And The Ugly' Loaded.
+[00:47:46] Deathmatch (DB): 'Blue Mountains' Loaded.
+[00:47:46] Deathmatch (DB): 'Cargo Ship' Loaded.
+[00:47:46] Deathmatch (DB): 'Dildo Farm Revenge' Loaded.
+[00:47:46] Deathmatch (DB): 'Millitary Base' Loaded.
+[00:47:46] Deathmatch (DB): 'Minigun Madness' Loaded.
+[00:47:46] Deathmatch (DB): 'fy_poolday' Loaded.
+[00:47:46] Deathmatch (DB): 'The US Navy' Loaded.
+[00:47:46] SERVER: Deathmatch module init
+[00:47:46] SERVER: Groundhold module init
+[00:47:46] SERVER: Business module init
+[00:47:46] SERVER: Housing module init
+[00:47:46] SERVER: Interior module init
+[00:47:46] SERVER: Bank module init
+[00:47:46] SERVER: Fightstyles module init
+[00:47:46] QuidemSys v2.7 initialized.
+[00:47:46] SERVER: Lottery system init
+[00:47:46] SERVER: Swagup module init
+[00:47:46] SERVER: (missions)Trucker module init
+[00:47:46] SERVER: (services)Fastfood module init
+[00:47:46] SERVER: (services)Bar module init
+[00:47:46] SERVER: (services)SkinShop module init
+[00:47:47] SERVER: (player)Level module init
+[00:47:47] SERVER: (protections)AntiIdle module init
+[00:47:47] SERVER: (protections)AntiHightPing module init
+[00:47:47] SERVER: (player)Health module init
+[00:47:47] SERVER: (player)Armour module init
+[00:47:47] SERVER: (player)Money module init
+[00:47:47] SERVER: (protections)ChatGuard(by MX_Master) module init
+[00:47:47] SERVER: (protections)AntiJetPack module init
+[00:47:47] SERVER: (protections)AntiRconHack module init
+[00:47:47] SERVER: Custom mapicons, objects and pickups init
+[00:47:47] SERVER: Timers started
+[00:47:47] SERVER: All Classes init
+[00:47:48] World save complete! Time taken: 1 seconds.
+[00:47:48] SERVER: Open-GTO v1.1.10 initialization complete. [00:47]
+[00:48:17] player: XOF(0): logged in successfully.

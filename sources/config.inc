@@ -213,6 +213,8 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define KEY_NAME			"Согласие - Y"
 #define PICKUP_TEXT			"\n{33AA33}Нажмите кнопку '{FFFFFF}"KEY_NAME"{33AA33}'"
 #define CreatePickupText(%0,%1,%2,%3)	Create3DTextLabel(%0PICKUP_TEXT, 0xFFFFFFFF,%1,%2,%3, 20.0, 0, 1)
+//
+#define WEAPON_HACK 38 || 36
 
 // диалоги
 enum {
