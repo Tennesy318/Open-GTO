@@ -291,12 +291,8 @@ enum {
 #define COLOUR_COMBAT_BAD 0xBB3333AA // Red - Combat
 #define COLOUR_MONEY_GOOD 0xFFFF00AA // Yellow - Money
 #define COLOUR_MONEY_BAD 0xDAA520AA // Yellow - Money
-#define COLOUR_RACE 0x005407AA // green - dark
-#define COLOUR_RACE_BAD 0x545407AA // yellow-green-dark
 #define COLOUR_GANG 0xFF8C00AA // orange
 #define COLOUR_GANG_CHAT 0xFFA500AA // orange
-#define COLOUR_DM 0xFF0066AA // red - purple
-#define COLOUR_DM_BAD 0xFF0066AA // red - purple
 #define COLOUR_PM 0xFFCC22FF
 #define WARN_MS_COLOR 0xFF5050AA
 

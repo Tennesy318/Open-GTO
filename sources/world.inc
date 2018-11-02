@@ -71,8 +71,6 @@ public WorldSave(necessarily) // save all
 	ChatGuardSaveConfig();
 	// other
 	WeaponSaveAll();
-	RaceSaveAll();
-	DeathmatchSaveAll();
 	BusinessSaveAll();
 	HousesSaveAll();
 	GangSaveAll();
@@ -130,9 +128,6 @@ public OneSecTimer()
 		SyncPlayers(playerid);
 		UpdatePlayerWeaponTextDraws(playerid);
 	}
-	
-	CheckDM();
-	CheckRace();
 }
 
 forward OneMinuteTimer();

@@ -194,7 +194,7 @@ stock Adm_OnPlayerCommandText(playerid, text[]) // process player commands
 			return SendClientMessage(playerid, COLOUR_RED, lang_texts[12][2]);
 		}
 		
-		if (!IsPlayerConnected(receiverid) || IsPlayerNPC(receiverid) || IsPlayerInAnyDM(receiverid) || IsPlayerInAnyRace(receiverid))
+		if (!IsPlayerConnected(receiverid) || IsPlayerNPC(receiverid))
 		{
 			return SendClientMessage(playerid, COLOUR_RED, lang_texts[12][3]);
 		}
@@ -233,7 +233,7 @@ stock Adm_OnPlayerCommandText(playerid, text[]) // process player commands
 		foreach (Player, id)
 		{
 			if (id == playerid) continue;
-			if (!IsPlayerJailed(id) && !IsPlayerRconAdmin(id)  && !IsPlayerInAnyDM(id) && !IsPlayerInAnyRace(id))
+			if (!IsPlayerJailed(id) && !IsPlayerRconAdmin(id))
 			{
 				X = X + random(2) - random(4);
 				Y = Y + random(2) - random(4);	

@@ -183,7 +183,7 @@ stock click_OnDialogResponse(playerid,dialogid,response,listitem,inputtext[])
 			{
 				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][2]);
 			}
-			if ((IsPlayerConnected(receiverid) == 0) && !IsPlayerInAnyDM(receiverid))
+			if ((IsPlayerConnected(receiverid) == 0))
 			{
 				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][3]);
 			}

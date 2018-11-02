@@ -901,9 +901,6 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 			housing_RenameOwner(Account_LastName, Account_NewName);
 			business_RenameOwner(Account_LastName, Account_NewName);
 			
-			races_RenameBestPlayer(Account_LastName, Account_NewName);
-			dm_RenameBestPlayer(Account_LastName, Account_NewName);
-			
 			PlayerSave(playerid);
 			AccountSave(playerid);
 			

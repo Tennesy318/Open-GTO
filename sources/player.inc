@@ -265,8 +265,7 @@ stock player_OnPlayerDisconnect(playerid, reason)
 	// save
 	PlayerSave(playerid);
 	AccountSave(playerid);
-	
-	DMPlayerDisconnect(playerid);
+
 	StopAudioStreamForPlayer(playerid);
 	new string[MAX_STRING];
 	format(string, sizeof(string), lang_texts[1][18], oGetPlayerName(playerid), playerid);

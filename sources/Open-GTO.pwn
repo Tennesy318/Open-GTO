@@ -55,16 +55,12 @@ Developers:
 #include "business"
 #include "streamers/mapicon_stream"
 #include "streamers/checkpoint_stream"
-#include "race"
-#include "deathmatch"
 #include "payday"
 #include "groundhold"
 #include "admin/functions"
 #include "admin/admin_func"
 #include "admin/mod_func"
 #include "admin/admin_commands"
-#include "admin/admin_commands_race"
-#include "admin/admin_commands_dm"
 #include "admin/admin_commands_sys"
 #include "admin/adm_commands"
 #include "admin/mod_commands"
@@ -97,37 +93,6 @@ Developers:
 #include "ac/speedhack"
 #include "ac/weaponhack"
 
-// Races
-#tryinclude "races/race_monstertruck"
-#tryinclude "races/race_thestrip"
-#tryinclude "races/race_riversiderun"
-#tryinclude "races/race_fleethecity"
-#tryinclude "races/race_lostinsmoke"
-#tryinclude "races/race_backstreetbang"
-#tryinclude "races/race_flyingfree"
-#tryinclude "races/race_murderhorn"
-#tryinclude "races/race_roundwego"
-#tryinclude "races/race_striptease"
-#tryinclude "races/race_countrycruise"
-#tryinclude "races/race_thegrove"
-#tryinclude "races/race_mullholland"
-#tryinclude "races/race_lv_julius"
-#tryinclude "races/race_ls_trailer1"
-#tryinclude "races/race_sf_fuckinwood1"
-#tryinclude "races/race_ls_majestic1"
-
-// Deathmatches
-#tryinclude "deathmatches/dm_air"
-#tryinclude "deathmatches/dm_area51"
-#tryinclude "deathmatches/dm_badandugly"
-#tryinclude "deathmatches/dm_bluemountains"
-#tryinclude "deathmatches/dm_cargoship"
-#tryinclude "deathmatches/dm_dildo"
-#tryinclude "deathmatches/dm_mbase"
-#tryinclude "deathmatches/dm_minigunmadness"
-#tryinclude "deathmatches/dm_poolday"
-#tryinclude "deathmatches/dm_usnavy"
-
 main() {}
 
 public OnGameModeInit()
@@ -143,8 +108,6 @@ public OnGameModeInit()
 	payday_OnGameModeInit();
 	weapons_OnGameModeInit();
 	vehicles_OnGameModeInit();
-	race_OnGameModeInit();
-	deathmatch_OnGameModeInit();
 	groundhold_OnGameModeInit();
 	business_OnGameModeInit();
 	housing_OnGameModeInit();
@@ -176,35 +139,6 @@ public OnGameModeInit()
 	antirconhack_OnGameModeInit();
 	ash_OnGameModeInit();
 	awh_OnGameModeInit();
-	//
-	race_thestrip_init();
-	race_riversiderun_init();
-	race_fleethecity_init();
-	race_lostinsmoke_init();
-	race_backstreetbang_init();
-	race_flyingfree_init();
-	race_murderhorn_init();
-	race_roundwego_init();
-	race_striptease_init();
-	race_monstertruck_init();
-	race_countrycruise_init();
-	race_thegrove_init();
-	race_mullholland_init();
-	race_lv_julius_init();
-	race_ls_trailer1_init();
-	race_sf_fuckinwood1_init();
-	race_ls_majestic1_init();
-	//
-	dm_air_init();
-	dm_area51_init();
-	dm_badandugly_init();
-	dm_bluemountains_init();
-	dm_cargoship_init();
-	dm_dildo_init();
-	dm_mbase_init();
-	dm_minigunmadness_init();
-	dm_poolday_init();
-	dm_usnavy_init();
 
 	#tryinclude "custom\mapicon"
 	#tryinclude "custom\pickups"
@@ -359,14 +293,12 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 
 public OnPlayerEnterCheckpoint(playerid)
 {
-	dm_OnPlayerEnterCheckpoint(playerid);
 	trucker_OnPlayerEnterCheckpoint(playerid);
 	return 1;
 }
 
 public OnPlayerEnterRaceCheckpoint(playerid)
 {
-	race_OnPlayerEnterCheckpoint(playerid);
 	return 1;
 }
 
@@ -382,13 +314,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 	SendDeathMessage(killerid, playerid, reason);
 
 	if (killerid == INVALID_PLAYER_ID) return 1;
-
-	if (IsPlayerInAnyDM(playerid))
-	{
-		deathmatch_OnPlayerDeath(playerid, killerid);
-		deathmatch_OnPlayerKill(killerid, playerid, reason);
-		return 1;
-	}
+	
 	player_OnPlayerDeath(playerid, killerid, reason);
 	player_OnPlayerKill(killerid, playerid, reason);
 	trucker_OnPlayerDeath(playerid, killerid, reason);
@@ -423,12 +349,8 @@ public OnPlayerSpawn(playerid)
 		SendClientMessage(playerid, COLOUR_RED, lang_texts[1][14]);
 		SetPlayerWantedLevel(playerid, 3);
 	}
-	new dmid = GetPlayerDM(playerid);
-	if (dmid == INVALID_DM_ID || DMPlayerStats[playerid][dm_player_active] == 0) {
-		player_OnPlayerSpawn(playerid);
-	} else {
-		deathmatch_OnPlayerSpawn(playerid, dmid);
-	}
+	
+	player_OnPlayerSpawn(playerid);
 	SetPlayerColor(playerid, PlayerGangColour(playerid));
 	if (IsPlayerJailed(playerid))
 	{
@@ -498,13 +420,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	command_register(cmdtext, "/g", 2, gang);
 	command_register(cmdtext, "/gang", 5, gang);
 
-	// race
-	command_register(cmdtext, "/races", 6, race);
-	command_registerNR(cmdtext, "/race", 5, race);
-
-	// admin race
-	command_registerNR(cmdtext, "/race", 5, AdminRace);
-
 	// rcon admins
 	command_registerNR(cmdtext, "/cmdlist", 8, Admin);
 	command_registerNR(cmdtext, "/about", 6, Admin);
@@ -531,14 +446,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	command_register(cmdtext, "/ahideme", 8, Admin);
 	command_register(cmdtext, "/ashowme", 8, Admin);
 	command_register(cmdtext, "/godmod", 7, Admin);
-
-	// dm
-	command_register(cmdtext, "/deathmatches", 13, dm);
-	command_register(cmdtext, "/dms", 4, dm);
-	command_registerNR(cmdtext, "/dm", 3, dm);
-
-	// admin dm
-	command_registerNR(cmdtext, "/dm", 3, AdminDM);
 
 	// admin sys
 	command_register(cmdtext, "/sys", 4, AdminSys);

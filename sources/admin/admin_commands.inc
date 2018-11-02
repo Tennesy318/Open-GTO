@@ -197,7 +197,7 @@ stock Admin_OnPlayerCommandText(playerid, text[]) // process player commands
 		new Float:playerx, Float:playery, Float:playerz;
 		foreach (Player, id)
 		{
-			if (!IsPlayerJailed(id) && !IsPlayerInAnyDM(id))
+			if (!IsPlayerJailed(id))
 			{
 				oGivePlayerWeapon(id, 46, 1);
 				GetPlayerPos(id, playerx, playery, playerz);
@@ -217,7 +217,7 @@ stock Admin_OnPlayerCommandText(playerid, text[]) // process player commands
 	if (!strcmp(cmd, "/disarm", true))
 	{
 		new receiverid = strval(strcharsplit(text, idx, ' '));
-		if (!IsPlayerConnected(receiverid) && !IsPlayerInAnyDM(receiverid))
+		if (!IsPlayerConnected(receiverid))
 		{
 			return SendClientMessage(playerid, COLOUR_RED, lang_texts[12][2]);
 		}
@@ -236,7 +236,7 @@ stock Admin_OnPlayerCommandText(playerid, text[]) // process player commands
 		new string[MAX_STRING];
 		foreach (Player, id)
 		{
-			if (id == playerid || IsPlayerJailed(id) || IsPlayerInAnyDM(id) || IsPlayerRconAdmin(id))
+			if (id == playerid || IsPlayerJailed(id) || IsPlayerRconAdmin(id))
 			{
 				continue;
 			}
@@ -254,7 +254,7 @@ stock Admin_OnPlayerCommandText(playerid, text[]) // process player commands
 		new string[MAX_STRING];
 		foreach (Player, id)
 		{
-			if (id == playerid || IsPlayerJailed(id) || IsPlayerInAnyDM(id) || IsPlayerRconAdmin(id))
+			if (id == playerid || IsPlayerJailed(id) || IsPlayerRconAdmin(id))
 			{
 				continue;
 			}
@@ -271,7 +271,7 @@ stock Admin_OnPlayerCommandText(playerid, text[]) // process player commands
 		new string[MAX_STRING];
 		foreach (Player, id)
 		{
-			if (id == playerid || IsPlayerJailed(id) || IsPlayerInAnyDM(id) || IsPlayerRconAdmin(id))
+			if (id == playerid || IsPlayerJailed(id) || IsPlayerRconAdmin(id))
 			{
 				continue;
 			}

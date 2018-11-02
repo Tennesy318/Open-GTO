@@ -22,14 +22,6 @@ new WeaponDB[MAX_STRING] = GTO_FILES_FOLDER "Weapon/";
 new GroundholdDB[MAX_STRING] = GTO_FILES_FOLDER "Groundhold/";
 new BanDB[MAX_STRING] = GTO_FILES_FOLDER "Banned/";
 
-new DeathmatchDB[MAX_STRING] = GTO_FILES_FOLDER "Deathmatch/!Deathmatches"GTO_FILES_FORMAT;
-new DMBaseDB[MAX_STRING] = GTO_FILES_FOLDER "Deathmatch/";
-new DMRecordDB[MAX_STRING] = GTO_FILES_FOLDER "Deathmatch/Record/";
-
-new RaceDB[MAX_STRING] = GTO_FILES_FOLDER "Race/!Races"GTO_FILES_FORMAT;
-new RaceBaseDB[MAX_STRING] = GTO_FILES_FOLDER "Race/";
-new RaceRecordDB[MAX_STRING] = GTO_FILES_FOLDER "Race/Record/";
-
 new RealTime = SERVER_REAL_TIME,
 	RealTimeOffset = SERVER_REAL_TIME_OFFSET,
 	WorldTime;
