@@ -152,20 +152,5 @@ stock commands_OnPlayerCommandText(playerid, text[]) // process player commands
 		}
 		return 1;
 	}
-	if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
-	{
-		if (!strcmp(cmd, "/handsup", true))
-		{
-			return SetPlayerSpecialAction(playerid, SPECIAL_ACTION_HANDSUP);
-		}
-		if (!strcmp(cmd, "/piss", true))
-		{
-			return SetPlayerSpecialAction(playerid, SPECIAL_ACTION_PISS);
-		}
-		if (!strcmp(cmd, "/smoke", true))
-		{
-			return SetPlayerSpecialAction(playerid, SPECIAL_ACTION_SMOKE_CIGGY);
-		}
-	}
 	return 0;
 }

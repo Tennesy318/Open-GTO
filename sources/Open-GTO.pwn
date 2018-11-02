@@ -22,6 +22,7 @@
 #include "bank"
 #include "fightstyles"
 #include "account"
+#include "cmd/player"
 #include "player"
 #include "weapons"
 #include "zones"

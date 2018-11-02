@@ -41,3 +41,33 @@
 		show_Msg_Dialog(playerid, "??????????", string, "??");
 		return 1;
 	}
+
+	/*
+
+		Fan commands
+
+	*/
+
+	CMD:handsup(playerid, params[]) {
+		if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
+		{
+			SetPlayerSpecialAction(playerid, SPECIAL_ACTION_HANDSUP);
+		}	
+		return 1;
+	}
+
+	CMD:piss(playerid, params[]) {
+		if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
+		{
+			SetPlayerSpecialAction(playerid, SPECIAL_ACTION_PISS);
+		}
+		return 1;
+	}	
+
+	CMD:smoke(playerid, params[]) {
+		if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
+		{
+			SetPlayerSpecialAction(playerid, SPECIAL_ACTION_SMOKE_CIGGY);
+		}
+		return 1;	
+	}
