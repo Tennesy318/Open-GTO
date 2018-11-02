@@ -624,6 +624,8 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 									\t\tOpen-GTO Team:\n\
 									\t\t\tCurrent: ziggi\n\
 									\t\t\tPrevious: GhostTT, heufix, Elbi\n\
+									\t\tVL Team:\n\
+									\t\t\tDeveloper: Tennesy318(Wartix1337), OptiFine(OptiCry)\n\
 						\n\
 						{00C0DD}Косвенные разработчики: {AFE7FF}\n\
 									\t\tMX_Master(mxINI, Chat-Guard)\n\
