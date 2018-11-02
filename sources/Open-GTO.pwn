@@ -1,30 +1,7 @@
-/*
-Project Name:	Open - Grand Theft Online (Open-GTO)
-Web site:		http://open-gto.ru/
-Date started:	5 November 2009
-
-SA-MP version:		0.3d and older
-Date started GTO:	12 August 2006
-
-Developers:
-
-	Open-GTO:
-		0.6.4 – current		ziggi
-		0.6.0 – 0.6.4		GhostTT, heufix, Elbi, ziggi
-
-	GTO:
-		0.5.9 – 0.6.0		SCALOLaz
-		0.5.8 – 0.5.9		Robin Kikkert (dejavu), Lajos Pacsek (Asturel)
-		0.5.7 – 0.5.8		Peter Steenbergen (j1nx)
-		0.0.0 – 0.5.7		Iain Gilbert
-
-	Translated to russian by Dmitry Borisoff (Beginner)
-
-*/
-
 #include <a_samp>
 #include "utils/foreach"
 #include "utils/Pawn.CMD"
+#include "utils/sscanf"
 #include "config"
 #include "base"
 #include "lang"
