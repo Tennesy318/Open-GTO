@@ -48,22 +48,6 @@ stock commands_OnPlayerCommandText(playerid, text[]) // process player commands
 		return 1;
 	}
 
-	if (!strcmp(cmd, "/objective", true) || !strcmp(cmd, "/info", true))
-	{
-		new string[MAX_STRING * 9];
-		strcat(string, lang_texts[15][6], sizeof(string));
-		strcat(string, lang_texts[15][7], sizeof(string));
-		strcat(string, lang_texts[15][8], sizeof(string));
-		strcat(string, lang_texts[15][9], sizeof(string));
-		strcat(string, lang_texts[15][10], sizeof(string));
-		strcat(string, lang_texts[15][11], sizeof(string));
-		strcat(string, lang_texts[15][12], sizeof(string));
-		strcat(string, lang_texts[15][13], sizeof(string));
-		strcat(string, lang_texts[15][14], sizeof(string));
-		show_Msg_Dialog(playerid, "Информация", string, "ОК");
-		return 1;
-	}
-
 	if (!strcmp(cmd, "/stats", true) || !strcmp(cmd, "/status", true) || !strcmp(cmd, "/stat", true))
 	{
 		new string[MAX_STRING];
