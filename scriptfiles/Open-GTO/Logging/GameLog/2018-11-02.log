@@ -1,0 +1,35 @@
+[13:06:29] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[13:06:29] SERVER: Logging module init
+[13:06:29] SERVER: Base module init
+[13:06:29] SERVER: Account module init
+[13:06:29] SERVER: Player module init
+[13:06:29] SERVER: Gang module init
+[13:06:29] SERVER: Payday module init
+[13:06:29] SERVER: Weapons module init
+[13:06:29] SERVER: Vehicles module init
+[13:06:29] SERVER: Groundhold module init
+[13:06:29] SERVER: Business module init
+[13:06:29] SERVER: Housing module init
+[13:06:29] SERVER: Interior module init
+[13:06:29] SERVER: Bank module init
+[13:06:29] SERVER: Fightstyles module init
+[13:06:29] QuidemSys v2.7 initialized.
+[13:06:29] SERVER: Lottery system init
+[13:06:29] SERVER: (missions)Trucker module init
+[13:06:29] SERVER: (services)Fastfood module init
+[13:06:29] SERVER: (services)Bar module init
+[13:06:29] SERVER: (services)SkinShop module init
+[13:06:29] SERVER: (player)Level module init
+[13:06:29] SERVER: (protections)AntiIdle module init
+[13:06:29] SERVER: (protections)AntiHightPing module init
+[13:06:29] SERVER: (player)Health module init
+[13:06:29] SERVER: (player)Armour module init
+[13:06:29] SERVER: (player)Money module init
+[13:06:29] SERVER: (protections)ChatGuard(by MX_Master) module init
+[13:06:29] SERVER: (protections)AntiJetPack module init
+[13:06:29] SERVER: (protections)AntiRconHack module init
+[13:06:29] SERVER: Custom mapicons, objects and pickups init
+[13:06:29] SERVER: Timers started
+[13:06:29] SERVER: All Classes init
+[13:06:30] World save complete! Time taken: 1 seconds.
+[13:06:30] SERVER: Open-GTO v1.1.10 initialization complete. [13:06]
