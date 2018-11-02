@@ -74,10 +74,8 @@ Developers:
 #include "services/vehshop"
 #include "interior"
 #include "weather"
-#include "swagup"
 #include "quidemsys"
 #include "usermenu"
-#include "anims"
 
 // AC
 #include "ac/weapon_hack"
@@ -117,7 +115,6 @@ public OnGameModeInit()
 	weapon_OnGameModeInit();
 	quidemsys_OnGameModeInit();
 	lottery_OnGameModeInit();
-	swagup_OnGameModeInit();
 	vip_OnGameModeInit();
 	// missions
 	mission_OnGameModeInit();
@@ -267,10 +264,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			vshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
 		}
-		case anims_lib_menu_DialogID, anims_anim_menu_DialogID:
-		{
-			anims_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
-		}
 	}
 	return 1;
 }
@@ -286,7 +279,6 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	weapon_OnPlayerPickUpPickup(playerid, pickupid);
 	aah_OnPlayerPickUpPickup(playerid, pickupid);
 	awh_OnPlayerPickUpPickup(playerid, pickupid);
-	swagup_OnPlayerPickUpPickup(playerid, pickupid);
 	vip_OnPlayerPickUpPickup(playerid, pickupid);
 	return 1;
 }
@@ -331,7 +323,6 @@ public OnPlayerSpawn(playerid)
 {
 	if (IsPlayerNPC(playerid)) return 1;
 
-	anims_OnPlayerSpawn(playerid);
 	// после использования TogglePlayerSpectating
 	if (GetPVarInt(playerid, "spec_after_off") == 1)
 	{

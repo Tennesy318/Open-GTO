@@ -44,7 +44,6 @@ stock show_User_Menu(playerid)
 		"Информация о персонаже\n\
 		Банда\n\
 		Стиль борьбы\n\
-		Анимации\n\
 		Телепорты\n\
 		Выбросить оружие\n\
 		Место спавна\n\
@@ -537,12 +536,7 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 					showFightStyleMenu(playerid);
 					return 1;
 				}
-				case 3: // Анимации
-				{
-					anims_ShowLibMenu(playerid);
-					return 1;
-				}
-				case 4: // Телепорты
+				case 3: // Телепорты
 				{
 					if (GetPVarInt(playerid, "teleports_Pause") == 1)
 					{
@@ -552,25 +546,25 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 					show_Teleport_Menu(playerid);
 					return 1;
 				}
-				case 5: // Выбросить оружие
+				case 4: // Выбросить оружие
 				{
 					//DropAmmo(playerid);
 					oResetPlayerWeapons(playerid);
 					return show_User_Menu_Dialog(playerid, "Выбросить оружие", "Вы добровольно избавились от всего оружия.");
 				}
-				case 6: // Место спавна
+				case 5: // Место спавна
 				{
 					return show_SpawnSelect_Menu(playerid);
 				}
-				case 7: // Мои бизнесы
+				case 6: // Мои бизнесы
 				{
 					return show_Businesses_Menu(playerid);
 				}
-				case 8: // Мой транспорт
+				case 7: // Мой транспорт
 				{
 					return show_PlayerVehicle_Menu(playerid);
 				}
-				case 9: // Администрация онлайн
+				case 8: // Администрация онлайн
 				{
 					new idsa = 0,
 						idsm = 0,
@@ -607,11 +601,11 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 					}
 					return show_User_Menu_Dialog(playerid, "Администрация онлайн", string);
 				}
-				case 10: // Настройки
+				case 9: // Настройки
 				{
 					return show_Setting_Menu(playerid);
 				}
-				case 11: // Версия
+				case 10: // Версия
 				{
 					show_User_Menu_Dialog(playerid,
 						"Информация о версии",

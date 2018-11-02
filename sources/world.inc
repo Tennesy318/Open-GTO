@@ -52,7 +52,6 @@ public WorldSave(necessarily) // save all
 	mission_SaveConfig();
 	QuidemSys_SaveConfig();
 	lottery_SaveConfig();
-	swagup_SaveConfig();
 	// systems
 	level_SaveConfig();
 	health_SaveConfig();
