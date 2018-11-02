@@ -1,6 +1,6 @@
 /*
 
-    Команды для игрока
+    ??????? ??????
 
 */
 
@@ -24,5 +24,20 @@
 		SendClientMessage(playerid, COLOUR_LIGHTRED, lang_texts[15][3]);
 		SendClientMessage(playerid, COLOUR_WHITE, lang_texts[15][4]);
 		SendClientMessage(playerid, COLOUR_WHITE, lang_texts[15][5]);
+		return 1;
+	}
+
+    CMD:info(playerid, params[]) {
+		new string[MAX_STRING * 9];
+		strcat(string, lang_texts[15][6], sizeof(string));
+		strcat(string, lang_texts[15][7], sizeof(string));
+		strcat(string, lang_texts[15][8], sizeof(string));
+		strcat(string, lang_texts[15][9], sizeof(string));
+		strcat(string, lang_texts[15][10], sizeof(string));
+		strcat(string, lang_texts[15][11], sizeof(string));
+		strcat(string, lang_texts[15][12], sizeof(string));
+		strcat(string, lang_texts[15][13], sizeof(string));
+		strcat(string, lang_texts[15][14], sizeof(string));
+		show_Msg_Dialog(playerid, "??????????", string, "??");
 		return 1;
 	}
