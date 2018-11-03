@@ -255,16 +255,21 @@ stock show_PlayerVehicle_Do_Menu(playerid, item)
 
 stock show_Setting_Menu(playerid)
 {
+	new filename_player[MAX_STRING];
+	new file_player = (!ini_Exist(filename_player)) ? ini_Create(filename_player) : ini_Open(filename_player);
+
 	new string[512];
+	new inter;
+	ini_getInteger(file_player, "I", inter);
 	
 	strcat(string, "Сохранить аккаунт\n", sizeof(string));
 	strcat(string, "Изменить ник\n", sizeof(string));
 	strcat(string, "Изменить пароль\n", sizeof(string));
-	if (GetPlayerInterface(playerid) == 1)
+	if (inter == 1)
 	{
 		strcat(string, "Интерфейс |{FF0000} Выключить\n", sizeof(string));
 	}
-	else if (GetPlayerInterface(playerid) == 0)
+	else
 	{
 		strcat(string, "Интерфейс |{33FF33} Включить\n", sizeof(string));
 	}

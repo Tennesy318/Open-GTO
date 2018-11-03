@@ -36,8 +36,8 @@
 #define GetPlayerSkinModel(%0) GetPVarInt(%0, "SkinModel")
 #define SetPlayerSkinModel(%0,%1) SetPVarInt(%0, "SkinModel",%1)
 
-#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
 #define GetPlayerInterface(%0) GetPVarInt(%0, "I")
+#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
 
 #define GetPlayerSpecID(%0) GetPVarInt(%0, "SpecID")
 #define SetPlayerSpecID(%0,%1) SetPVarInt(%0, "SpecID",%1)
@@ -584,7 +584,6 @@ stock player_save_db_ini(playerid)
 	ini_SetInt(file_player, "JailTime", GetPlayerJailTime(playerid));
 	ini_SetInt(file_player, "Muted", GetPlayerMuted(playerid));
 	ini_SetInt(file_player, "MuteTime", GetPlayerMuteTime(playerid));
-	ini_SetInt(file_player, "I", GetPlayerInterface(playerid));
 	ini_SetInt(file_player, "FightStyle", GetPlayerFightStyle(playerid));
     ini_SetInt(file_player, "FightStyleUsed", GetPlayerFightStyleUsed(playerid));
 	ini_SetInt(file_player, "I", 1);
