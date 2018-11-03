@@ -255,11 +255,23 @@ stock show_PlayerVehicle_Do_Menu(playerid, item)
 
 stock show_Setting_Menu(playerid)
 {
+	new string[512];
+	
+	strcat(string, "Сохранить аккаунт\n", sizeof(string));
+	strcat(string, "Изменить ник\n", sizeof(string));
+	strcat(string, "Изменить пароль\n", sizeof(string));
+	if (GetPlayerInterface(playerid) == 1)
+	{
+		strcat(string, "Интерфейс |{FF0000} Выключить\n", sizeof(string));
+	}
+	else
+	{
+		strcat(string, "Интерфейс |{33FF33} Включить\n", sizeof(string));
+	}
+		
 	return ShowPlayerDialog(playerid, settings_menu_DialogID, DIALOG_STYLE_LIST,
-		"Мои настройки",
-		"Сохранить аккаунт\n\
-		Изменить ник\n\
-		Изменить пароль",
+		"Мои настройк",
+		string,
 		"Выбрать", "Назад"
 	);
 }

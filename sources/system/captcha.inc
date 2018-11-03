@@ -31,12 +31,3 @@ stock captcha_OnDialogResponse(playerid, dialogid, response, inputtext[])
 	}
 	return 1;
 }
-
-forward Captcha_Time(playerid);
-public Captcha_Time(playerid)
-{
-    new string[128];
-    format(string, sizeof(string), "Capcha");
-    KickPlayer(playerid, string);
-    return 1;
-}

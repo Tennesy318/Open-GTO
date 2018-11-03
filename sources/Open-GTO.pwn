@@ -71,7 +71,7 @@
 #include "ac/speedhack"
 #include "ac/weaponhack"
 //system
-#include "system/captcha"
+ // #include "system/captcha"
 #include "system/chat"
 
 main() {}
@@ -248,10 +248,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			vshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
 		}
-		case captcha_DialogID:
+		/* case captcha_DialogID:
 		{
 			captcha_OnDialogResponse(playerid, dialogid, response, inputtext);
-		}
+		}*/
 	}
 	return 1;
 }
