@@ -89,6 +89,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define LOTTERY_ENABLED		1 // включен-ли скрипт лотереи
 #define LOTTERY_TIME		10 // время розыгрыша, в минутах
 #define LOTTERY_WIN_MONEY	200000 // количество денег победителю в лотерее
+#define LOTTERY_WIN_XP 		1000 // Количество xp победителю в лотерее
 #define LOTTERY_TICKET_COST	5000 // цена лотерейного билета
 
 // skins

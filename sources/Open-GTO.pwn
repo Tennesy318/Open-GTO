@@ -31,10 +31,12 @@
 #include "gang"
 #include "housing"
 #include "business"
+//streamers
 #include "streamers/mapicon_stream"
 #include "streamers/checkpoint_stream"
 #include "payday"
 #include "groundhold"
+//admin funtions
 #include "admin/functions"
 #include "admin/admin_func"
 #include "admin/mod_func"
@@ -68,6 +70,8 @@
 #include "ac/jetpack"
 #include "ac/speedhack"
 #include "ac/weaponhack"
+//system
+#include "system/captcha"
 
 main() {}
 

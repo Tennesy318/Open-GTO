@@ -200,6 +200,7 @@ stock account_OnPlayerConnect(playerid)
 stock account_OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
 	#pragma unused listitem, response
+	Captcha_DialogID(playerid); // диалог с капта
 	if (dialogid == account_Log_DialogID)
 	{
 		new pass_len = strlen(inputtext);

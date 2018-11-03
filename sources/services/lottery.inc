@@ -19,6 +19,7 @@ static
 	LotteryEnabled = LOTTERY_ENABLED,
 	LotteryTime = LOTTERY_TIME,
 	LotteryWinMoney = LOTTERY_WIN_MONEY,
+	LotteryWinXP = LOTTERY_WIN_XP,
 	LotteryTicketCost = LOTTERY_TICKET_COST,
 	LotteryCount = -1,
 	lottery_timer;
@@ -30,6 +31,7 @@ stock lottery_LoadConfig()
 	ini_GetInt(file_lwm, "Lottery_Enabled", LotteryEnabled);
 	ini_GetInt(file_lwm, "Lottery_Time", LotteryTime);
 	ini_GetInt(file_lwm, "Lottery_Win_Money", LotteryWinMoney);
+	ini_GetInt(file_lwm, "Lottery_Win_XP", LotteryWinXP);
 	ini_GetInt(file_lwm, "Lottery_Ticket_Cost", LotteryTicketCost);
 	ini_Close(file_lwm);
 	return 1;
@@ -41,6 +43,7 @@ stock lottery_SaveConfig()
 	ini_SetInt(file_lwm, "Lottery_Enabled", LotteryEnabled);
 	ini_SetInt(file_lwm, "Lottery_Time", LotteryTime);
 	ini_SetInt(file_lwm, "Lottery_Win_Money", LotteryWinMoney);
+	ini_SetInt(file_lwm, "Lottery_Win_XP", LotteryWinXP);
 	ini_SetInt(file_lwm, "Lottery_Ticket_Cost", LotteryTicketCost);
 	ini_Close(file_lwm);
 	return 1;
@@ -120,6 +123,7 @@ public lottery_Timer()
 		{
 			winner = 1;
 			oGivePlayerMoney(playerid, LotteryWinMoney, 1);
+			GivePlayerXP(playerid, LotteryWinXP, 1);
 			
 			new string[MAX_STRING];
 			
