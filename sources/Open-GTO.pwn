@@ -246,6 +246,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			vshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
 		}
+		case captcha_DialogID:
+		{
+			captcha_OnDialogResponse(playerid, dialogid, response, inputtext);
+		}
 	}
 	return 1;
 }

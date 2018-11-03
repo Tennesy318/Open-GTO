@@ -4,31 +4,30 @@ stock RandomString() {
     return string;
 } 
 
-stock ShowCaptcha(playerid) {
+stock ShowCaptcha(playerid)
+{
     new string[64];
     format(string, 64, "%s", RandomString());
     SetPVarString(playerid, "Captcha", string);
     format(string, 64, "Введите, пожалуйста, код ниже:\n{FFA000}%s", string);
-    ShowPlayerDialog(playerid, 777, 1, "\tCaptcha проверка", string, "Ввод", "");
+    ShowPlayerDialog(playerid, captcha_DialogID, 1, "\tCaptcha проверка", string, "Ввод", "");
     return 1;
 } 
 
-stock captcha_OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
+stock captcha_OnDialogResponse(playerid, dialogid, response, inputtext[])
 {
 	switch (dialogid)
 	{
-        case 777:
-        {
+		case captcha_DialogID:
+		{
+			new string[32];
+			if (!response || strlen(inputtext) < 6)
+			return ShowCaptcha(playerid);
 
-        }
-    if (dialogid == 777) 
-    {
-        new string[32];
-        if (!response || strlen(inputtext) < 6)
-        return ShowCaptcha(playerid);
-
-        GetPVarString(playerid, "Captcha", string, 32);
-        if(strcmp(string, inputtext, true) != 0)
-        return SendClientMessage(playerid, 0xFFFA00FF, "Каптча-код введён неправльно!"), ShowCaptcha(playerid);
-    } 
+			GetPVarString(playerid, "Captcha", string, 32);
+			if(strcmp(string, inputtext, true) != 0)
+			return SendClientMessage(playerid, 0xFFFA00FF, "Каптча-код введён неправльно!"), ShowCaptcha(playerid);
+		}
+	}
+	return 1;
 }
