@@ -140,17 +140,5 @@ stock commands_OnPlayerCommandText(playerid, text[]) // process player commands
 		SetPlayerSkydiveTime(playerid, SKYDIVE_TIME);
 		return 1;
 	}
- 	if (!strcmp(cmd, "/dance", true))
-	{
-		switch (strval(strcharsplit(text, idx,' ')))
-		{
-			case 1: SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DANCE1);
-			case 2: SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DANCE2);
-			case 3: SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DANCE3);
-			case 4: SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DANCE4);
-			default: SendClientMessage(playerid, COLOUR_RED, lang_texts[15][83]);
-		}
-		return 1;
-	}
 	return 0;
 }

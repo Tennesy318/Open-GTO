@@ -1,6 +1,6 @@
 /*
 
-    ??????? ??????
+    Команды игрока
 
 */
 
@@ -38,7 +38,7 @@
 		strcat(string, lang_texts[15][12], sizeof(string));
 		strcat(string, lang_texts[15][13], sizeof(string));
 		strcat(string, lang_texts[15][14], sizeof(string));
-		show_Msg_Dialog(playerid, "??????????", string, "??");
+		show_Msg_Dialog(playerid, "Информация", string, "Ок");
 		return 1;
 	}
 
@@ -71,3 +71,4 @@
 		}
 		return 1;	
 	}
+	

@@ -367,10 +367,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	command_register(cmdtext, "/version", 8, commands);
 	command_register(cmdtext, "/time", 5, commands);
 	command_register(cmdtext, "/skydive", 8, commands);
-	command_register(cmdtext, "/dance", 6, commands);
-	command_register(cmdtext, "/handsup", 8, commands);
-	command_register(cmdtext, "/piss", 5, commands);
-	command_register(cmdtext, "/smoke", 6, commands);
 	command_register(cmdtext, "/pm", 3, commands);
 
 	// Lottery
