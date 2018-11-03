@@ -264,13 +264,13 @@ stock show_Setting_Menu(playerid)
 	{
 		strcat(string, "Интерфейс |{FF0000} Выключить\n", sizeof(string));
 	}
-	else
+	else if (GetPlayerInterface(playerid) == 0)
 	{
 		strcat(string, "Интерфейс |{33FF33} Включить\n", sizeof(string));
 	}
 		
 	return ShowPlayerDialog(playerid, settings_menu_DialogID, DIALOG_STYLE_LIST,
-		"Мои настройк",
+		"Мои настройки",
 		string,
 		"Выбрать", "Назад"
 	);

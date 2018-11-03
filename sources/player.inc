@@ -584,6 +584,7 @@ stock player_save_db_ini(playerid)
 	ini_SetInt(file_player, "JailTime", GetPlayerJailTime(playerid));
 	ini_SetInt(file_player, "Muted", GetPlayerMuted(playerid));
 	ini_SetInt(file_player, "MuteTime", GetPlayerMuteTime(playerid));
+	ini_SetInt(file_player, "I", GetPlayerInterface(playerid));
 	ini_SetInt(file_player, "FightStyle", GetPlayerFightStyle(playerid));
     ini_SetInt(file_player, "FightStyleUsed", GetPlayerFightStyleUsed(playerid));
 	ini_SetInt(file_player, "I", 1);
