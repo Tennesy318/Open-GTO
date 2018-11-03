@@ -129,6 +129,7 @@ stock AccountLogin(playerid, password[])
 		SendClientMessage(idst, COLOUR_WHITE, string);
 	}
 	GameMSG("player: %s(%d): logged in successfully.", playername, playerid);
+	SetTimerEx("Captcha_Time", 2 * 1000, 0, "d", playerid);
 	ShowCaptcha(playerid);
 	return 1;
 }
