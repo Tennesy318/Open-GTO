@@ -586,8 +586,7 @@
 97: %s забанен в %s администратором %s(%d) %s
 98: %s, по причине "%s"
 [13 admin_commands 2]
-// admin_commands
-1: Administrator RCON:______________________________________________________________
+1: {FFCC66}Список доступных команд:
 2: R: '/ssay <text>', '/an <type> <LATtext>', '/setlvl <ID> <lvl>', '/setstatus <ID> <status> (0, 1, 2, 3)'
 3: R: '/disarm <ID>', '/disarmall', '/skydiveall', '/paralyzeall', '/deparalyzeall', '/remcash <ID>', '/remcashall'
 4: R: '/payday', /go <point> (0, 1, 2-4(tune) - 27)', '/allowport <ID> <allow>', '/setskin <ID> <IDskin>'

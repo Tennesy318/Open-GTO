@@ -73,35 +73,6 @@ stock Mod_OnPlayerCommandText(playerid, text[]) // process player commands
 		if (ccount == 0) SendClientMessage(playerid, COLOUR_XP_GOOD, lang_texts[18][7]);
 		return 1;
 	}
-	if (!strcmp(cmd, "/remcar", true))
-	{
-		SendMessageToAdmins(playerid, COLOUR_LIGHTGREEN, text);
-		new receiverid = strval(strcharsplit(text, idx, ' '));
-		if (!IsPlayerConnected(receiverid))
-		{
-			return SendClientMessage(playerid, COLOUR_RED, lang_texts[12][3]);
-		}
-		if (IsPlayerRconAdmin(receiverid))
-		{
-			return SendClientMessage(playerid, COLOUR_RED, lang_texts[12][2]);
-		}
-
-		new string[MAX_STRING];
-		if (IsPlayerInAnyVehicle(receiverid))
-		{
-			RemovePlayerFromVehicle(receiverid);
-			format(string, sizeof(string), lang_texts[12][64], oGetPlayerName(receiverid), receiverid);
-			SendClientMessage(playerid, COLOUR_XP_GOOD, string);
-			format(string, sizeof(string), lang_texts[12][65], oGetPlayerName(playerid));
-			SendClientMessage(receiverid, COLOUR_XP_GOOD, string);
-		} 
-		else 
-		{
-			format(string, sizeof(string), lang_texts[12][73], oGetPlayerName(receiverid), receiverid);
-			SendClientMessage(playerid, COLOUR_RED, string);
-		}
-		return 1;
-	}
 	if (!strcmp(cmd, "/kick", true))
 	{
 		SendMessageToAdmins(playerid, COLOUR_LIGHTGREEN, text);
@@ -240,83 +211,6 @@ stock Mod_OnPlayerCommandText(playerid, text[]) // process player commands
 		new string[MAX_STRING];
 		format(string, sizeof(string), lang_texts[12][93], text[idx+1]);
 		SendClientMessageToAll(COLOUR_BLUE, string);
-		return 1;
-	}
-	if (!strcmp(cmd, "/spec", true))
-	{
-		new tmp[20];
-		tmp = strcharsplit(text, idx, ' ');
-		if (strlen(tmp) == 0)
-		{
-			if (GetPlayerSpectating(playerid))
-			{
-				SetPVarInt(playerid, "spec_after_off", 1);
-				TogglePlayerSpectating(playerid, 0);
-				SetPlayerSpecID(playerid, INVALID_PLAYER_ID);
-				SetPlayerSpectating(playerid, 0);
-				SetPlayerInterior(playerid, GetPVarInt(playerid, "spec_interior"));
-				SetPlayerVirtualWorld(playerid, GetPVarInt(playerid, "spec_virtualworld"));
-				SetPlayerSkin(playerid, GetPVarInt(playerid, "spec_skin"));
-				
-				GivePlayerOwnedWeapons(playerid);
-				
-				new Float:pos[4];
-				pos[0] = GetPVarFloat(playerid, "spec_pos_x");
-				pos[1] = GetPVarFloat(playerid, "spec_pos_y");
-				pos[2] = GetPVarFloat(playerid, "spec_pos_z");
-				pos[3] = GetPVarFloat(playerid, "spec_pos_a");
-				SetPlayerPos(playerid, pos[0], pos[1], pos[2]);
-				SetPlayerFacingAngle(playerid, pos[3]);
-				
-				DeletePVar(playerid, "spec_interior");
-				DeletePVar(playerid, "spec_virtualworld");
-				DeletePVar(playerid, "spec_skin");
-				DeletePVar(playerid, "spec_pos_x");
-				DeletePVar(playerid, "spec_pos_y");
-				DeletePVar(playerid, "spec_pos_z");
-				DeletePVar(playerid, "spec_pos_a");
-			}
-			else
-			{
-				SendClientMessage(playerid, COLOUR_RED, lang_texts[13][19]);
-			}
-			return 1;
-		}
-		new specid = strval(tmp);
-		if (!IsPlayerConnected(specid) || specid == playerid)
-		{
-			return SendClientMessage(playerid, COLOUR_RED, lang_texts[13][20]);
-		}
-		
-		SetPlayerSpecID(playerid, specid);
-		SetPlayerSpectating(playerid, 1);
-		TogglePlayerSpectating(playerid, 1);
-		SetPlayerInterior(playerid, GetPlayerInterior(specid));
-		SetPlayerVirtualWorld(playerid, GetPlayerVirtualWorld(specid));
-		
-		// сохраним параметры
-		SetPVarInt(playerid, "spec_interior", GetPlayerInterior(playerid));
-		SetPVarInt(playerid, "spec_virtualworld", GetPlayerVirtualWorld(playerid));
-		SetPVarInt(playerid, "spec_skin", GetPlayerSkin(playerid));
-		new Float:pos[4];
-		GetPlayerPos(playerid, pos[0], pos[1], pos[2]);
-		GetPlayerFacingAngle(playerid, pos[3]);
-		SetPVarFloat(playerid, "spec_pos_x", pos[0]);
-		SetPVarFloat(playerid, "spec_pos_y", pos[1]);
-		SetPVarFloat(playerid, "spec_pos_z", pos[2]);
-		SetPVarFloat(playerid, "spec_pos_a", pos[3]);
-		
-		SendClientMessage(playerid, COLOUR_BLUE, lang_texts[13][21]);
-		
-		new vehid = GetPlayerVehicleID(specid);
-		if (vehid != 0)
-		{
-			PlayerSpectateVehicle(playerid, vehid);
-		}
-		else
-		{
-			PlayerSpectatePlayer(playerid, specid);
-		}
 		return 1;
 	}
 	if (!strcmp(cmd, "/clearchat", true))

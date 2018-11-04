@@ -77,7 +77,7 @@
 #include "system/interface"
 #include "system/spec.inc"
 //cmd
-#include "cmd/player_cmd"
+#include "cmd/moder"
 
 main() {}
 
@@ -485,7 +485,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	command_registerNR(cmdtext, "/cmdlist", 8, Mod);
 	command_registerNR(cmdtext, "/about", 6, Mod);
 	command_register(cmdtext, "/plist", 6, Mod);
-	command_register(cmdtext, "/remcar", 7, Mod);
 	command_register(cmdtext, "/kick", 5, Mod);
 	command_register(cmdtext, "/carresp", 8, Mod);
 	command_register(cmdtext, "/carrespall", 11, Mod);
