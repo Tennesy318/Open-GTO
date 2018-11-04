@@ -1,11 +1,12 @@
 #include <a_samp>
+//utils
 #include "utils/foreach"
 #include "utils/Pawn.CMD"
 #include "utils/sscanf"
+#include "utils/mxINI"
 #include "config"
 #include "base"
 #include "lang"
-#include "utils/mxINI"
 #include "logging"
 #include "utils/gtoutils"
 #include "arrays"
@@ -22,8 +23,6 @@
 #include "bank"
 #include "fightstyles"
 #include "account"
-#include "cmd/player"
-#include "cmd/admin"
 #include "player"
 #include "weapons"
 #include "zones"
@@ -59,7 +58,6 @@
 #include "weather"
 #include "quidemsys"
 #include "usermenu"
-
 // AC
 #include "ac/weapon_hack"
 #include "ac/fakekill_hack"
@@ -77,6 +75,9 @@
 #include "system/captcha"
 #include "system/chat"
 #include "system/interface"
+#include "system/spec.inc"
+//cmd
+#include "cmd/player_cmd"
 
 main() {}
 
@@ -146,6 +147,9 @@ public OnGameModeInit()
 	GameMSG("SERVER: Timers started");
 	SpawnWorld();
 
+	//spec system
+	CreateTextDraws();
+
 	WorldSave(0);
 	new hour, minute;
 	gettime(hour, minute);
@@ -155,6 +159,9 @@ public OnGameModeInit()
 
 public OnGameModeExit()
 {
+	//spec system
+	spec_OnGameModeExit();
+
 	WorldSave(1);
 	new hour, minute;
 	gettime(hour, minute);
@@ -173,6 +180,8 @@ public OnPlayerConnect(playerid)
 	level_OnPlayerConnect(playerid);
 	weapon_OnPlayerConnect(playerid);
 	qudemsys_OnPlayerConnect(playerid);
+	// spec
+	spec_OnPlayerConnect(playerid);
 	return 1;
 }
 
@@ -188,6 +197,8 @@ public OnPlayerDisconnect(playerid, reason)
 	weapon_OnPlayerDisconnect(playerid, reason);
 	qudemsys_OnPlayerDisconnect(playerid, reason);
 	pveh_OnPlayerDisconnect(playerid, reason);
+	//spec system
+	spec_OnPlayerDisconnect(playerid);
 	return 1;
 }
 
@@ -318,6 +329,9 @@ public OnPlayerDeath(playerid, killerid, reason)
 	level_HideTextDraws(playerid);
 	PlayCrimeReportForPlayer(killerid, killerid, random(18)+3);
 	PlayCrimeReportForPlayer(playerid, killerid, random(18)+3);
+
+	// spec system
+	spec_OnPlayerDeath(playerid);
 	return 1;
 }
 
@@ -351,7 +365,10 @@ public OnPlayerSpawn(playerid)
 		JailPlayer(playerid, GetPlayerJailTime(playerid));
 	}
 	SetTimerEx("OnPlayerSpawned", 2500, 0, "d", playerid);
+	// interface system
 	interface_check(playerid);
+	// spec system
+	spec_OnPlayerSpawn(playerid);
 	return 1;
 }
 
@@ -495,6 +512,9 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerUpdate(playerid)
 {
+	// Spec system
+	spec_OnPlayerUpdate(playerid);
+	//weapon_hack
 	wh_OnPlayerUpdate(playerid);
 	return 1;
 }
@@ -575,6 +595,8 @@ public OnPlayerStateChange(playerid, newstate, oldstate)
 		airshop_OnPlayerStateChange(playerid, newstate, oldstate);
 		bikeshop_OnPlayerStateChange(playerid, newstate, oldstate);
 	}
+	// spec system
+	spec_OnPlayerStateChange(playerid, newstate);
 	return 1;
 }
 
@@ -593,6 +615,8 @@ public OnPlayerInteriorChange(playerid, newinteriorid, oldinteriorid)
 {
 	ash_OnPlayerInteriorChange(playerid, newinteriorid, oldinteriorid);
 	modfunc_OnPlayerInteriorChange(playerid, newinteriorid, oldinteriorid);
+	// spec system
+	spec_OnPlayerInteriorChange(playerid, newinteriorid);
 	return 1;
 }
 
@@ -714,4 +738,11 @@ public OnEnterExitModShop(playerid, enterexit, interiorid)
 		}
 	}
 	return 1;
+}
+
+// spec system
+public OnPlayerClickTextDraw(playerid, Text:clickedid)
+{
+	spec_OnPlayerClickTextDraw(playerid, Text:clickedid);
+    return 0;
 }
