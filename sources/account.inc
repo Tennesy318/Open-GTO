@@ -129,7 +129,7 @@ stock AccountLogin(playerid, password[])
 		SendClientMessage(idst, COLOUR_WHITE, string);
 	}
 	GameMSG("player: %s(%d): logged in successfully.", playername, playerid);
-	// ShowCaptcha(playerid);
+	ShowCaptcha(playerid);
 	return 1;
 }
 

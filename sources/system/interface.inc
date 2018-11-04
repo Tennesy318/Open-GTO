@@ -1,2 +1,23 @@
-#define GetPlayerInterface(%0) GetPVarInt(%0, "I")
-#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
+/*
+
+    interface check
+
+*/
+
+stock interface_check(playerid)
+{
+    new inter = GetPlayerInterface(playerid);
+    if (inter == INTERFACE_ON)
+    {
+        TextDrawShowForPlayer(playerid,level_TextDraw_Level[playerid]);
+        TextDrawShowForPlayer(playerid, weapon_TextDraw_Level[playerid]);
+        TextDrawShowForPlayer(playerid,level_TextDraw_XP[playerid]);
+        UpdatePlayerWeaponTextDraws(playerid);
+    }
+    else if (inter == INTERFACE_OFF)
+    {
+        wskill_HideTextDraw(playerid);
+        level_HideTextDraws(playerid);
+    }
+    return 1;
+}

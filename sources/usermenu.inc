@@ -858,6 +858,26 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 				{
 					return show_ChangePass_Menu(playerid);
 				}
+				case 3: // Включение/выключение интерфейса
+				{
+					new inter = GetPlayerInterface(playerid);
+					if (inter == INTERFACE_ON)
+					{
+						SetPlayerInterface(playerid, INTERFACE_OFF);
+						wskill_HideTextDraw(playerid);
+						level_HideTextDraws(playerid);
+						PlayerSave(playerid);
+					}
+					else if (inter == INTERFACE_OFF)
+					{
+						SetPlayerInterface(playerid, INTERFACE_ON);
+						TextDrawShowForPlayer(playerid,level_TextDraw_Level[playerid]);
+						TextDrawShowForPlayer(playerid, weapon_TextDraw_Level[playerid]);
+						TextDrawShowForPlayer(playerid,level_TextDraw_XP[playerid]);
+						UpdatePlayerWeaponTextDraws(playerid);
+						PlayerSave(playerid);
+					}
+				}
 			}
 			return 1;
 		}

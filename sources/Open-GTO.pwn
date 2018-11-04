@@ -71,8 +71,9 @@
 #include "ac/speedhack"
 #include "ac/weaponhack"
 //system
- // #include "system/captcha"
+#include "system/captcha"
 #include "system/chat"
+#include "system/interface"
 
 main() {}
 
@@ -167,11 +168,6 @@ public OnPlayerConnect(playerid)
 	level_OnPlayerConnect(playerid);
 	weapon_OnPlayerConnect(playerid);
 	qudemsys_OnPlayerConnect(playerid);
-	new filename_player[MAX_STRING];
-	new file_player = (!ini_Exist(filename_player)) ? ini_Create(filename_player) : ini_Open(filename_player);
-	new inter;
-	ini_getInteger(file_player, "I", inter);
-	printf("I = %d.", inter);  
 	return 1;
 }
 
@@ -253,10 +249,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			vshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
 		}
-		/* case captcha_DialogID:
+		case captcha_DialogID:
 		{
 			captcha_OnDialogResponse(playerid, dialogid, response, inputtext);
-		}*/
+		}
 	}
 	return 1;
 }
@@ -326,7 +322,6 @@ public OnPlayerSpawn(playerid)
 	// spawn player
 	SetPlayerSkin(playerid, GetPlayerSkinModel(playerid));
 	UpdatePlayerLevelTextDraws(playerid);
-	UpdatePlayerWeaponTextDraws(playerid);
 
 	if (GetPlayerMuteTime(playerid) != 0)
 	{
@@ -341,6 +336,7 @@ public OnPlayerSpawn(playerid)
 		JailPlayer(playerid, GetPlayerJailTime(playerid));
 	}
 	SetTimerEx("OnPlayerSpawned", 2500, 0, "d", playerid);
+	interface_check(playerid);
 	return 1;
 }
 
