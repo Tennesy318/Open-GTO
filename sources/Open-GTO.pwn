@@ -295,7 +295,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 	SendDeathMessage(killerid, playerid, reason);
 
 	if (killerid == INVALID_PLAYER_ID) return 1;
-	
+
 	player_OnPlayerDeath(playerid, killerid, reason);
 	player_OnPlayerKill(killerid, playerid, reason);
 	trucker_OnPlayerDeath(playerid, killerid, reason);
@@ -321,6 +321,7 @@ public OnPlayerSpawn(playerid)
 
 	// spawn player
 	SetPlayerSkin(playerid, GetPlayerSkinModel(playerid));
+ 	TextDrawShowForPlayer(playerid, weapon_TextDraw_Level[playerid]);
 	UpdatePlayerLevelTextDraws(playerid);
 	UpdatePlayerWeaponTextDraws(playerid);
 
@@ -329,7 +330,7 @@ public OnPlayerSpawn(playerid)
 		SendClientMessage(playerid, COLOUR_RED, lang_texts[1][14]);
 		SetPlayerWantedLevel(playerid, 3);
 	}
-	
+
 	player_OnPlayerSpawn(playerid);
 	SetPlayerColor(playerid, PlayerGangColour(playerid));
 	if (IsPlayerJailed(playerid))
