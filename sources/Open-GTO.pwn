@@ -322,6 +322,7 @@ public OnPlayerSpawn(playerid)
 	// spawn player
 	SetPlayerSkin(playerid, GetPlayerSkinModel(playerid));
 	UpdatePlayerLevelTextDraws(playerid);
+	UpdatePlayerWeaponTextDraws(playerid);
 
 	if (GetPlayerMuteTime(playerid) != 0)
 	{
