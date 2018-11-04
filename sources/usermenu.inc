@@ -13,6 +13,9 @@
 #pragma library user_menu
 
 
+#define INTERFACE_ON 1
+#define INTERFACE_OFF 0
+
 stock show_menu(playerid)
 {
 	if (GetPlayerState(playerid) == PLAYER_STATE_ONFOOT)
@@ -256,17 +259,16 @@ stock show_PlayerVehicle_Do_Menu(playerid, item)
 stock show_Setting_Menu(playerid)
 {
 	new string[512];
-	new inter;
-	GetPlayerInterface(inter);
+	new inter = GetPlayerInterface(playerid);
 	
 	strcat(string, "Сохранить аккаунт\n", sizeof(string));
 	strcat(string, "Изменить ник\n", sizeof(string));
 	strcat(string, "Изменить пароль\n", sizeof(string));
-	if (inter == 1)
+	if (inter == INTERFACE_ON)
 	{
 		strcat(string, "Интерфейс |{FF0000} Выключить\n", sizeof(string));
 	}
-	else
+	if (inter == INTERFACE_OFF)
 	{
 		strcat(string, "Интерфейс |{33FF33} Включить\n", sizeof(string));
 	}

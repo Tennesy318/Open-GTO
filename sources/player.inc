@@ -36,9 +36,6 @@
 #define GetPlayerSkinModel(%0) GetPVarInt(%0, "SkinModel")
 #define SetPlayerSkinModel(%0,%1) SetPVarInt(%0, "SkinModel",%1)
 
-#define GetPlayerInterface(%0) GetPVarInt(%0, "I")
-#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
-
 #define GetPlayerSpecID(%0) GetPVarInt(%0, "SpecID")
 #define SetPlayerSpecID(%0,%1) SetPVarInt(%0, "SpecID",%1)
 
@@ -56,6 +53,9 @@
 
 #define SetPlayerSkydiveTime(%0,%1) SetPVarInt(%0, "SkydiveTime",%1)
 #define GetPlayerSkydiveTime(%0) GetPVarInt(%0, "SkydiveTime")
+
+#define GetPlayerInterface(%0) GetPVarInt(%0, "I")
+#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
 
 stock GetPlayerGangName(playerid)
 {
