@@ -255,12 +255,9 @@ stock show_PlayerVehicle_Do_Menu(playerid, item)
 
 stock show_Setting_Menu(playerid)
 {
-	new filename_player[MAX_STRING];
-	new file_player = (!ini_Exist(filename_player)) ? ini_Create(filename_player) : ini_Open(filename_player);
-
 	new string[512];
 	new inter;
-	ini_getInteger(file_player, "I", inter);
+	GetPlayerInterface(inter);
 	
 	strcat(string, "Сохранить аккаунт\n", sizeof(string));
 	strcat(string, "Изменить ник\n", sizeof(string));
