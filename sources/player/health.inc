@@ -39,6 +39,19 @@ stock health_OnGameModeInit()
 	return 1;
 }
 
+stock health_OnPlayerPickUpPickup(playerid, pickupid)
+{
+	if (GetPickupModel(pickupid) == 11738)
+	{
+		oSetPlayerHealth(playerid,100);
+	}
+	else if (GetPickupModel(pickupid) == 11736)
+	{
+		oSetPlayerHealth(playerid,50);
+	}
+	return 1;
+}
+
 stock SyncHealth(playerid)
 {
 	if (AntiHealthHackEnabled != 1) return 1;

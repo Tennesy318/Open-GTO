@@ -300,6 +300,7 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	aah_OnPlayerPickUpPickup(playerid, pickupid);
 	awh_OnPlayerPickUpPickup(playerid, pickupid);
 	vip_OnPlayerPickUpPickup(playerid, pickupid);
+	health_OnPlayerPickUpPickup(playerid, pickupid);
 	return 1;
 }
 

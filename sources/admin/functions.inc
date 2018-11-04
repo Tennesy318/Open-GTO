@@ -172,7 +172,6 @@ stock oBan(user[], reason[], adminid, time=0)
 stock JailPlayer(playerid, jail_time)
 {
 	SetPlayerJailTime(playerid, jail_time);
-	SetPlayerWantedLevel(playerid, (jail_time == 0 || jail_time > 6) ? 6 : jail_time);
 	
 	SetPlayerInterior(playerid, 6);
 	oSetPlayerPos(playerid, 265.1273, 77.6823, 1001.0391);
@@ -188,7 +187,11 @@ stock JailPlayerCheck(playerid)
 {
 	if (IsPlayerJailed(playerid) && !IsPlayerInRangeOfPoint(playerid, 5, 265.1273, 77.6823, 1001.0391))
 	{
-		KickPlayer(playerid, lang_texts[11][16]);
+		SetPlayerInterior(playerid, 6);
+		oSetPlayerPos(playerid, 265.1273, 77.6823, 1001.0391);
+		SetPlayerFacingAngle(playerid,-90);	
+		TogglePlayerControllable(playerid, 0);
+		SetCameraBehindPlayer(playerid);
 	}
 	return 1;
 }

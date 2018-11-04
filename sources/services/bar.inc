@@ -84,15 +84,16 @@ public bar_Gulp(playerid)
 
 stock bar_ShowDialog(playerid)
 {
-	new string[512];
-	for (new i = 0; i < sizeof(Drinks); i++)
-	{
+	new string[MAX_STRING * sizeof(Drinks)];
+	string = lang_texts[17][13];
+
+	for (new i = 0; i < sizeof(Drinks); i++) {
 		format(string, sizeof(string),
-			lang_texts[17][13],
+			lang_texts[17][11],
 			string, Drinks[i][Name], Drinks[i][Cost], Drinks[i][Alcohol], Drinks[i][Hp]
 		);
 	}
-	return ShowPlayerDialog(playerid, bar_DialogID, DIALOG_STYLE_LIST,
+	return ShowPlayerDialog(playerid, bar_DialogID, DIALOG_STYLE_TABLIST_HEADERS,
 		lang_texts[17][14],
 		string,
 		lang_texts[17][15], lang_texts[17][16]

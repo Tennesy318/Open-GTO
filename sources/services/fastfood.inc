@@ -52,11 +52,15 @@ stock fastfood_OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 stock fastfood_ShowDialog(playerid)
 {
 	new string[MAX_STRING * sizeof(Food)];
-	for (new i = 0; i < sizeof(Food); i++)
-	{
-		format(string, sizeof(string), lang_texts[17][2], string, Food[i][food_name], Food[i][food_cost], Food[i][food_hp]);
+	string = lang_texts[17][2];
+
+	for (new i = 0; i < sizeof(Food); i++) {
+		format(string, sizeof(string),
+			lang_texts[17][0],
+			string, Food[i][food_name], Food[i][food_cost], Food[i][food_hp]
+		);
 	}
-	return ShowPlayerDialog(playerid, fastfood_DialogID, DIALOG_STYLE_LIST,
+	return ShowPlayerDialog(playerid, fastfood_DialogID, DIALOG_STYLE_TABLIST_HEADERS,
 		lang_texts[17][3],
 		string,
 		lang_texts[17][4], lang_texts[17][5]
