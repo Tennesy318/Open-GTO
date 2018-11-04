@@ -4,6 +4,7 @@
 #include "utils/Pawn.CMD"
 #include "utils/sscanf"
 #include "utils/mxINI"
+
 #include "config"
 #include "base"
 #include "lang"
@@ -47,6 +48,7 @@
 #include "missions"
 #include "missions/trucker"
 #include "click"
+// services
 #include "services/fastfood"
 #include "services/bar"
 #include "services/skinshop"
@@ -75,7 +77,10 @@
 #include "system/captcha"
 #include "system/chat"
 #include "system/interface"
-#include "system/spec.inc"
+#include "system/spec"
+#include "system/afkcount"
+#include "system/announce"
+
 //cmd
 #include "cmd/moder"
 
@@ -114,6 +119,8 @@ public OnGameModeInit()
 	vshop_OnGameModeInit();
 	airshop_OnGameModeInit();
 	bikeshop_OnGameModeInit();
+	// system
+	afkcount_OnGameModeInit();
 	//
 	level_OnGameModeInit();
 	antiidle_OnGameModeInit();
@@ -180,8 +187,8 @@ public OnPlayerConnect(playerid)
 	level_OnPlayerConnect(playerid);
 	weapon_OnPlayerConnect(playerid);
 	qudemsys_OnPlayerConnect(playerid);
-	// spec
 	spec_OnPlayerConnect(playerid);
+	afkcount_OnPlayerConnect(playerid);
 	return 1;
 }
 
@@ -359,6 +366,7 @@ public OnPlayerSpawn(playerid)
 	}
 
 	player_OnPlayerSpawn(playerid);
+	afkcount_OnPlayerSpawn(playerid);
 	SetPlayerColor(playerid, PlayerGangColour(playerid));
 	if (IsPlayerJailed(playerid))
 	{
@@ -511,10 +519,9 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerUpdate(playerid)
 {
-	// Spec system
 	spec_OnPlayerUpdate(playerid);
-	//weapon_hack
 	wh_OnPlayerUpdate(playerid);
+	afkcount_OnPlayerUpdate(playerid);
 	return 1;
 }
 

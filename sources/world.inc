@@ -165,6 +165,7 @@ forward TenMinuteTimer();
 public TenMinuteTimer()
 {
 	HouseKeepUp();
+	commercials();
 }
 
 forward FiveSecondTimer();
