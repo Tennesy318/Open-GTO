@@ -171,7 +171,7 @@ public OnPlayerConnect(playerid)
 	new file_player = (!ini_Exist(filename_player)) ? ini_Create(filename_player) : ini_Open(filename_player);
 	new inter;
 	ini_getInteger(file_player, "I", inter);
-	printf("Сейчас %d год.", inter);  
+	printf("I = %d.", inter);  
 	return 1;
 }
 
