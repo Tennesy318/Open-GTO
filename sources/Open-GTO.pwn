@@ -23,6 +23,7 @@
 #include "fightstyles"
 #include "account"
 #include "cmd/player"
+#include "cmd/admin"
 #include "player"
 #include "weapons"
 #include "zones"
@@ -52,6 +53,8 @@
 #include "services/skinshop"
 #include "services/lottery"
 #include "services/vehshop"
+#include "services/airshop"
+#include "services/bikeshop"
 #include "interior"
 #include "weather"
 #include "quidemsys"
@@ -108,6 +111,8 @@ public OnGameModeInit()
 	bar_OnGameModeInit();
 	ss_OnGameModeInit();
 	vshop_OnGameModeInit();
+	airshop_OnGameModeInit();
+	bikeshop_OnGameModeInit();
 	//
 	level_OnGameModeInit();
 	antiidle_OnGameModeInit();
@@ -248,6 +253,14 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		case vshop_DialogID:
 		{
 			vshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
+		}
+		case airshop_DialogID:
+		{
+			airshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
+		}
+		case bikeshop_DialogID:
+		{
+			bikeshop_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
 		}
 		case captcha_DialogID:
 		{
@@ -559,6 +572,8 @@ public OnPlayerStateChange(playerid, newstate, oldstate)
 	if (newstate == PLAYER_STATE_DRIVER || newstate == PLAYER_STATE_PASSENGER)
 	{
 		vshop_OnPlayerStateChange(playerid, newstate, oldstate);
+		airshop_OnPlayerStateChange(playerid, newstate, oldstate);
+		bikeshop_OnPlayerStateChange(playerid, newstate, oldstate);
 	}
 	return 1;
 }
@@ -617,6 +632,8 @@ public OnVehicleSpawn(vehicleid)
 {
 	quidemsys_OnVehicleSpawn(vehicleid);
 	vshop_OnVehicleSpawn(vehicleid);
+	airshop_OnVehicleSpawn(vehicleid);
+	bikeshop_OnVehicleSpawn(vehicleid);
 	return 1;
 }
 

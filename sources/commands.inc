@@ -10,7 +10,6 @@
 #define _commands_included
 #pragma library commands
 
-
 stock commands_OnPlayerCommandText(playerid, text[]) // process player commands
 {
 	new cmd[20], idx;

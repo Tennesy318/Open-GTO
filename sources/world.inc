@@ -177,4 +177,6 @@ public FiveSecondTimer()
 	housing_Update3DTextLabelText();
 	PayDay();
 	vshop_SetVehiclesToRespawn();
+	airshop_SetVehiclesToRespawn();
+	bikeshop_SetVehiclesToRespawn();
 }

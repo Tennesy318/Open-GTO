@@ -44,7 +44,7 @@
 
 	/*
 
-		Fan commands
+		Fun commands
 
 	*/
 

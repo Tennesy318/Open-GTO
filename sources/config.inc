@@ -14,7 +14,7 @@
 
 #pragma dynamic 13000
 
-#define VERSION					"v1.1.10" // версия мода
+#define VERSION					"v0.4" // версия мода
 #define GTO_FILES_FORMAT		".gto" // расширение(.txt для операционных систем на базе GNU/Linux не рекомендуется)
 #define GTO_FILES_FOLDER		"Open-GTO/" // папка, где хранятся файлы Open-GTO, в scriptfiles/
 
@@ -80,11 +80,6 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 // прочее
 #define MAX_GULPS			3 // максимальное количество глотков из бутылки
 
-// поклажи
-#define SWAGUP_ENABLED		1 // включена-ли система поклаж
-#define SWAGUP_MONEY_RATE	30 // параметр количества денег, за поднятие поклажи
-#define SWAGUP_XP_RATE		30 // параметр количества опыта, за поднятие поклажи
-
 // лотерея
 #define LOTTERY_ENABLED		1 // включен-ли скрипт лотереи
 #define LOTTERY_TIME		10 // время розыгрыша, в минутах
@@ -95,7 +90,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 // skins
 #define SKINS_COST			0 // цена покупки скина
 #define SKINS_IGNORE		0, 74  // список игнорируемых скинов
-#define SKINS_MAXID			299
+#define SKINS_MAXID			311
 #define SKINS_MINID			1
 
 #define GROUNDHOLD_ENABLED		1 // точки прокачки
@@ -167,7 +162,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define MIN_GANG_NAME_LEN	3 // минимальная длина имени банды
 #define MAX_GANG_NAME_LEN	40 // максимальная длина имени банды
 
-#define MAX_GANG_MOTD_LEN	64 // максимальная длина объявления банды
+#define MAX_GANG_MOTD_LEN	128 // максимальная длина объявления банды
 
 #define GANG_CREATE_COST	500000 // кол-во денег, требуемое на создание банды
 #define GANG_COLOUR_COST	20000 // кол-во денег, требуемое на смены цвета банды
@@ -179,7 +174,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define MIN_HEALTH				35.0 // минимальное(стартовое) кол-во здоровья
 #define MAX_HEALTH				100.0 // максимальное кол-во здоровья
 #define HEALTH_TARIF			4.0	// степень увеличения максимального здоровья от лвл, формула: MIN_HEALTH + (GetPlayerLevel(playerid) * HEALTH_TARIF)
-#define HEALTH_REGEN_TARIF		0.4 // степень кол-ва востанавливаемого здоровья, формула: (GetPlayerLevel(id) * HEALTH_REGEN_TARIF)
+#define HEALTH_REGEN_TARIF		0.1 // степень кол-ва востанавливаемого здоровья, формула: (GetPlayerLevel(id) * HEALTH_REGEN_TARIF)
 
 #define CHANGE_NICK_COST			100000 // кол-во денег, требуемых для смены ника
 #define MIN_PLAYER_NAME				3
@@ -209,9 +204,8 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define FIRST_LEVEL				1 // уровень, который даётся игроку после регистрации
 #define PLAYER_START_MONEY		1500 // кол-во стартовых денег
 
-#define MAX_COUNTDOWN		4 // кол-во секунд для отсчёта гонок и дм
-#define KEY_USING			KEY_WALK // Кнопка 'Y' - отвечает за открытие диалогов(банк, покупка чегонибудь...), входов/выходов
-#define KEY_NAME			"Согласие - Y"
+#define KEY_USING			KEY_WALK
+#define KEY_NAME			"ALT"
 #define PICKUP_TEXT			"\n{33AA33}Нажмите кнопку '{FFFFFF}"KEY_NAME"{33AA33}'"
 #define CreatePickupText(%0,%1,%2,%3)	Create3DTextLabel(%0PICKUP_TEXT, 0xFFFFFFFF,%1,%2,%3, 20.0, 0, 1)
 //
@@ -237,7 +231,7 @@ enum {
 	SkinShop_Buy_DialogID,
 	trucker_DialogID, trucker_cancel_DialogID,
 	teleport_menu_DialogID,
-	vshop_DialogID,
+	vshop_DialogID, airshop_DialogID, bikeshop_DialogID,
 	captcha_DialogID,
 	pveh_select_DialogID, pveh_do_DialogID,
 }
