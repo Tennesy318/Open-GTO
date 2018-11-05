@@ -14,19 +14,11 @@ stock click_OnPlayerClickPlayer(playerid, clickedplayerid)
 	if (playerid == clickedplayerid) return show_menu(playerid);
 	SetPlayerClickedPlayerid(playerid,clickedplayerid);
 	new listitems[256]; // не менять!
-	listitems = "Отправить денег\nЛичное сообщение\nЖалоба";
-	if (IsPlayerMod(playerid)) strcat(listitems, "\nКикнуть\nЗаткнуть\nРазоткнуть\nВ тюрьму\nИз тюрьмы", sizeof(listitems));
-	if (IsPlayerAdm(playerid)) strcat(listitems, "\nИнфо\nУбить\nТелепорт к\nТелепортировать к себе\nЗадать здоровье\nЗадать броню\nДать опыт\nДать денег\nЗаморозить\nРазморозить\nNetStats", sizeof(listitems));
+	listitems = "Отправить денег\nЛичное сообщение\nЖалоба\nДуэль";
+	if (IsPlayerMod(playerid)) strcat(listitems, "\nКикнуть\nЗаткнуть\nРазоткнуть\nВ тюрьму\nИз тюрьмы\nИнфо\nУбить\nТелепорт к\nТелепортировать к себе", sizeof(listitems));
+	if (IsPlayerAdm(playerid)) strcat(listitems, "\nЗадать здоровье\nЗадать броню", sizeof(listitems));
 	ShowPlayerDialog(playerid,click_DialogID,DIALOG_STYLE_LIST,"Выберите действие",listitems," Выбрать"," Отмена");
 	return 1;
-}
-
-forward PlayerNetStatsShow(playerid,receiverid);
-public PlayerNetStatsShow(playerid,receiverid)
-{
-	new netstats_str[2048+1];
-	GetPlayerNetworkStats(receiverid,netstats_str, 2048);
-	ShowPlayerDialog(playerid,click_Resp_DialogID,DIALOG_STYLE_MSGBOX,"Player NetStats",netstats_str,"ОК","");
 }
 
 stock click_OnDialogResponse(playerid,dialogid,response,listitem,inputtext[])
@@ -222,64 +214,6 @@ stock click_OnDialogResponse(playerid,dialogid,response,listitem,inputtext[])
 			GuiHeader = " Задать броню";
 			GuiText =  " Введите значение\n\n";
 		}
-		if (listitem == 14)
-		{
-			GuiHeader = " Дать опыт";
-			GuiText =  " Введите значение\n\n";
-		}
-		if (listitem == 15)
-		{
-			GuiHeader = " Дать денег";
-			GuiText =  " Введите значение$$\n\n";
-		}
-		if (listitem == 16)
-		{
-			new receiverid = GetPlayerClickedPlayerid(playerid);
-			if (IsPlayerRconAdmin(receiverid) && !IsPlayerRconAdmin(playerid))
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][9]);
-			}
-			if (IsPlayerConnected(receiverid) == 0)
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][10]);
-			}
-			TogglePlayerControllable(receiverid,0);
-			new string[MAX_STRING];
-			format(string,sizeof(string), lang_texts[12][54] ,oGetPlayerName(playerid));
-			SendClientMessage(receiverid,COLOUR_XP_GOOD,string);
-			format(string,sizeof(string), lang_texts[12][55] ,oGetPlayerName(receiverid));
-			SendClientMessage(playerid,COLOUR_XP_GOOD,string);
-			return 1;
-		}
-		if (listitem == 17)
-		{
-			new receiverid = GetPlayerClickedPlayerid(playerid);
-			if (IsPlayerRconAdmin(receiverid) && !IsPlayerRconAdmin(playerid))
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][9]);
-			}
-			if (IsPlayerConnected(receiverid) == 0)
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][10]);
-			}
-			TogglePlayerControllable(receiverid,1);
-			new string[MAX_STRING];
-			format(string,sizeof(string), lang_texts[12][56] ,oGetPlayerName(playerid));
-			SendClientMessage(receiverid,COLOUR_XP_GOOD,string);
-			format(string,sizeof(string), lang_texts[12][57] ,oGetPlayerName(receiverid));
-			SendClientMessage(playerid,COLOUR_XP_GOOD,string);
-			return 1;
-		}
-		if (listitem == 18) // NetStats
-		{
-			new receiverid = GetPlayerClickedPlayerid(playerid);
-			PlayerNetStatsShow(playerid,receiverid);
-			SetPVarInt(playerid,
-				"NetStats_TimerID",
-				SetTimerEx("PlayerNetStatsShow",3000,1,"dd",playerid,receiverid)
-			);
-			return 1;
-		}
 		ShowPlayerDialog(playerid,click_Resp_DialogID,DIALOG_STYLE_INPUT,GuiHeader,GuiText,"Отправить","Отмена");
 	}
 	if (dialogid == click_Resp_DialogID)
@@ -445,82 +379,6 @@ stock click_OnDialogResponse(playerid,dialogid,response,listitem,inputtext[])
 			oSetPlayerArmour(receiverid, armamount);
 			return 1;
 		}
-		if (ListResponseType[playerid] == 14)
-		{
-			new receiverid = GetPlayerClickedPlayerid(playerid);
-			if (IsPlayerRconAdmin(receiverid) && !IsPlayerRconAdmin(playerid))
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][2]);
-			}
-			if (IsPlayerConnected(receiverid) == 0)
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][3]);
-			}
-			new xpamount = strval(inputtext);
-			if ((xpamount == 0) || (xpamount > MAX_XP))
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][4]);
-			}
-			new xpamountkeep = GetPlayerXP(receiverid)+xpamount;
-			if (xpamountkeep > MAX_XP)
-			{
-				SendClientMessage(playerid,COLOUR_RED,lang_texts[12][40]);
-				xpamount = xpamountkeep - MAX_XP;
-			}
-			SetPlayerXP(receiverid,GetPlayerXP(receiverid)+xpamount);
-			CheckPlayerLevel(receiverid);
-			new string[MAX_STRING];
-			if (xpamount > 0)
-			{
-				format(string,sizeof(string), lang_texts[12][5] ,oGetPlayerName(playerid),xpamount);
-				SendClientMessage(receiverid,COLOUR_XP_GOOD,string);
-				format(string,sizeof(string), lang_texts[12][6] ,oGetPlayerName(receiverid),xpamount,GetPlayerXP(receiverid));
-				SendClientMessage(playerid,COLOUR_XP_GOOD,string);
-			}
-			else
-			{
-				format(string,sizeof(string), lang_texts[12][7] ,oGetPlayerName(playerid),xpamount);
-				SendClientMessage(receiverid,COLOUR_XP_GOOD,string);
-				format(string,sizeof(string), lang_texts[12][8] ,oGetPlayerName(receiverid),xpamount,GetPlayerXP(receiverid));
-				SendClientMessage(playerid,COLOUR_XP_GOOD,string);
-			}
-			return 1;
-		}
-		if (ListResponseType[playerid] == 15)
-		{
-			new receiverid = GetPlayerClickedPlayerid(playerid);
-			if (IsPlayerRconAdmin(receiverid) && !IsPlayerRconAdmin(playerid))
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][9]);
-			}
-			if (IsPlayerConnected(receiverid) == 0)
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][10]);
-			}
-			new cashamount = strval(inputtext);
-			if ((cashamount < -999999) || (cashamount == 0) || (cashamount > 999999))
-			{
-				return SendClientMessage(playerid,COLOUR_RED,lang_texts[12][11]);
-			}
-			oGivePlayerMoney(receiverid,cashamount,1);
-			new string[MAX_STRING];
-			if (cashamount > 0)
-			{
-				format(string,sizeof(string), lang_texts[12][12] ,oGetPlayerName(playerid),cashamount);
-				SendClientMessage(receiverid,COLOUR_XP_GOOD,string);
-				format(string,sizeof(string), lang_texts[12][13] ,oGetPlayerName(receiverid),cashamount,oGetPlayerMoney(receiverid));
-				SendClientMessage(playerid,COLOUR_XP_GOOD,string);
-			}
-			else
-			{
-				format(string,sizeof(string), lang_texts[12][14] ,oGetPlayerName(playerid),cashamount);
-				SendClientMessage(receiverid,COLOUR_XP_GOOD,string);
-				format(string,sizeof(string), lang_texts[12][15] ,oGetPlayerName(receiverid),cashamount,oGetPlayerMoney(receiverid));
-				SendClientMessage(playerid,COLOUR_XP_GOOD,string);
-			}
-			return 1;
-		}
-
 	}
 	return 1;
 }

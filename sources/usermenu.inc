@@ -462,18 +462,18 @@ stock show_GangExitAccept_Dialog(playerid)
 
 stock show_Teleport_Menu(playerid)
 {
-	new string[MAX_NAME * sizeof(Teleports)];
+	new string[MAX_STRING * sizeof(Teleports)];
+	string = lang_texts[17][44];
 	
-	for (new i = 0; i < sizeof(Teleports); i++)
+	for (new i = 0; i < sizeof(Teleports); i++) 
 	{
-		strcat(string, Teleports[i][Teleports_Name], sizeof(string));
-		if (i != sizeof(Teleports) - 1)
-		{
-			strcat(string, "\n", sizeof(string));
-		}
+		format(string, sizeof(string),
+			lang_texts[17][45],
+			string, Teleports[i][Teleports_Name], Teleports[i][Teleports_Cost]
+		);
 	}
 	
-	return ShowPlayerDialog(playerid, teleport_menu_DialogID, DIALOG_STYLE_LIST,
+	return ShowPlayerDialog(playerid, teleport_menu_DialogID, DIALOG_STYLE_TABLIST_HEADERS,
 		"Меню телепортов",
 		string,
 		"ОК", "Назад"
@@ -1356,15 +1356,19 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 				format(string, sizeof(string), "Недостаточно денег, нужно $%d.", Teleports[listitem][Teleports_Cost]);
 				show_User_Menu_Dialog(playerid, "Меню телепортов", string);
 				return 0;
-			}
-			
+			}				
 			SetPVarInt(playerid, "teleports_Pause", 1);
 			SetTimerEx("teleports_Pause_Time", TELEPORTS_PAUSE_TIME * 1000, 0, "d", playerid);
 			oGivePlayerMoney(playerid, -Teleports[listitem][Teleports_Cost], 1);
-			SetPlayerPosEx(playerid,
-				Teleports[listitem][Teleports_Pos_X], Teleports[listitem][Teleports_Pos_Y], Teleports[listitem][Teleports_Pos_Z], Teleports[listitem][Teleports_Pos_A],
-				Teleports[listitem][Teleports_Interior], 0
-			);
+			SetPlayerPosEx(playerid, Teleports[listitem][Teleports_Pos_X], Teleports[listitem][Teleports_Pos_Y], Teleports[listitem][Teleports_Pos_Z], Teleports[listitem][Teleports_Pos_A], Teleports[listitem][Teleports_Interior], 0);
+			return 1;
+		}
+		case teleport_DialogID:
+		{
+			if (!response)
+			{
+				return 0;
+			}	
 			return 1;
 		}
 		case pveh_select_DialogID:
@@ -1389,9 +1393,11 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 						return 0;
 					}
 					new Float:pos[4];
+					new playercar;
 					GetPlayerPos(playerid, pos[0], pos[1], pos[2]);
 					GetPlayerFacingAngle(playerid, pos[3]);
-					CreatePlayerVehicle(playerid, GetPVarInt(playerid, "pveh_Slot"), pos[0]+1, pos[1]+1, pos[2], pos[3]);
+					playercar = CreatePlayerVehicle(playerid, GetPVarInt(playerid, "pveh_Slot"), pos[0]+1, pos[1]+1, pos[2], pos[3]);
+					SetVehicleNumberPlate(playercar, oGetPlayerName(playerid));
 					DeletePVar(playerid, "pveh_Slot");
 					return 1;
 				}

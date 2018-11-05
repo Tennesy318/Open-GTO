@@ -14,14 +14,6 @@
 #define _skinshop_included
 #pragma library skinshop
 
-
-new SkinShops[][CoordInfo] = {
-	{207.6596, -100.7878, 1005.2578},
-	{161.5244, -83.5924, 1001.8047},
-	{206.8538, -129.5790, 1003.5078},
-	{203.9252, -43.7523, 1001.8047}
-};
-
 stock ss_OnGameModeInit()
 {
 	for (new id = 0; id < sizeof(SkinShops); id++)

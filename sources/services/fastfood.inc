@@ -10,27 +10,6 @@
 #define _fastfood_included
 #pragma library fastfood
 
-
-new FastFoods[][CoordInfo] = {
-	{373.4858, -119.4608, 1001.4922}, // LS pizza
-	{377.4426, -67.5379, 1001.5078}, // LS burger
-	{369.3667, -6.3469, 1001.8516}, // LS chicken
-	{-784.5101,505.0186,1371.7422} // Liberty City Restoran
-};
-
-enum FoodInfo {
-	food_name[MAX_NAME],
-	food_cost,
-	Float:food_hp
-}
-new Food[][FoodInfo] = {
-	{"√нилой корень", 10, 10.0},
-	{"ѕеченьки с молоком", 15, 25.0},
-	{"ѕетрушка с хреном", 25, 50.0},
-	{"ƒва €йца всм€тку", 35, 80.0},
-	{"јмлет с колбасой", 45, 100.0}
-};
-
 stock fastfood_OnGameModeInit()
 {
 	for (new ff_id = 0; ff_id < sizeof(FastFoods); ff_id++)

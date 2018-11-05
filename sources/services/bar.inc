@@ -10,33 +10,6 @@
 #define _bar_included
 #pragma library bar
 
-
-new Bars[][CoordInfo] = {
-	{495.3609, -76.0381, 998.7578}, // green bar
-	{681.5761, -453.8308, -25.6172}, // Welcome Pump(Dillimore)
-	{-2654.0112, 1413.2083, 906.2771}, // Jizzy's
-	{1955.3743, 1017.9493, 992.4688}, // 4 Dragons Casino
-	{1139.7212, -4.2430, 1000.6719}, // Redsands Casino
-	{-224.7835, 1407.4834, 27.7734}, // Lil' Probe Inn
-	{499.4490, -16.8206, 1000.6719}, // Alhambra Club
-	{-785.9133, 500.1498, 1371.7422} // Liberty City Restoran
-};
-
-enum DrinkInfo {
-	Name[MAX_NAME],
-	Cost,
-	Float:Hp,
-	Float:Alcohol,
-	Action,
-}
-new Drinks[][DrinkInfo] = {
-	{"Водка Зелёная марка", 100, 30.0, 40.0, SPECIAL_ACTION_DRINK_SPRUNK},
-	{"Пиво Жигулёвское", 30, 10.0, 4.5, SPECIAL_ACTION_DRINK_BEER},
-	{"Глинтвейн", 30, 10.0, 10.0, SPECIAL_ACTION_DRINK_WINE},
-	{"Чай с лимоном и сахаром", 15, 10.0, -20.0, SPECIAL_ACTION_DRINK_SPRUNK},
-	{"Крепкая папироса", 15, 5.0, 2.0, SPECIAL_ACTION_SMOKE_CIGGY}
-};
-
 stock bar_OnGameModeInit()
 {
 	for (new b_id = 0; b_id < sizeof(Bars); b_id++)

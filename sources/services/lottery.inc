@@ -73,7 +73,7 @@ stock lottery_OnPlayerCommandText(playerid, text[])
 		tmp = strcharsplit(text, idx, ' ');
 		new value = strval(tmp);
 		
-		if (strlen(tmp) == 0 || value < 1 || value > 100)
+		if (strlen(tmp) == 0 || value < 1 || value > 20)
 		{
 			return SendClientMessage(playerid, COLOUR_PM, lang_texts[17][32]);
 		}
@@ -114,7 +114,7 @@ public lottery_Timer()
 	}
 	KillTimer(lottery_timer);
 	LotteryCount = -1;
-	new win_value = mathrandom(1, 100),
+	new win_value = mathrandom(1, 20),
 		winner = 0;
 	
 	foreach (Player, playerid)

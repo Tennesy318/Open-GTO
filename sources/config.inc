@@ -32,11 +32,11 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define SERVER_REAL_TIME			1 // мировое время соответствует текущему времени сервера
 #define SERVER_REAL_TIME_OFFSET		0 // смещение времени относительно сервера
 
-#define MAX_PLAYER_LOGIN_ATTEMPT	3 // максимальное количество попыток входа
+#define MAX_PLAYER_LOGIN_ATTEMPT	5 // максимальное количество попыток входа
 
-#define MAX_MONEY				99999999 // максимальное кол-во денег, которое может иметь игрок
-#define MIN_SEND_SYMBOLS		3 // минимальное кол-во отправляемых символов в ПМ
-#define MAX_SEND_SYMBOLS		100 // максимальное кол-во отправляемых символов в ПМ
+#define MAX_MONEY				500000000 // максимальное кол-во денег, которое может иметь игрок
+#define MIN_SEND_SYMBOLS		2 // минимальное кол-во отправляемых символов в ПМ
+#define MAX_SEND_SYMBOLS		128 // максимальное кол-во отправляемых символов в ПМ
 
 #define INVALID_QUEST_ID		0
 #define MAX_QUESTS				255
@@ -58,7 +58,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define MAXIMAL_PING				500 // пинг, при котором кикает
 
 #define ANTI_IDLE_ENABLED			1 // защита от АФК на точках прокачки
-#define MAX_IDLE_TIME				5 // кол-во минут, после которых кикает
+#define MAX_IDLE_TIME				2 // кол-во минут, после которых кикает
 
 #define CHAT_GUARD_ENABLED			1 // защита чата
 #define ANTI_JETPACK_ENABLED		1 // защита от использования JetPack
@@ -74,17 +74,17 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 // QuidemSys - спидометр и бензин
 #define QUIDEMSYS_ENABLED		1
 #define QUIDEMSYS_TD_FONT		2 // используемый id шрифта в текстдраве
-#define QUIDEMSYS_FUEL_SPEED	2 // количество бензина, заправляемого за 1 секунду
-#define QUIDEMSYS_FUEL_TARIF	10 // цена одного литра бензина, в долларах
+#define QUIDEMSYS_FUEL_SPEED	1 // количество бензина, заправляемого за 1 секунду
+#define QUIDEMSYS_FUEL_TARIF	3000 // цена одного литра бензина, в долларах
 
 // прочее
-#define MAX_GULPS			3 // максимальное количество глотков из бутылки
+#define MAX_GULPS			5 // максимальное количество глотков из бутылки
 
 // лотерея
 #define LOTTERY_ENABLED		1 // включен-ли скрипт лотереи
 #define LOTTERY_TIME		10 // время розыгрыша, в минутах
-#define LOTTERY_WIN_MONEY	200000 // количество денег победителю в лотерее
-#define LOTTERY_WIN_XP 		1000 // Количество xp победителю в лотерее
+#define LOTTERY_WIN_MONEY	1000000 // количество денег победителю в лотерее
+#define LOTTERY_WIN_XP 		50000 // Количество xp победителю в лотерее
 #define LOTTERY_TICKET_COST	5000 // цена лотерейного билета
 
 // skins
@@ -99,15 +99,15 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define BANK_PROFIT			2 // процент начисления прибыли за хранение в банке
 #define MAX_BANK_MONEY		1000000000 // максимальное количество денег, которых можно хранить в банке
 
-#define PAYDAY_BASE_PAY		25 // PayDay тариф на деньги
+#define PAYDAY_BASE_PAY		35 // PayDay тариф на деньги
 #define PAYDAY_CUTOFF		MAX_MONEY / 2 // кол-во денег, при котором перестаётся даваться деньги за PayDay
-#define	PAYDAY_PAYXP		200 // PayDay тариф на опыт
+#define	PAYDAY_PAYXP		300 // PayDay тариф на опыт
 
 #define CHAT_SHOW_ID		"(%d)" // вид отображения ида в чате
 
 #define WEAPON_SKILL_ENABLED	1 // включить прокачку оружия (если выключено, то оружие на максимуме)
-#define WEAPON_SKILL_SPEED		10 // количество даваемого скилла за одно убийство
-#define WEAPON_DROP_ENABLED		1 // включить выпадание оружия
+#define WEAPON_SKILL_SPEED		50 // количество даваемого скилла за одно убийство
+#define WEAPON_DROP_ENABLED		0 // включить выпадание оружия
 #define WEAPON_DROP_TIME		10 // время, после которого удалятся пикапы, выпавшие из игрока, в секундах
 #define WEAPON_DROP_BULL		20 // столько процентов количества патрон выпадет из игрока
 #define MAX_DROPPED_WEAPONS		64 // максимальное количество выпавшего оружия единовременно(у всех игроков)
@@ -130,10 +130,10 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 
 // дома
 #define MAX_PLAYER_HOUSES		3 // количество домов, которые может иметь игрок(много ставить не рекомендуется)
-#define HOUSE_UPGRADE_ARMOUR_COST 100000
-#define HOUSE_UPGRADE_HEALTH_COST 100000
+#define HOUSE_UPGRADE_ARMOUR_COST 1000000
+#define HOUSE_UPGRADE_HEALTH_COST 1000000
 //#define BUY_ALL_HOUSES // позволяет запретить покупать чужие дома(если закомментировано то чужие дома нельзя покупать)
-#define HOUSE_UNLOGIN_SELL_DAYS		14 // количество дней, через которое дом будет продан, если игрок не входил в игру
+#define HOUSE_UNLOGIN_SELL_DAYS		7 // количество дней, через которое дом будет продан, если игрок не входил в игру
 //
 
 // бизнесы
@@ -141,7 +141,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define MAX_BUSINESS_LEVEL		30 // максимальный уровень поднятия бизнеса
 #define UPGRADE_TARIF			10 // тариф денег на повышение уровня, формула: (Businesses[id][Business_Upgrade]+1) * Businesses[id][Business_Value] * UPGRADE_TARIF
 //#define BUY_ALL_BUSINESS // позволяет запретить покупать чужие бизнесы(если закомментировано то чужие бизнесы нельзя покупать)
-#define BUSINESS_UNLOGIN_SELL_DAYS	14 // количество дней, через которое бизнес будет продан, если игрок не входил в игру
+#define BUSINESS_UNLOGIN_SELL_DAYS	5 // количество дней, через которое бизнес будет продан, если игрок не входил в игру
 //
 
 // транспорт
@@ -152,14 +152,14 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define VEHICLE_LIGHTS_ON_TIME		16 // время(часов), когда фары транспорта будут автоматически включаться
 #define VEHICLE_LIGHTS_OFF_TIME		7 // время(часов), когда фары транспорта будут автоматически выключаться
 //
-#define MAX_PLAYER_VEHICLES			4 // максимальное количество личного транспорта
-#define VEHSHOP_CAR_CHANGE_TIME		3 // количество часов, через которое транспорт в магазине меняется
+#define MAX_PLAYER_VEHICLES			7 // максимальное количество личного транспорта
+#define VEHSHOP_CAR_CHANGE_TIME		1 // количество часов, через которое транспорт в магазине меняется
 
 // банды
 #define MAX_GANGS			MAX_PLAYERS // максимум банд онлайн
-#define MAX_GANG_SIZE		12 // максимальное кол-во людей в банде
+#define MAX_GANG_SIZE		11 // максимальное кол-во людей в банде
 
-#define MIN_GANG_NAME_LEN	3 // минимальная длина имени банды
+#define MIN_GANG_NAME_LEN	2 // минимальная длина имени банды
 #define MAX_GANG_NAME_LEN	40 // максимальная длина имени банды
 
 #define MAX_GANG_MOTD_LEN	128 // максимальная длина объявления банды
@@ -167,7 +167,7 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 #define GANG_CREATE_COST	500000 // кол-во денег, требуемое на создание банды
 #define GANG_COLOUR_COST	20000 // кол-во денег, требуемое на смены цвета банды
 
-#define MAX_GANG_BANK		2000000000 // максимальное количество денег, которых можно хранить в банке банды
+#define MAX_GANG_BANK		500000000 // максимальное количество денег, которых можно хранить в банке банды
 //
 
 // игрок
@@ -184,25 +184,25 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 // МИССИИ
 	// trucker
 	#define TRUCKER_ENABLED					1
-	#define TRUCKER_XP_RATE					20 // кол-во опыта за завоз, формула: ( (GetPlayerLevel(playerid)+1) * 2 )^2 * trucker_GIVE_XP_RATE
+	#define TRUCKER_XP_RATE					25 // кол-во опыта за завоз, формула: ( (GetPlayerLevel(playerid)+1) * 2 )^2 * trucker_GIVE_XP_RATE
 	#define TRUCKER_MONEY_RATE				10
 	#define TRUCKER_MONEY_PENALTY			2000 // кол-во денег забираемых при невыполнении договора
 	#define TRUCKER_TIME_GET_TRAILER		120 // кол-во секунд, дающихся на прицепление фуры к тягачу
 	#define TRUCKER_MISSION_TRY_COUNT		2 // кол-во проходений и использований миссий до перерыва
 	#define TRUCKER_MISSION_TIME			480 // время дающееся на прохождение миссии
 	#define TRUCKER_RUNNER_MISSION_TIME		300 // время перерыва между миссиями, в секундах
-	#define TRUCKER_CAR_SPAWN_TIME			300
+	#define TRUCKER_CAR_SPAWN_TIME			30
 	//
 
 //
 // при смерти
-#define PLAYER_XP_DEATH_MINUS_PROC		3 // сколько процентов XP убирается от уже имеющегося опыта
-#define PLAYER_MONEY_DEATH_MINUS_PROC	20 // сколько процентов денег убирается
-#define PLAYER_XP_KILL_TARIF			5 // отвечает за количество получаемого опыта при убийстве, подробнее в функции player_OnPlayerKill
+#define PLAYER_XP_DEATH_MINUS_PROC		1 // сколько процентов XP убирается от уже имеющегося опыта
+#define PLAYER_MONEY_DEATH_MINUS_PROC	25 // сколько процентов денег убирается
+#define PLAYER_XP_KILL_TARIF			15 // отвечает за количество получаемого опыта при убийстве, подробнее в функции player_OnPlayerKill
 
 // стартовые параметры игрока
 #define FIRST_LEVEL				1 // уровень, который даётся игроку после регистрации
-#define PLAYER_START_MONEY		1500 // кол-во стартовых денег
+#define PLAYER_START_MONEY		100 // кол-во стартовых денег
 
 #define KEY_USING			KEY_WALK
 #define KEY_NAME			"ALT"
@@ -230,7 +230,7 @@ enum {
 	fastfood_DialogID,
 	SkinShop_Buy_DialogID,
 	trucker_DialogID, trucker_cancel_DialogID,
-	teleport_menu_DialogID,
+	teleport_menu_DialogID, teleport_DialogID,
 	vshop_DialogID, airshop_DialogID, bikeshop_DialogID,
 	captcha_DialogID,
 	pveh_select_DialogID, pveh_do_DialogID,

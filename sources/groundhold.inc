@@ -16,25 +16,6 @@
 #include "player"
 #include "world"
 
-enum gh_info {
-	gh_id,
-	gh_name[MAX_NAME], // name of ground
-	gh_money, // base amount of money recieved for holding this ground
-	gh_xp, // base amount of xp recieved for holding this ground
-	gh_multi, // max multiplyer of base
-	gh_dist, // distance from checkpoint player can be to still receive pay
-	Float:gh_x,
-	Float:gh_y,
-	Float:gh_z
-}
-
-new Groundhold_Enabled = GROUNDHOLD_ENABLED;
-new Groundholds[][gh_info] = {
-	//      Name,     pay, xp, multi, dist, x, y, z
-	{0, "Заброшеный склад",	6,	18, 50,	30,	-2146.9585,-217.1571, 35.3203},
-	{1, "Автомагазин",		10,	30, 20,	30,	1221.3528,-1814.8983, 16.5938},
-	{2, "Домик в деревне",	10,	30, 10,	30,	-687.9928, 948.6489, 12.1502}
-};
 new PlayerGroundHoldTime[ sizeof(Groundholds) ][MAX_PLAYERS];
 new PlayerHoldingGround[ sizeof(Groundholds) ][MAX_PLAYERS];
 

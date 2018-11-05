@@ -16,11 +16,6 @@
 new ProfitCount = BANK_PROFIT, 
 	MAX_BANK = MAX_BANK_MONEY;
 
-new Banks[][CoordInfo] = {
-	{-22.9578, -54.8951, 1003.5469}, // LV 24/7 bank
-	{-27.0310, -89.5228, 1003.5469} // 24/7 bank
-};
-
 stock BankLoadConfig()
 {
 	if (!ini_Exist(ConfigDB)) return 0;

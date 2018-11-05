@@ -1,48 +1,6 @@
-/*
-    CHAT GUARD
-
-    автор:  MX_Master
-    версия: 0.1
-
-    описание:
-        Это фильтрскрипт для мультиплеера SA-MP, который следит за порядком
-        в игровом чате. Он отлавливает неправильные сообщения или имена
-        игроков.
-
-        Неправильные сообщения не отображаются в общем чате.
-        Сообщения игроков с неправильными именами, также не видны в общем чате.
-
-        ФС запрещает писать в общем чате:
-            - IP адреса
-            - домены или имена сайтов
-            - сообщения, злоупотребляющие верхним регистром букв
-            - попытки ввода команд чата в другой раскладке клавы
-            - одинаковые или похожие сообщения подряд
-            - пустые сообщения или сообщения только с пробельными символами
-            - если имя игрока содержит IP адрес / домен
-            - слишком частые сообщения (флуд)
-*/
-/*
-	Адаптация для Open-GTO: ZiGGi, 05.05.2011
-*/
-
 new ChatGuardEnabled = CHAT_GUARD_ENABLED;
 
-/*
-chatguard_OnGameModeInit();
-chatguard_OnPlayerConnect(playerid);
-chatguard_OnPlayerDisconnect(playerid,reason);
-chatguard_OnPlayerText(playerid,text);
-
-*/
-
 #define SPACE_CHARS ' ', '\t', '\r', '\n'
-
-/*
-    Обрежет по обоим краям строки все пробельные символы.
------------
-    Ничего не возвращает.
-*/
 
 stock trimSideSpaces ( string[] )
 {
@@ -75,23 +33,7 @@ stock trimSideSpaces ( string[] )
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 #define cells *4
-
-/*
-    Заменяет группы пробельных символов на единичные пробелы
------------
-    Ничего не возвращает
-*/
 
 stock spaceGroupsToSpaces ( string[] )
 {
@@ -131,23 +73,6 @@ stock spaceGroupsToSpaces ( string[] )
 
 #undef SPACE_CHARS
 
-
-
-
-
-
-
-
-
-
-
-/*
-    Вернет 1, если строка содержит любой реальный IP адрес,
-    или более 3 групп чисел, разделенных любыми другими символами.
-------------
-    Иначе, вернет 0.
-*/
-
 stock containsAnyIP ( string[] )
 {
     new digits, digitGroups;
@@ -175,17 +100,6 @@ stock containsAnyIP ( string[] )
     return 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-// список запрещенных доменов 1 уровня
 stock forbiddenDomain[][] =
 {
     ".net", ".nеt",
@@ -224,17 +138,6 @@ stock containsDomainName ( string[] )
     return 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-// список флагов для каждого игрока
 stock forbiddenName [ MAX_PLAYERS char ];
 
 /*
@@ -266,23 +169,6 @@ stock playerHasForbiddenName ( playerid )
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-/*
-    Вернет 1, если строка является неудачной попыткой ввода какой-то команды чата.
-    Такое бывает при вводе текста команды не в той раскладке.
--------------
-    Иначе вернет 0.
-*/
-
 #define INCORRECT_CMD_CHARS '.', '?'
 
 stock incorrectCmdAttempt ( string[] )
@@ -303,19 +189,8 @@ stock incorrectCmdAttempt ( string[] )
 
 #undef INCORRECT_CMD_CHARS
 
-
-
-
-
-
-
-
-
-
-
 #define CHAT_STR_SIZE           128 // макс кол-во символов в сообщении чата
 #define CHAT_HISTORY_SIZE       20 // кол-во сохраненных сообщений чата
-#define DUBLPOSTS_SIMILARITY    0 // допустимый % похожести, идущих подряд, сообщений игрока
 #define MAX_MESSAGES_PER_TIME   3 // максимум сообщений за, указанную ниже, единицу времени
 #define MAX_MESSAGES_TIME       3000 // мс. За указанное время должно быть не более MAX_FAST_MESSAGES сообщений игрока
 
@@ -375,50 +250,6 @@ stock sparam
 }
 
 /*
-    Вернет 1, если предыдущее сообщение игрока такое же как текущее,
-    или текущее сообщение похоже на предыдущее на DUBLPOSTS_SIMILARITY процентов.
-------------
-    Иначе вернет 0.
-*/
-
-stock sameTextAsLastBefore ( playerid, text[] )
-{
-    // найдем предыдущее сообщение игрока в истории чата
-    new m;
-
-    for ( ; m < CHAT_HISTORY_SIZE; m++ )
-        if ( ms[m][chPosterID] == playerid ) break;
-
-    if ( m >= CHAT_HISTORY_SIZE ) return 0;
-
-
-    // узнаем, сколько в строке пробелов
-    new words = 1, w = strfind( text, " ", false, 0 );
-    while ( w >= 0 )
-    {
-        words++;
-        w = strfind( text, " ", false, w + 1 );
-    }
-
-
-    // узнаем, кол-во одинаковых символов во всех словах обеих строк
-    new word[2][CHAT_STR_SIZE], sameChars, c;
-    for ( w = 0; w < words; w++ )
-    {
-        sparam( word[0], CHAT_STR_SIZE, text,          ' ', w );
-        sparam( word[1], CHAT_STR_SIZE, ms[m][chText], ' ', w );
-
-        for ( c = 0; word[0][c] != 0; c++ )
-            if ( toupper( word[0][c] ) == toupper( word[1][c] ) ) sameChars++;
-    }
-
-    if ( float(sameChars) / float( strlen(ms[m][chText]) ) * 100.0 > DUBLPOSTS_SIMILARITY.0 ) return 1;
-
-
-    return 0;
-}
-
-/*
     Обновит историю сообщений чата
 ----------
     Ничего не вернет.
@@ -458,7 +289,6 @@ stock tooManyMessagesForShortTime ( playerid, lastMsTick )
 
 #undef cells
 #undef CHAT_STR_SIZE
-#undef DUBLPOSTS_SIMILARITY
 #undef MAX_MESSAGES_PER_TIME
 #undef MAX_MESSAGES_TIME
 
@@ -618,13 +448,6 @@ stock chatguard_OnPlayerText ( playerid, text[] )
     if ( tooManyMessagesForShortTime( playerid, msgTick ) )
     {
         SendClientMessage( playerid, WARN_MS_COLOR, lang_texts[11][13] );
-        return 0;
-    }
-
-    // нельзя писать похожие сообщения подряд
-    if ( sameTextAsLastBefore( playerid, text ) )
-    {
-        SendClientMessage( playerid, WARN_MS_COLOR, lang_texts[11][14] );
         return 0;
     }
 

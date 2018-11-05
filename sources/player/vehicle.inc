@@ -221,10 +221,13 @@ stock GetPlayerVehicleMaximumCount(playerid)
 {
 	switch (GetPlayerLevel(playerid))
 	{
-		case 0..29: return 1;
-		case 30..54: return 2;
-		case 55..59: return 3;
-		case 60: return 4;
+		case 0..10: return 1;
+		case 11..20: return 2;
+		case 21..30: return 3;
+		case 31..40: return 4;
+		case 41..50: return 5;
+		case 51..59: return 6;
+		case 60: return 7;
 	}
 	return MAX_PLAYER_VEHICLES;
 }
