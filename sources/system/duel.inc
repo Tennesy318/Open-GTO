@@ -95,8 +95,8 @@ stock duel_OnDialogResponse(playerid, dialogid, response)
 			SetPlayerHealth(duel1, 100),SetPlayerHealth(duel2, 100);
 			SetPlayerArmour(duel1, 100),SetPlayerArmour(duel2, 100);
 			InDuel[duel1] = 1,InDuel[duel2] = 1;
-			GivePlayerMoney(duel1, -Duel_money[playerid]);
-			GivePlayerMoney(duel2, -Duel_money[playerid]);
+			oGivePlayerMoney(duel1, -Duel_money[playerid]);
+			oGivePlayerMoney(duel2, -Duel_money[playerid]);
 			TogglePlayerControllable(duel1, false);
 			TogglePlayerControllable(duel2, false);
 			SetPlayerPos(duel1, 1390.1539,2107.4912,11.0156);//телепортирует
@@ -155,7 +155,7 @@ stock duel_OnPlayerDeath(playerid, killerid)
     if(InDuel[playerid] == 1 && InDuel[killerid] == 1)
     {
         new str[128];
-        GivePlayerMoney(killerid, 2*Duel_money[playerid]);
+        oGivePlayerMoney(killerid, 2*Duel_money[playerid]);
         format(str, sizeof(str), "{ff0000}[Дуэль]: Ты выйграл у %s(%d) сумму $%d", PlayerName(playerid), killerid, Duel_money[playerid]);
         SendClientMessage(killerid, -1, str);
         InDuel[playerid] = 0;
