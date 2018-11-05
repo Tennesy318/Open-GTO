@@ -81,6 +81,7 @@
 #include "system/spec"
 #include "system/afkcount"
 #include "system/announce"
+#include "system/duel"
 
 //cmd
 #include "cmd/moder"
@@ -122,6 +123,7 @@ public OnGameModeInit()
 	bikeshop_OnGameModeInit();
 	// system
 	afkcount_OnGameModeInit();
+	duel_OnGameModeInit();
 	//
 	level_OnGameModeInit();
 	antiidle_OnGameModeInit();
@@ -285,6 +287,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			captcha_OnDialogResponse(playerid, dialogid, response, inputtext);
 		}
+		case duel_DialogID:
+		{
+			duel_OnDialogResponse(playerid, dialogid, response);
+		}
 	}
 	return 1;
 }
@@ -338,9 +344,8 @@ public OnPlayerDeath(playerid, killerid, reason)
 	level_HideTextDraws(playerid);
 	PlayCrimeReportForPlayer(killerid, killerid, random(18)+3);
 	PlayCrimeReportForPlayer(playerid, killerid, random(18)+3);
-
-	// spec system
 	spec_OnPlayerDeath(playerid);
+	duel_OnPlayerDeath(playerid, killerid);
 	return 1;
 }
 
@@ -752,5 +757,6 @@ public OnEnterExitModShop(playerid, enterexit, interiorid)
 public OnPlayerClickTextDraw(playerid, Text:clickedid)
 {
 	spec_OnPlayerClickTextDraw(playerid, Text:clickedid);
+	duel_OnPlayerClickTextDraw(playerid, Text:clickedid);
     return 0;
 }

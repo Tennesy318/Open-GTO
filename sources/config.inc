@@ -232,7 +232,7 @@ enum {
 	trucker_DialogID, trucker_cancel_DialogID,
 	teleport_menu_DialogID, teleport_DialogID,
 	vshop_DialogID, airshop_DialogID, bikeshop_DialogID,
-	captcha_DialogID,
+	captcha_DialogID, duel_DialogID,
 	pveh_select_DialogID, pveh_do_DialogID,
 }
 
