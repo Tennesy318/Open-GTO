@@ -230,6 +230,7 @@ enum {
 	fastfood_DialogID,
 	SkinShop_Buy_DialogID,
 	trucker_DialogID, trucker_cancel_DialogID,
+	cargo_DialogID,
 	teleport_menu_DialogID, teleport_DialogID,
 	vshop_DialogID, airshop_DialogID, bikeshop_DialogID,
 	captcha_DialogID, duel_DialogID,

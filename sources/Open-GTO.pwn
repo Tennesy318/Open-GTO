@@ -48,6 +48,7 @@
 #include "admin/mod_commands"
 #include "missions"
 #include "missions/trucker"
+#include "missions/cargo"
 #include "click"
 // services
 #include "services/fastfood"
@@ -114,6 +115,7 @@ public OnGameModeInit()
 	// missions
 	mission_OnGameModeInit();
 	trucker_OnGameModeInit();
+	cargo_OnGameModeInit();
 	// services
 	fastfood_OnGameModeInit();
 	bar_OnGameModeInit();
@@ -291,6 +293,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
 			duel_OnDialogResponse(playerid, dialogid, response);
 		}
+		case cargo_DialogID:
+		{
+			cargo_OnDialogResponse(playerid, dialogid, response);
+		}
 	}
 	return 1;
 }
@@ -308,6 +314,7 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	awh_OnPlayerPickUpPickup(playerid, pickupid);
 	vip_OnPlayerPickUpPickup(playerid, pickupid);
 	health_OnPlayerPickUpPickup(playerid, pickupid);
+	cargo_OnPlayerPickUpPickup(playerid, pickupid);
 	return 1;
 }
 
@@ -319,6 +326,7 @@ public OnPlayerEnterCheckpoint(playerid)
 
 public OnPlayerEnterRaceCheckpoint(playerid)
 {
+	cargo_OnPlayerEnterRaceCheckpoint(playerid);
 	return 1;
 }
 
