@@ -77,6 +77,8 @@ stock cargo_OnDialogResponse(playerid, dialogid, response)
 				GruzRab[playerid] = 0;
 				SetPlayerSkin(playerid, GruzSkinRab[playerid]); // вот как раз такие и возвращение скина.
 				DisablePlayerRaceCheckpoint(playerid);
+				RemovePlayerAttachedObject(playerid, 2); // удаление объекта
+				SetPlayerSpecialAction (playerid, SPECIAL_ACTION_NONE); // убратие функции специальной (выше писал)
 				SendClientMessage(playerid, COLOUR_GREEN, "Вы уволились с работы!");
 			}
 		}
