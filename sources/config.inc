@@ -192,7 +192,8 @@ new ENCRYPTION_KEY[] = "_C)2^K¬RPXjwE8b\\p{Df+=Q3(O*vgu9ZH[!1\"Le0->?/hSF<'xVzm]
 	#define TRUCKER_MISSION_TIME			480 // время дающееся на прохождение миссии
 	#define TRUCKER_RUNNER_MISSION_TIME		300 // время перерыва между миссиями, в секундах
 	#define TRUCKER_CAR_SPAWN_TIME			30
-	//
+	// cargo
+	#define CARGO_MONEY		10000
 
 //
 // при смерти
