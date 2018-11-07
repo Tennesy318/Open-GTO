@@ -47,7 +47,9 @@ stock health_OnPlayerPickUpPickup(playerid, pickupid)
 	}
 	else if (GetPickupModel(pickupid) == 11736)
 	{
-		oSetPlayerHealth(playerid,50);
+		new Float:clienthealth;
+		GetPlayerHealth(playerid,clienthealth);
+		oSetPlayerHealth(playerid,clienthealth+50);
 	}
 	return 1;
 }
