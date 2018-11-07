@@ -165,6 +165,7 @@ new Float:LVDMPlayerSpawns[23][CoordInfo] = {
 	{1705.2347, 1025.6808, 10.8203}
 };
 
+new Text:AntiDMText;
 stock PlayerLoadConfig()
 {
 	if (!ini_Exist(ConfigDB)) return 0;
@@ -284,6 +285,18 @@ stock player_OnPlayerDisconnect(playerid, reason)
 	SendDeathMessage(INVALID_PLAYER_ID, playerid, 201);
 }
 
+stock player_OnPlayerUpdate(playerid)
+{
+	if(IsPlayerInRangeOfPoint(playerid, 70, 2039.3116, -2526.5325, 290.0793))
+	{
+    	TextDrawShowForPlayer(playerid, AntiDMText);
+	}
+	else
+	{
+	    TextDrawHideForPlayer(playerid, AntiDMText);
+	}
+	return 1;
+}
 stock player_OnPlayerConnect(playerid)
 {
     new plrIP[MAX_IP], string[MAX_STRING];
@@ -299,6 +312,14 @@ stock player_OnPlayerConnect(playerid)
 	SetPlayerColor(playerid, COLOUR_PLAYER);
 	oBan_Check(playerid);
 	
+	AntiDMText = TextDrawCreate(26 ,322, "~r~no_xp_zone*");
+    TextDrawBackgroundColor(AntiDMText, 255);
+    TextDrawFont(AntiDMText, 3);
+    TextDrawLetterSize(AntiDMText, 0.500000, 0.900000);
+    TextDrawColor(AntiDMText, -1);
+    TextDrawSetProportional(AntiDMText, 2);
+    TextDrawSetOutline(AntiDMText, 1);
+    TextDrawSetProportional(AntiDMText, 1);
 	format(string, sizeof(string), lang_texts[15][85], VERSION);
 	GameTextForPlayer(playerid, string, 5500, 1);
 	SendClientMessage(playerid, COLOUR_LIGHTRED, lang_texts[15][86]);
@@ -322,6 +343,16 @@ stock player_OnPlayerDeath(playerid, killerid, reason)
 
 stock player_OnPlayerKill(killerid, victimid, reason) // earn xp, kills++
 {
+	if(IsPlayerInRangeOfPoint(killerid, 5, 265.1273, 77.6823, 1001.0391))
+	{
+		return ;
+	}
+	
+	if(IsPlayerInRangeOfPoint(killerid, 30, 2039.3116, -2526.5325, 290.0793))
+	{
+		return ;
+	}
+	
 	if (GetPVarInt(killerid, "GangID") != 0)
 	{
 		if (GangKill(GetPVarInt(killerid, "GangID"), killerid, victimid, reason) == 1)

@@ -538,6 +538,7 @@ public OnPlayerUpdate(playerid)
 	spec_OnPlayerUpdate(playerid);
 	wh_OnPlayerUpdate(playerid);
 	afkcount_OnPlayerUpdate(playerid);
+	player_OnPlayerUpdate(playerid);
 	return 1;
 }
 
