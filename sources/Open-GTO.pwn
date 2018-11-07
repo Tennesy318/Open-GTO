@@ -58,6 +58,7 @@
 #include "services/vehshop"
 #include "services/airshop"
 #include "services/bikeshop"
+#include "services/max_lvl"
 #include "interior"
 #include "weather"
 #include "quidemsys"
@@ -83,6 +84,7 @@
 #include "system/afkcount"
 #include "system/announce"
 #include "system/duel"
+#include "system/pwo"
 
 //cmd
 #include "cmd/moder"
@@ -123,9 +125,11 @@ public OnGameModeInit()
 	vshop_OnGameModeInit();
 	airshop_OnGameModeInit();
 	bikeshop_OnGameModeInit();
+	ml_OnGameModeInit();
 	// system
 	afkcount_OnGameModeInit();
-	duel_OnGameModeInit();
+ 	duel_OnGameModeInit();
+ 	pwo_OnGameModeInit();
 	//
 	level_OnGameModeInit();
 	antiidle_OnGameModeInit();
@@ -183,7 +187,6 @@ public OnGameModeExit()
 
 public OnPlayerConnect(playerid)
 {
-	#tryinclude "robjects.inc"
 	if (IsPlayerNPC(playerid)) return 1;
 	vpn_OnPlayerConnect(playerid);
 	player_OnPlayerConnect(playerid);
@@ -194,6 +197,7 @@ public OnPlayerConnect(playerid)
 	qudemsys_OnPlayerConnect(playerid);
 	spec_OnPlayerConnect(playerid);
 	afkcount_OnPlayerConnect(playerid);
+	#tryinclude "custom\robjects"
 	return 1;
 }
 
@@ -314,7 +318,6 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	awh_OnPlayerPickUpPickup(playerid, pickupid);
 	vip_OnPlayerPickUpPickup(playerid, pickupid);
 	health_OnPlayerPickUpPickup(playerid, pickupid);
-	cargo_OnPlayerPickUpPickup(playerid, pickupid);
 	return 1;
 }
 
@@ -326,7 +329,7 @@ public OnPlayerEnterCheckpoint(playerid)
 
 public OnPlayerEnterRaceCheckpoint(playerid)
 {
-	cargo_OnPlayerEnterRaceCheckpoint(playerid);
+	c_OnPlayerEnterRaceCheckpoint(playerid); // грузчик
 	return 1;
 }
 
@@ -354,6 +357,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 	PlayCrimeReportForPlayer(playerid, killerid, random(18)+3);
 	spec_OnPlayerDeath(playerid);
 	duel_OnPlayerDeath(playerid, killerid);
+	cargo_OnPlayerDeath(playerid);
 	return 1;
 }
 
@@ -560,6 +564,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		if ( GetPlayerFightTrenerID(playerid) != -1 ) return fights_OnPlayerKeyStateChange(playerid, newkeys, oldkeys);
 		if ( IsPlayerAtFastFood(playerid) ) return fastfood_OnPlayerKeyStateChange(playerid, newkeys, oldkeys);
 		if ( IsPlayerAtBar(playerid) ) return bar_OnPlayerKeyStateChange(playerid, newkeys, oldkeys);
+		if ( IsPlayerAtCargo(playerid) != -1 ) return cargo_OnPlayerKeyStateChange(playerid, newkeys, oldkeys);
 		show_menu(playerid);
 		return 1;
 	}
@@ -589,6 +594,7 @@ public OnPlayerStateChange(playerid, newstate, oldstate)
 {
 	vehicle_OnPlayerStateChange(playerid, newstate, oldstate);
 	ash_OnPlayerStateChange(playerid, newstate, oldstate);
+	ml_OnPlayerStateChange(playerid);
 	qudemsys_OnPlayerStateChange(playerid, newstate, oldstate);
 	if (newstate == PLAYER_STATE_DRIVER)
 	{
