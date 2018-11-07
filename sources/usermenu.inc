@@ -12,9 +12,9 @@
 #define _user_menu_included
 #pragma library user_menu
 
-
 #define INTERFACE_ON 1
 #define INTERFACE_OFF 0
+
 
 stock show_menu(playerid)
 {
@@ -53,6 +53,7 @@ stock show_User_Menu(playerid)
 		Мои бизнесы\n\
 		Мой транспорт\n\
 		Администрация онлайн\n\
+		RC Arena\n\
 		Настройки\n\
 		Версия",
 		"ОК", "Отмена"
@@ -264,6 +265,7 @@ stock show_Setting_Menu(playerid)
 	strcat(string, "Сохранить аккаунт\n", sizeof(string));
 	strcat(string, "Изменить ник\n", sizeof(string));
 	strcat(string, "Изменить пароль\n", sizeof(string));
+	
 	if (inter == INTERFACE_ON)
 	{
 		strcat(string, "Интерфейс |{FF0000} Выключить\n", sizeof(string));
@@ -272,7 +274,6 @@ stock show_Setting_Menu(playerid)
 	{
 		strcat(string, "Интерфейс |{33FF33} Включить\n", sizeof(string));
 	}
-		
 	return ShowPlayerDialog(playerid, settings_menu_DialogID, DIALOG_STYLE_LIST,
 		"Мои настройки",
 		string,
@@ -480,6 +481,7 @@ stock show_Teleport_Menu(playerid)
 	);
 }
 
+new RCBLOCKED;
 stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
 	#pragma unused inputtext
@@ -617,11 +619,31 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 					}
 					return show_User_Menu_Dialog(playerid, "Администрация онлайн", string);
 				}
-				case 9: // Настройки
+				case 9: // RC Арена
+				{
+					if (GetPVarInt(playerid, "RCBlock"))
+					{
+						format(string, sizeof(string), "Вы уже телепортируетесь!");
+						SendClientMessage(playerid, COLOUR_RED, string);
+						return 1;
+					}
+					if (IsPlayerJailed(playerid)) 
+					{
+						show_User_Menu_Dialog(playerid, "RC Арена", "Вы не можете телепортироваться на RC Арену находясь в тюрьме.");
+						return 1;
+					}
+					RCBLOCKED = SetTimerEx("RCTeleport", 5000, false, "i", playerid);
+					SetPVarInt(playerid, "RCBlock", 1);
+					format(string, sizeof(string), "Телепорт на RC арену. Ждите. {FF0000}При получении урона телепорт будет отменён");
+					SendClientMessage(playerid, COLOUR_WHITE, string);
+					format(string, sizeof(string), "Телепортируюсь на RC арену!");
+					SetPlayerChatBubble(playerid, string, COLOUR_WHITE, 50.0, 5000);
+				}
+				case 10: // Настройки
 				{
 					return show_Setting_Menu(playerid);
 				}
-				case 10: // Версия
+				case 11: // Версия
 				{
 					show_User_Menu_Dialog(playerid,
 						"Информация о версии",
@@ -858,7 +880,7 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 				{
 					return show_ChangePass_Menu(playerid);
 				}
-				case 3: // Включение/выключение интерфейса
+				case 3:
 				{
 					new inter = GetPlayerInterface(playerid);
 					if (inter == INTERFACE_ON)
@@ -1356,7 +1378,14 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 				format(string, sizeof(string), "Недостаточно денег, нужно $%d.", Teleports[listitem][Teleports_Cost]);
 				show_User_Menu_Dialog(playerid, "Меню телепортов", string);
 				return 0;
-			}				
+			}
+			if (GetPVarInt(playerid, "RCBlock"))
+			{
+				new string[MAX_STRING];
+				format(string, sizeof(string), lang_texts[1][60]);
+				SendClientMessage(playerid, COLOUR_RED, string);
+				return 0;
+			}			
 			SetPVarInt(playerid, "teleports_Pause", 1);
 			SetTimerEx("teleports_Pause_Time", TELEPORTS_PAUSE_TIME * 1000, 0, "d", playerid);
 			oGivePlayerMoney(playerid, -Teleports[listitem][Teleports_Cost], 1);
@@ -1431,5 +1460,31 @@ forward teleports_Pause_Time(playerid);
 public teleports_Pause_Time(playerid)
 {
 	DeletePVar(playerid, "teleports_Pause");
+	return 1;
+}
+
+forward RCTeleport(playerid);
+public RCTeleport(playerid)
+{
+	SetPlayerInterior(playerid, 0);
+	oSetPlayerPos(playerid, 2039.3116, -2526.5325, 290.0793);
+	PlayerPlaySound(playerid, 5201, 0, 0, 0);
+	DeletePVar(playerid, "RCBlock");
+	return 1;
+}
+
+stock um_OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid)
+{
+	#pragma unused issuerid, amount, weaponid
+	new string[64];
+	if (GetPVarInt(playerid, "RCBlock"))
+	{
+		KillTimer(RCBLOCKED);
+		DeletePVar(playerid, "RCBlock");
+		format(string, sizeof(string), "Телепорт отменён! Вы получили урон.");
+		SendClientMessage(playerid, COLOUR_WHITE, string);
+		format(string, sizeof(string), "Телепорт отменён!");
+		SetPlayerChatBubble(playerid, string, COLOUR_RED, 50.0, 5000);
+	}
 	return 1;
 }

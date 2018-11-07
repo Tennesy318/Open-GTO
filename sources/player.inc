@@ -45,6 +45,9 @@
 #define GetPlayerStatus(%0) GetPVarInt(%0, "Status")
 #define SetPlayerStatus(%0,%1) SetPVarInt(%0, "Status",%1)
 
+#define GetPlayerInterface(%0) GetPVarInt(%0, "I")
+#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
+
 #define GetPlayerHideStatus(%0) GetPVarInt(%0, "Hide")
 #define SetPlayerHideStatus(%0,%1) SetPVarInt(%0, "Hide",%1)
 
@@ -53,9 +56,6 @@
 
 #define SetPlayerSkydiveTime(%0,%1) SetPVarInt(%0, "SkydiveTime",%1)
 #define GetPlayerSkydiveTime(%0) GetPVarInt(%0, "SkydiveTime")
-
-#define GetPlayerInterface(%0) GetPVarInt(%0, "I")
-#define SetPlayerInterface(%0,%1) SetPVarInt(%0, "I",%1)
 
 stock GetPlayerGangName(playerid)
 {
@@ -254,7 +254,6 @@ stock player_OnPlayerSpawn(playerid)
 		SendClientMessage(playerid, COLOUR_RED, tmp);
 	}
 	SetPlayerFacingAngle(playerid, GetPVarFloat(playerid, "Coord_A"));
-	
 	GivePlayerOwnedWeapons(playerid);
 	oSetPlayerHealth(playerid, GetMaxHealth(playerid)); // set health based on level
 	weapon_SetSkills(playerid);
@@ -542,8 +541,8 @@ stock CreatePlayer(playerid)
 	SetPlayerSkinModel(playerid, 1);
 	SetPlayerFightStyle(playerid, 4);
 	SetPlayerFightStyleUsed(playerid, 4);
-	SetPlayerInterface(playerid, 1);
 	weapon_ResetSkills(playerid);
+	SetPlayerInterface(playerid, 1);
 	SetPlayerJailTime(playerid, -1);
 	for (new i = 0; i < sizeof(PlayerStartWeapon); i++)
 	{
@@ -681,8 +680,8 @@ stock player_load_db_ini(playerid)
 	
     ini_GetInt(file_player, "FightStyleUsed", buf);
 	SetPlayerFightStyleUsed(playerid, buf);
-
-    ini_GetInt(file_player, "I", buf);
+	
+	ini_GetInt(file_player, "I", buf);
 	SetPlayerInterface(playerid, buf);
 	
 	buf=0;

@@ -14,7 +14,7 @@ stock ml_OnGameModeInit()
 
 stock ml_OnPlayerStateChange(playerid)
 {
-    if(GetPlayerVehicleID(playerid == tank))
+    if(GetPlayerVehicleID(playerid) == tank)
     {
 		if(GetPlayerScore(playerid) == MAX_LEVEL)
 		{

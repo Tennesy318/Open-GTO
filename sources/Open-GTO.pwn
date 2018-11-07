@@ -79,12 +79,12 @@
 //system
 #include "system/captcha"
 #include "system/chat"
-#include "system/interface"
 #include "system/spec"
 #include "system/afkcount"
 #include "system/announce"
 #include "system/duel"
 #include "system/pwo"
+#include "system/interface"
 
 //cmd
 #include "cmd/moder"
@@ -374,14 +374,12 @@ public OnPlayerSpawn(playerid)
 
 	// spawn player
 	SetPlayerSkin(playerid, GetPlayerSkinModel(playerid));
- 	TextDrawShowForPlayer(playerid, weapon_TextDraw_Level[playerid]);
 	UpdatePlayerLevelTextDraws(playerid);
 	UpdatePlayerWeaponTextDraws(playerid);
 
 	if (GetPlayerMuteTime(playerid) != 0)
 	{
 		SendClientMessage(playerid, COLOUR_RED, lang_texts[1][14]);
-		SetPlayerWantedLevel(playerid, 3);
 	}
 
 	player_OnPlayerSpawn(playerid);
@@ -392,10 +390,9 @@ public OnPlayerSpawn(playerid)
 		JailPlayer(playerid, GetPlayerJailTime(playerid));
 	}
 	SetTimerEx("OnPlayerSpawned", 2500, 0, "d", playerid);
-	// interface system
-	interface_check(playerid);
 	// spec system
 	spec_OnPlayerSpawn(playerid);
+	interface_check(playerid);
 	return 1;
 }
 
@@ -731,6 +728,7 @@ public OnPlayerClickMap(playerid, Float:fX, Float:fY, Float:fZ)
 public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid)
 {
 	admin_OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid);
+	um_OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid);
 	return 1;
 }
 

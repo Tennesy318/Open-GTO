@@ -48,6 +48,7 @@ stock wskill_OnPlayerConnect(playerid)
 	if (!wskill_Enabled) {
 		return 0;
 	}
+	
 	weapon_TextDraw_Level[playerid] = TextDrawCreate(499.000000, 13.000000, "999/1000");
 	TextDrawBackgroundColor(weapon_TextDraw_Level[playerid], 255);
 	TextDrawFont(weapon_TextDraw_Level[playerid], 1);
