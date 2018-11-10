@@ -88,11 +88,14 @@
 
 //cmd
 #include "cmd/moder"
+new Text:idz;
 
 main() {}
 
 public OnGameModeInit()
 {
+	idz = TextDrawCreate(0.000000, 0.000000, "ID");
+	TextDrawSetSelectable(idz, true);
 	SetGameModeText("Open-GTO "#VERSION);
 	// Initialize everything that needs it
 	lang_OnGameModeInit();
@@ -220,6 +223,49 @@ public OnPlayerDisconnect(playerid, reason)
 
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
+    if(dialogid == 221) 
+    { 
+        if(response) 
+        { 
+            if(strval(inputtext) >= 0 && strval(inputtext) <= 300) 
+            { 
+            	SetPlayerSkin(playerid,strval(inputtext));
+				SetPVarInt(playerid, "Spawned", 1);
+
+				if (IsPlayerNPC(playerid)) return 1;
+
+				// после использования TogglePlayerSpectating
+				if (GetPVarInt(playerid, "spec_after_off") == 1)
+				{
+					DeletePVar(playerid, "spec_after_off");
+					return 1;
+				}
+
+				// spawn player
+				SetPlayerSkin(playerid, GetPlayerSkinModel(playerid));
+				UpdatePlayerLevelTextDraws(playerid);
+				UpdatePlayerWeaponTextDraws(playerid);
+
+				if (GetPlayerMuteTime(playerid) != 0)
+				{
+					SendClientMessage(playerid, COLOUR_RED, lang_texts[1][14]);
+				}
+
+				player_OnPlayerSpawn(playerid);
+				afkcount_OnPlayerSpawn(playerid);
+				SetPlayerColor(playerid, PlayerGangColour(playerid));
+				if (IsPlayerJailed(playerid))
+				{
+					JailPlayer(playerid, GetPlayerJailTime(playerid));
+				}
+				SetTimerEx("OnPlayerSpawned", 2500, 0, "d", playerid);
+				// spec system
+				spec_OnPlayerSpawn(playerid);
+				interface_check(playerid);
+            } 
+        } 
+        else ShowPlayerDialog(playerid, 221, DIALOG_STYLE_INPUT, "Выбор скина", "Введите ID", "OK", "назад"); 
+    }  
 	switch (dialogid)
 	{
 		case account_Log_DialogID, account_Reg_DialogID:
@@ -405,6 +451,8 @@ public OnPlayerSpawned(playerid)
 
 public OnPlayerRequestClass(playerid, classid)
 {
+	TextDrawShowForPlayer(playerid,idz);
+	SelectTextDraw(playerid,0xFFFFFFFF);
 	SetPVarInt(playerid, "Spawned", 0);
 	player_OnPlayerRequestClass(playerid, classid);
 	weapon_OnPlayerRequestClass(playerid, classid);
@@ -769,6 +817,11 @@ public OnEnterExitModShop(playerid, enterexit, interiorid)
 // spec system
 public OnPlayerClickTextDraw(playerid, Text:clickedid)
 {
+    if(clickedid == idz) // проверяем, если игрок нажал именно на textdraw mxINI, то...
+    {
+		ShowPlayerDialog(playerid,221,DIALOG_STYLE_INPUT, "Выбор скины", "Введите ID", "OK", "назад"); 
+		CancelSelectTextDraw(playerid); // и закрываем выбранный TextDraw
+    }
 	spec_OnPlayerClickTextDraw(playerid, Text:clickedid);
 	duel_OnPlayerClickTextDraw(playerid, Text:clickedid);
     return 0;

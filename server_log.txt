@@ -432,3 +432,1075 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [21:16:05] player: WaRTiX1337(0): player_saved successfully
 [21:16:08] player: WaRTiX1337(0): player_saved successfully
 [21:16:56] player: Goodvin.(1): has killed player WaRTiX1337(0)> Reason: (22)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:49:58] 
+[14:49:58] Server Plugins
+[14:49:58] --------------
+[14:49:58]  Loading plugin: pawncmd
+[14:49:59] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[14:49:59]   Loaded.
+[14:49:59]  Loading plugin: sscanf
+[14:49:59] 
+
+[14:49:59]  ===============================
+
+[14:49:59]       sscanf plugin loaded.     
+
+[14:49:59]          Version:  2.8.2        
+
+[14:49:59]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:49:59]  ===============================
+
+[14:49:59]   Loaded.
+[14:49:59]  Loading plugin: streamer
+[14:49:59] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[14:49:59]   Loaded.
+[14:49:59]  Loaded 3 plugins.
+
+[14:49:59] 
+[14:49:59] Filterscripts
+[14:49:59] ---------------
+[14:49:59]   Loaded 0 filterscripts.
+
+[14:49:59] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[14:49:59] SERVER: Logging module init
+[14:49:59] SERVER: Base module init
+[14:49:59] SERVER: Account module init
+[14:49:59] SERVER: Player module init
+[14:49:59] SERVER: Gang module init
+[14:49:59] SERVER: Payday module init
+[14:49:59] SERVER: Weapons module init
+[14:49:59] SERVER: Vehicles module init
+[14:49:59] SERVER: Groundhold module init
+[14:49:59] SERVER: Business module init
+[14:49:59] SERVER: Housing module init
+[14:49:59] SERVER: Interior module init
+[14:49:59] SERVER: Bank module init
+[14:49:59] SERVER: Fightstyles module init
+[14:49:59] QuidemSys v2.7 initialized.
+[14:49:59] SERVER: Lottery system init
+[14:49:59] SERVER: (missions)Trucker module init
+[14:49:59] SERVER: (services)Fastfood module init
+[14:49:59] SERVER: (services)Bar module init
+[14:49:59] SERVER: (services)SkinShop module init
+[14:49:59] SERVER: (player)Level module init
+[14:49:59] SERVER: (protections)AntiIdle module init
+[14:49:59] SERVER: (protections)AntiHightPing module init
+[14:49:59] SERVER: (player)Health module init
+[14:49:59] SERVER: (player)Armour module init
+[14:49:59] SERVER: (player)Money module init
+[14:49:59] SERVER: (protections)ChatGuard(by MX_Master) module init
+[14:49:59] SERVER: (protections)AntiJetPack module init
+[14:49:59] SERVER: (protections)AntiRconHack module init
+[14:49:59] SERVER: Custom mapicons, objects and pickups init
+[14:49:59] SERVER: Timers started
+[14:49:59] SERVER: All Classes init
+[14:49:59] World save complete! Time taken: 0 seconds.
+[14:49:59] SERVER: Open-GTO v0.4 initialization complete. [14:49]
+[14:49:59] Number of vehicle models: 188
+[14:50:35] [connection] 127.0.0.1:25601 requests connection cookie.
+[14:50:37] [connection] incoming connection: 127.0.0.1:25601 id: 0
+[14:50:37] [join] OptiFine has joined the server (0:127.0.0.1)
+[14:50:41] player: OptiFine(0): player_created successfully
+[14:50:41] player: OptiFine(0): logged in successfully.
+[14:50:41] create_account: success OptiFine(0)
+[14:54:29] player: OptiFine(0): player_saved successfully
+[14:54:29] [part] OptiFine has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:56:09] 
+[14:56:09] Server Plugins
+[14:56:09] --------------
+[14:56:09]  Loading plugin: pawncmd
+[14:56:09] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[14:56:09]   Loaded.
+[14:56:09]  Loading plugin: sscanf
+[14:56:09] 
+
+[14:56:09]  ===============================
+
+[14:56:09]       sscanf plugin loaded.     
+
+[14:56:09]          Version:  2.8.2        
+
+[14:56:09]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:56:09]  ===============================
+
+[14:56:09]   Loaded.
+[14:56:09]  Loading plugin: streamer
+[14:56:09] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[14:56:09]   Loaded.
+[14:56:09]  Loaded 3 plugins.
+
+[14:56:09] 
+[14:56:09] Filterscripts
+[14:56:09] ---------------
+[14:56:09]   Loaded 0 filterscripts.
+
+[14:56:09] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[14:56:09] SERVER: Logging module init
+[14:56:09] SERVER: Base module init
+[14:56:09] SERVER: Account module init
+[14:56:09] SERVER: Player module init
+[14:56:09] SERVER: Gang module init
+[14:56:09] SERVER: Payday module init
+[14:56:09] SERVER: Weapons module init
+[14:56:09] SERVER: Vehicles module init
+[14:56:09] SERVER: Groundhold module init
+[14:56:09] SERVER: Business module init
+[14:56:09] SERVER: Housing module init
+[14:56:09] SERVER: Interior module init
+[14:56:09] SERVER: Bank module init
+[14:56:09] SERVER: Fightstyles module init
+[14:56:09] QuidemSys v2.7 initialized.
+[14:56:09] SERVER: Lottery system init
+[14:56:09] SERVER: (missions)Trucker module init
+[14:56:09] SERVER: (services)Fastfood module init
+[14:56:09] SERVER: (services)Bar module init
+[14:56:09] SERVER: (services)SkinShop module init
+[14:56:09] SERVER: (player)Level module init
+[14:56:09] SERVER: (protections)AntiIdle module init
+[14:56:09] SERVER: (protections)AntiHightPing module init
+[14:56:09] SERVER: (player)Health module init
+[14:56:09] SERVER: (player)Armour module init
+[14:56:09] SERVER: (player)Money module init
+[14:56:09] SERVER: (protections)ChatGuard(by MX_Master) module init
+[14:56:09] SERVER: (protections)AntiJetPack module init
+[14:56:09] SERVER: (protections)AntiRconHack module init
+[14:56:09] SERVER: Custom mapicons, objects and pickups init
+[14:56:09] SERVER: Timers started
+[14:56:09] SERVER: All Classes init
+[14:56:10] World save complete! Time taken: 1 seconds.
+[14:56:10] SERVER: Open-GTO v0.4 initialization complete. [14:56]
+[14:56:10] Number of vehicle models: 186
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[14:56:11] 
+[14:56:11] Server Plugins
+[14:56:11] --------------
+[14:56:11]  Loading plugin: pawncmd
+[14:56:11] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[14:56:11]   Loaded.
+[14:56:11]  Loading plugin: sscanf
+[14:56:11] 
+
+[14:56:11]  ===============================
+
+[14:56:11]       sscanf plugin loaded.     
+
+[14:56:11]          Version:  2.8.2        
+
+[14:56:11]    (c) 2012 Alex "Y_Less" Cole  
+
+[14:56:11]  ===============================
+
+[14:56:11]   Loaded.
+[14:56:11]  Loading plugin: streamer
+[14:56:11] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[14:56:11]   Loaded.
+[14:56:11]  Loaded 3 plugins.
+
+[14:56:11] 
+[14:56:11] Filterscripts
+[14:56:11] ---------------
+[14:56:11]   Loaded 0 filterscripts.
+
+[14:56:12] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[14:56:12] SERVER: Logging module init
+[14:56:12] SERVER: Base module init
+[14:56:12] SERVER: Account module init
+[14:56:12] SERVER: Player module init
+[14:56:12] SERVER: Gang module init
+[14:56:12] SERVER: Payday module init
+[14:56:12] SERVER: Weapons module init
+[14:56:12] SERVER: Vehicles module init
+[14:56:12] SERVER: Groundhold module init
+[14:56:12] SERVER: Business module init
+[14:56:12] SERVER: Housing module init
+[14:56:12] SERVER: Interior module init
+[14:56:12] SERVER: Bank module init
+[14:56:12] SERVER: Fightstyles module init
+[14:56:12] QuidemSys v2.7 initialized.
+[14:56:12] SERVER: Lottery system init
+[14:56:12] SERVER: (missions)Trucker module init
+[14:56:12] SERVER: (services)Fastfood module init
+[14:56:12] SERVER: (services)Bar module init
+[14:56:12] SERVER: (services)SkinShop module init
+[14:56:12] SERVER: (player)Level module init
+[14:56:12] SERVER: (protections)AntiIdle module init
+[14:56:12] SERVER: (protections)AntiHightPing module init
+[14:56:12] SERVER: (player)Health module init
+[14:56:12] SERVER: (player)Armour module init
+[14:56:12] SERVER: (player)Money module init
+[14:56:12] SERVER: (protections)ChatGuard(by MX_Master) module init
+[14:56:12] SERVER: (protections)AntiJetPack module init
+[14:56:12] SERVER: (protections)AntiRconHack module init
+[14:56:12] SERVER: Custom mapicons, objects and pickups init
+[14:56:12] SERVER: Timers started
+[14:56:12] SERVER: All Classes init
+[14:56:12] World save complete! Time taken: 0 seconds.
+[14:56:12] SERVER: Open-GTO v0.4 initialization complete. [14:56]
+[14:56:12] Number of vehicle models: 186
+[14:56:36] [connection] 127.0.0.1:1040 requests connection cookie.
+[14:56:37] [connection] incoming connection: 127.0.0.1:1040 id: 0
+[14:56:38] [join] OptiFine has joined the server (0:127.0.0.1)
+[14:58:08] player_login: failed: incorrect password by OptiFine(0)
+[14:58:11] player: OptiFine(0): logged in successfully.
+[14:58:48] player: OptiFine(0): player_saved successfully
+[14:58:48] [part] OptiFine has left the server (0:1)
+[14:59:11] [connection] 127.0.0.1:29992 requests connection cookie.
+[14:59:12] [connection] incoming connection: 127.0.0.1:29992 id: 0
+[14:59:12] [join] OptiFine has joined the server (0:127.0.0.1)
+[14:59:58] player: OptiFine(0): logged in successfully.
+[15:00:04] player: OptiFine(0): increased his level from 1 to 2
+[15:01:42] player: OptiFine(0): player_saved successfully
+[15:01:42] World save complete! Time taken: 0 seconds.
+[15:06:12] player: OptiFine(0): player_saved successfully
+[15:06:12] [part] OptiFine has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:06:53] 
+[15:06:53] Server Plugins
+[15:06:53] --------------
+[15:06:53]  Loading plugin: pawncmd
+[15:06:53] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:06:53]   Loaded.
+[15:06:53]  Loading plugin: sscanf
+[15:06:53] 
+
+[15:06:53]  ===============================
+
+[15:06:53]       sscanf plugin loaded.     
+
+[15:06:53]          Version:  2.8.2        
+
+[15:06:53]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:06:53]  ===============================
+
+[15:06:53]   Loaded.
+[15:06:53]  Loading plugin: streamer
+[15:06:53] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:06:53]   Loaded.
+[15:06:53]  Loaded 3 plugins.
+
+[15:06:53] 
+[15:06:53] Filterscripts
+[15:06:53] ---------------
+[15:06:53]   Loaded 0 filterscripts.
+
+[15:06:53] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:06:53] SERVER: Logging module init
+[15:06:53] SERVER: Base module init
+[15:06:53] SERVER: Account module init
+[15:06:53] SERVER: Player module init
+[15:06:53] SERVER: Gang module init
+[15:06:53] SERVER: Payday module init
+[15:06:53] SERVER: Weapons module init
+[15:06:53] SERVER: Vehicles module init
+[15:06:53] SERVER: Groundhold module init
+[15:06:53] SERVER: Business module init
+[15:06:53] SERVER: Housing module init
+[15:06:53] SERVER: Interior module init
+[15:06:53] SERVER: Bank module init
+[15:06:53] SERVER: Fightstyles module init
+[15:06:53] QuidemSys v2.7 initialized.
+[15:06:53] SERVER: Lottery system init
+[15:06:53] SERVER: (missions)Trucker module init
+[15:06:53] SERVER: (services)Fastfood module init
+[15:06:53] SERVER: (services)Bar module init
+[15:06:53] SERVER: (services)SkinShop module init
+[15:06:53] SERVER: (player)Level module init
+[15:06:53] SERVER: (protections)AntiIdle module init
+[15:06:53] SERVER: (protections)AntiHightPing module init
+[15:06:53] SERVER: (player)Health module init
+[15:06:53] SERVER: (player)Armour module init
+[15:06:53] SERVER: (player)Money module init
+[15:06:53] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:06:53] SERVER: (protections)AntiJetPack module init
+[15:06:53] SERVER: (protections)AntiRconHack module init
+[15:06:53] SERVER: Custom mapicons, objects and pickups init
+[15:06:53] SERVER: Timers started
+[15:06:53] SERVER: All Classes init
+[15:06:53] World save complete! Time taken: 0 seconds.
+[15:06:53] SERVER: Open-GTO v0.4 initialization complete. [15:06]
+[15:06:53] Number of vehicle models: 185
+[15:07:17] [connection] 127.0.0.1:1040 requests connection cookie.
+[15:07:18] [connection] incoming connection: 127.0.0.1:1040 id: 0
+[15:07:19] [join] OptiFine has joined the server (0:127.0.0.1)
+[15:07:25] player: OptiFine(0): logged in successfully.
+[15:07:51] player: OptiFine(0): player_saved successfully
+[15:07:51] [part] OptiFine has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:08:29] 
+[15:08:29] Server Plugins
+[15:08:29] --------------
+[15:08:29]  Loading plugin: pawncmd
+[15:08:29] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:08:29]   Loaded.
+[15:08:29]  Loading plugin: sscanf
+[15:08:29] 
+
+[15:08:29]  ===============================
+
+[15:08:29]       sscanf plugin loaded.     
+
+[15:08:29]          Version:  2.8.2        
+
+[15:08:29]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:08:29]  ===============================
+
+[15:08:29]   Loaded.
+[15:08:29]  Loading plugin: streamer
+[15:08:29] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:08:29]   Loaded.
+[15:08:29]  Loaded 3 plugins.
+
+[15:08:29] 
+[15:08:29] Filterscripts
+[15:08:29] ---------------
+[15:08:29]   Loaded 0 filterscripts.
+
+[15:08:29] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:08:29] SERVER: Logging module init
+[15:08:29] SERVER: Base module init
+[15:08:29] SERVER: Account module init
+[15:08:29] SERVER: Player module init
+[15:08:29] SERVER: Gang module init
+[15:08:29] SERVER: Payday module init
+[15:08:29] SERVER: Weapons module init
+[15:08:29] SERVER: Vehicles module init
+[15:08:29] SERVER: Groundhold module init
+[15:08:29] SERVER: Business module init
+[15:08:29] SERVER: Housing module init
+[15:08:29] SERVER: Interior module init
+[15:08:29] SERVER: Bank module init
+[15:08:29] SERVER: Fightstyles module init
+[15:08:29] QuidemSys v2.7 initialized.
+[15:08:29] SERVER: Lottery system init
+[15:08:29] SERVER: (missions)Trucker module init
+[15:08:29] SERVER: (services)Fastfood module init
+[15:08:29] SERVER: (services)Bar module init
+[15:08:29] SERVER: (services)SkinShop module init
+[15:08:29] SERVER: (player)Level module init
+[15:08:29] SERVER: (protections)AntiIdle module init
+[15:08:29] SERVER: (protections)AntiHightPing module init
+[15:08:29] SERVER: (player)Health module init
+[15:08:29] SERVER: (player)Armour module init
+[15:08:29] SERVER: (player)Money module init
+[15:08:29] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:08:29] SERVER: (protections)AntiJetPack module init
+[15:08:29] SERVER: (protections)AntiRconHack module init
+[15:08:29] SERVER: Custom mapicons, objects and pickups init
+[15:08:29] SERVER: Timers started
+[15:08:29] SERVER: All Classes init
+[15:08:29] World save complete! Time taken: 0 seconds.
+[15:08:29] SERVER: Open-GTO v0.4 initialization complete. [15:08]
+[15:08:29] Number of vehicle models: 185
+[15:08:54] [connection] 127.0.0.1:1043 requests connection cookie.
+[15:08:55] [connection] incoming connection: 127.0.0.1:1043 id: 0
+[15:08:55] [join] OptiFine has joined the server (0:127.0.0.1)
+[15:08:59] player: OptiFine(0): logged in successfully.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:10:50] 
+[15:10:50] Server Plugins
+[15:10:50] --------------
+[15:10:50]  Loading plugin: pawncmd
+[15:10:50] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:10:50]   Loaded.
+[15:10:50]  Loading plugin: sscanf
+[15:10:50] 
+
+[15:10:50]  ===============================
+
+[15:10:50]       sscanf plugin loaded.     
+
+[15:10:50]          Version:  2.8.2        
+
+[15:10:50]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:10:50]  ===============================
+
+[15:10:50]   Loaded.
+[15:10:50]  Loading plugin: streamer
+[15:10:50] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:10:50]   Loaded.
+[15:10:50]  Loaded 3 plugins.
+
+[15:10:50] 
+[15:10:50] Filterscripts
+[15:10:50] ---------------
+[15:10:50]   Loaded 0 filterscripts.
+
+[15:10:50] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:10:50] SERVER: Logging module init
+[15:10:50] SERVER: Base module init
+[15:10:50] SERVER: Account module init
+[15:10:50] SERVER: Player module init
+[15:10:50] SERVER: Gang module init
+[15:10:50] SERVER: Payday module init
+[15:10:50] SERVER: Weapons module init
+[15:10:50] SERVER: Vehicles module init
+[15:10:50] SERVER: Groundhold module init
+[15:10:50] SERVER: Business module init
+[15:10:51] SERVER: Housing module init
+[15:10:51] SERVER: Interior module init
+[15:10:51] SERVER: Bank module init
+[15:10:51] SERVER: Fightstyles module init
+[15:10:51] QuidemSys v2.7 initialized.
+[15:10:51] SERVER: Lottery system init
+[15:10:51] SERVER: (missions)Trucker module init
+[15:10:51] SERVER: (services)Fastfood module init
+[15:10:51] SERVER: (services)Bar module init
+[15:10:51] SERVER: (services)SkinShop module init
+[15:10:51] SERVER: (player)Level module init
+[15:10:51] SERVER: (protections)AntiIdle module init
+[15:10:51] SERVER: (protections)AntiHightPing module init
+[15:10:51] SERVER: (player)Health module init
+[15:10:51] SERVER: (player)Armour module init
+[15:10:51] SERVER: (player)Money module init
+[15:10:51] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:10:51] SERVER: (protections)AntiJetPack module init
+[15:10:51] SERVER: (protections)AntiRconHack module init
+[15:10:51] SERVER: Custom mapicons, objects and pickups init
+[15:10:51] SERVER: Timers started
+[15:10:51] SERVER: All Classes init
+[15:10:51] World save complete! Time taken: 0 seconds.
+[15:10:51] SERVER: Open-GTO v0.4 initialization complete. [15:10]
+[15:10:51] Number of vehicle models: 189
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:10:53] 
+[15:10:53] Server Plugins
+[15:10:53] --------------
+[15:10:53]  Loading plugin: pawncmd
+[15:10:53] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:10:53]   Loaded.
+[15:10:53]  Loading plugin: sscanf
+[15:10:53] 
+
+[15:10:53]  ===============================
+
+[15:10:53]       sscanf plugin loaded.     
+
+[15:10:53]          Version:  2.8.2        
+
+[15:10:53]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:10:53]  ===============================
+
+[15:10:53]   Loaded.
+[15:10:53]  Loading plugin: streamer
+[15:10:53] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:10:53]   Loaded.
+[15:10:53]  Loaded 3 plugins.
+
+[15:10:53] 
+[15:10:53] Filterscripts
+[15:10:53] ---------------
+[15:10:53]   Loaded 0 filterscripts.
+
+[15:10:53] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:10:53] SERVER: Logging module init
+[15:10:53] SERVER: Base module init
+[15:10:53] SERVER: Account module init
+[15:10:53] SERVER: Player module init
+[15:10:53] SERVER: Gang module init
+[15:10:53] SERVER: Payday module init
+[15:10:53] SERVER: Weapons module init
+[15:10:53] SERVER: Vehicles module init
+[15:10:53] SERVER: Groundhold module init
+[15:10:53] SERVER: Business module init
+[15:10:53] SERVER: Housing module init
+[15:10:53] SERVER: Interior module init
+[15:10:53] SERVER: Bank module init
+[15:10:53] SERVER: Fightstyles module init
+[15:10:53] QuidemSys v2.7 initialized.
+[15:10:53] SERVER: Lottery system init
+[15:10:53] SERVER: (missions)Trucker module init
+[15:10:53] SERVER: (services)Fastfood module init
+[15:10:53] SERVER: (services)Bar module init
+[15:10:53] SERVER: (services)SkinShop module init
+[15:10:53] SERVER: (player)Level module init
+[15:10:53] SERVER: (protections)AntiIdle module init
+[15:10:53] SERVER: (protections)AntiHightPing module init
+[15:10:53] SERVER: (player)Health module init
+[15:10:53] SERVER: (player)Armour module init
+[15:10:53] SERVER: (player)Money module init
+[15:10:53] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:10:53] SERVER: (protections)AntiJetPack module init
+[15:10:53] SERVER: (protections)AntiRconHack module init
+[15:10:53] SERVER: Custom mapicons, objects and pickups init
+[15:10:53] SERVER: Timers started
+[15:10:53] SERVER: All Classes init
+[15:10:54] World save complete! Time taken: 1 seconds.
+[15:10:54] SERVER: Open-GTO v0.4 initialization complete. [15:10]
+[15:10:54] Number of vehicle models: 187
+[15:11:11] [connection] 127.0.0.1:1038 requests connection cookie.
+[15:11:12] [connection] incoming connection: 127.0.0.1:1038 id: 0
+[15:11:13] [join] OptiFine has joined the server (0:127.0.0.1)
+[15:11:22] player: OptiFine(0): logged in successfully.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:13:09] 
+[15:13:10] Server Plugins
+[15:13:10] --------------
+[15:13:10]  Loading plugin: pawncmd
+[15:13:10] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:13:10]   Loaded.
+[15:13:10]  Loading plugin: sscanf
+[15:13:10] 
+
+[15:13:10]  ===============================
+
+[15:13:10]       sscanf plugin loaded.     
+
+[15:13:10]          Version:  2.8.2        
+
+[15:13:10]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:13:10]  ===============================
+
+[15:13:10]   Loaded.
+[15:13:10]  Loading plugin: streamer
+[15:13:10] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:13:10]   Loaded.
+[15:13:10]  Loaded 3 plugins.
+
+[15:13:10] 
+[15:13:10] Filterscripts
+[15:13:10] ---------------
+[15:13:10]   Loaded 0 filterscripts.
+
+[15:13:10] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:13:10] SERVER: Logging module init
+[15:13:10] SERVER: Base module init
+[15:13:10] SERVER: Account module init
+[15:13:10] SERVER: Player module init
+[15:13:10] SERVER: Gang module init
+[15:13:10] SERVER: Payday module init
+[15:13:10] SERVER: Weapons module init
+[15:13:10] SERVER: Vehicles module init
+[15:13:10] SERVER: Groundhold module init
+[15:13:10] SERVER: Business module init
+[15:13:10] SERVER: Housing module init
+[15:13:10] SERVER: Interior module init
+[15:13:10] SERVER: Bank module init
+[15:13:10] SERVER: Fightstyles module init
+[15:13:10] QuidemSys v2.7 initialized.
+[15:13:10] SERVER: Lottery system init
+[15:13:10] SERVER: (missions)Trucker module init
+[15:13:10] SERVER: (services)Fastfood module init
+[15:13:10] SERVER: (services)Bar module init
+[15:13:10] SERVER: (services)SkinShop module init
+[15:13:10] SERVER: (player)Level module init
+[15:13:10] SERVER: (protections)AntiIdle module init
+[15:13:10] SERVER: (protections)AntiHightPing module init
+[15:13:10] SERVER: (player)Health module init
+[15:13:10] SERVER: (player)Armour module init
+[15:13:10] SERVER: (player)Money module init
+[15:13:10] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:13:10] SERVER: (protections)AntiJetPack module init
+[15:13:10] SERVER: (protections)AntiRconHack module init
+[15:13:10] SERVER: Custom mapicons, objects and pickups init
+[15:13:10] SERVER: Timers started
+[15:13:10] SERVER: All Classes init
+[15:13:10] World save complete! Time taken: 0 seconds.
+[15:13:10] SERVER: Open-GTO v0.4 initialization complete. [15:13]
+[15:13:10] Number of vehicle models: 187
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:13:12] 
+[15:13:12] Server Plugins
+[15:13:12] --------------
+[15:13:12]  Loading plugin: pawncmd
+[15:13:12] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:13:12]   Loaded.
+[15:13:12]  Loading plugin: sscanf
+[15:13:12] 
+
+[15:13:12]  ===============================
+
+[15:13:12]       sscanf plugin loaded.     
+
+[15:13:12]          Version:  2.8.2        
+
+[15:13:12]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:13:12]  ===============================
+
+[15:13:12]   Loaded.
+[15:13:12]  Loading plugin: streamer
+[15:13:12] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:13:12]   Loaded.
+[15:13:12]  Loaded 3 plugins.
+
+[15:13:12] 
+[15:13:12] Filterscripts
+[15:13:12] ---------------
+[15:13:12]   Loaded 0 filterscripts.
+
+[15:13:12] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:13:12] SERVER: Logging module init
+[15:13:12] SERVER: Base module init
+[15:13:12] SERVER: Account module init
+[15:13:12] SERVER: Player module init
+[15:13:12] SERVER: Gang module init
+[15:13:12] SERVER: Payday module init
+[15:13:12] SERVER: Weapons module init
+[15:13:12] SERVER: Vehicles module init
+[15:13:12] SERVER: Groundhold module init
+[15:13:12] SERVER: Business module init
+[15:13:12] SERVER: Housing module init
+[15:13:12] SERVER: Interior module init
+[15:13:12] SERVER: Bank module init
+[15:13:12] SERVER: Fightstyles module init
+[15:13:12] QuidemSys v2.7 initialized.
+[15:13:12] SERVER: Lottery system init
+[15:13:12] SERVER: (missions)Trucker module init
+[15:13:12] SERVER: (services)Fastfood module init
+[15:13:12] SERVER: (services)Bar module init
+[15:13:12] SERVER: (services)SkinShop module init
+[15:13:12] SERVER: (player)Level module init
+[15:13:12] SERVER: (protections)AntiIdle module init
+[15:13:12] SERVER: (protections)AntiHightPing module init
+[15:13:12] SERVER: (player)Health module init
+[15:13:12] SERVER: (player)Armour module init
+[15:13:12] SERVER: (player)Money module init
+[15:13:12] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:13:12] SERVER: (protections)AntiJetPack module init
+[15:13:12] SERVER: (protections)AntiRconHack module init
+[15:13:12] SERVER: Custom mapicons, objects and pickups init
+[15:13:12] SERVER: Timers started
+[15:13:12] SERVER: All Classes init
+[15:13:12] World save complete! Time taken: 0 seconds.
+[15:13:12] SERVER: Open-GTO v0.4 initialization complete. [15:13]
+[15:13:12] Number of vehicle models: 186
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:13:18] 
+[15:13:18] Server Plugins
+[15:13:18] --------------
+[15:13:18]  Loading plugin: pawncmd
+[15:13:18] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:13:18]   Loaded.
+[15:13:18]  Loading plugin: sscanf
+[15:13:18] 
+
+[15:13:18]  ===============================
+
+[15:13:18]       sscanf plugin loaded.     
+
+[15:13:18]          Version:  2.8.2        
+
+[15:13:18]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:13:18]  ===============================
+
+[15:13:18]   Loaded.
+[15:13:18]  Loading plugin: streamer
+[15:13:19] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:13:19]   Loaded.
+[15:13:19]  Loaded 3 plugins.
+
+[15:13:19] 
+[15:13:19] Filterscripts
+[15:13:19] ---------------
+[15:13:19]   Loaded 0 filterscripts.
+
+[15:13:19] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:13:19] SERVER: Logging module init
+[15:13:19] SERVER: Base module init
+[15:13:19] SERVER: Account module init
+[15:13:19] SERVER: Player module init
+[15:13:19] SERVER: Gang module init
+[15:13:19] SERVER: Payday module init
+[15:13:19] SERVER: Weapons module init
+[15:13:19] SERVER: Vehicles module init
+[15:13:19] SERVER: Groundhold module init
+[15:13:19] SERVER: Business module init
+[15:13:19] SERVER: Housing module init
+[15:13:19] SERVER: Interior module init
+[15:13:19] SERVER: Bank module init
+[15:13:19] SERVER: Fightstyles module init
+[15:13:19] QuidemSys v2.7 initialized.
+[15:13:19] SERVER: Lottery system init
+[15:13:19] SERVER: (missions)Trucker module init
+[15:13:19] SERVER: (services)Fastfood module init
+[15:13:19] SERVER: (services)Bar module init
+[15:13:19] SERVER: (services)SkinShop module init
+[15:13:19] SERVER: (player)Level module init
+[15:13:19] SERVER: (protections)AntiIdle module init
+[15:13:19] SERVER: (protections)AntiHightPing module init
+[15:13:19] SERVER: (player)Health module init
+[15:13:19] SERVER: (player)Armour module init
+[15:13:19] SERVER: (player)Money module init
+[15:13:19] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:13:19] SERVER: (protections)AntiJetPack module init
+[15:13:19] SERVER: (protections)AntiRconHack module init
+[15:13:19] SERVER: Custom mapicons, objects and pickups init
+[15:13:19] SERVER: Timers started
+[15:13:19] SERVER: All Classes init
+[15:13:19] World save complete! Time taken: 0 seconds.
+[15:13:19] SERVER: Open-GTO v0.4 initialization complete. [15:13]
+[15:13:19] Number of vehicle models: 184
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:13:24] 
+[15:13:24] Server Plugins
+[15:13:24] --------------
+[15:13:24]  Loading plugin: pawncmd
+[15:13:24] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:13:24]   Loaded.
+[15:13:24]  Loading plugin: sscanf
+[15:13:24] 
+
+[15:13:24]  ===============================
+
+[15:13:24]       sscanf plugin loaded.     
+
+[15:13:24]          Version:  2.8.2        
+
+[15:13:24]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:13:24]  ===============================
+
+[15:13:24]   Loaded.
+[15:13:24]  Loading plugin: streamer
+[15:13:24] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:13:24]   Loaded.
+[15:13:24]  Loaded 3 plugins.
+
+[15:13:24] 
+[15:13:24] Filterscripts
+[15:13:24] ---------------
+[15:13:24]   Loaded 0 filterscripts.
+
+[15:13:24] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:13:24] SERVER: Logging module init
+[15:13:24] SERVER: Base module init
+[15:13:24] SERVER: Account module init
+[15:13:24] SERVER: Player module init
+[15:13:24] SERVER: Gang module init
+[15:13:24] SERVER: Payday module init
+[15:13:24] SERVER: Weapons module init
+[15:13:24] SERVER: Vehicles module init
+[15:13:24] SERVER: Groundhold module init
+[15:13:24] SERVER: Business module init
+[15:13:24] SERVER: Housing module init
+[15:13:24] SERVER: Interior module init
+[15:13:24] SERVER: Bank module init
+[15:13:24] SERVER: Fightstyles module init
+[15:13:24] QuidemSys v2.7 initialized.
+[15:13:24] SERVER: Lottery system init
+[15:13:24] SERVER: (missions)Trucker module init
+[15:13:24] SERVER: (services)Fastfood module init
+[15:13:24] SERVER: (services)Bar module init
+[15:13:24] SERVER: (services)SkinShop module init
+[15:13:24] SERVER: (player)Level module init
+[15:13:24] SERVER: (protections)AntiIdle module init
+[15:13:24] SERVER: (protections)AntiHightPing module init
+[15:13:24] SERVER: (player)Health module init
+[15:13:24] SERVER: (player)Armour module init
+[15:13:24] SERVER: (player)Money module init
+[15:13:24] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:13:24] SERVER: (protections)AntiJetPack module init
+[15:13:24] SERVER: (protections)AntiRconHack module init
+[15:13:24] SERVER: Custom mapicons, objects and pickups init
+[15:13:24] SERVER: Timers started
+[15:13:25] SERVER: All Classes init
+[15:13:25] World save complete! Time taken: 0 seconds.
+[15:13:25] SERVER: Open-GTO v0.4 initialization complete. [15:13]
+[15:13:25] Number of vehicle models: 185
+[15:14:02] [connection] 127.0.0.1:17158 requests connection cookie.
+[15:14:03] [connection] incoming connection: 127.0.0.1:17158 id: 0
+[15:14:03] [join] OptiFine has joined the server (0:127.0.0.1)
+[15:14:05] player: OptiFine(0): logged in successfully.
+[15:14:29] player: OptiFine(0): player_saved successfully
+[15:14:29] [part] OptiFine has left the server (0:1)
+[15:14:53] [connection] 127.0.0.1:1038 requests connection cookie.
+[15:14:54] [connection] incoming connection: 127.0.0.1:1038 id: 0
+[15:14:54] [join] OptiFine has joined the server (0:127.0.0.1)
+[15:16:30] player: OptiFine(0): logged in successfully.
+[15:17:44] player: OptiFine(0): player_saved successfully
+[15:17:44] [part] OptiFine has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[15:24:15] 
+[15:24:15] Server Plugins
+[15:24:15] --------------
+[15:24:15]  Loading plugin: pawncmd
+[15:24:15] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[15:24:15]   Loaded.
+[15:24:15]  Loading plugin: sscanf
+[15:24:15] 
+
+[15:24:15]  ===============================
+
+[15:24:15]       sscanf plugin loaded.     
+
+[15:24:15]          Version:  2.8.2        
+
+[15:24:15]    (c) 2012 Alex "Y_Less" Cole  
+
+[15:24:15]  ===============================
+
+[15:24:15]   Loaded.
+[15:24:15]  Loading plugin: streamer
+[15:24:15] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[15:24:15]   Loaded.
+[15:24:15]  Loaded 3 plugins.
+
+[15:24:15] 
+[15:24:15] Filterscripts
+[15:24:15] ---------------
+[15:24:15]   Loaded 0 filterscripts.
+
+[15:24:15] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[15:24:15] SERVER: Logging module init
+[15:24:15] SERVER: Base module init
+[15:24:15] SERVER: Account module init
+[15:24:15] SERVER: Player module init
+[15:24:15] SERVER: Gang module init
+[15:24:15] SERVER: Payday module init
+[15:24:15] SERVER: Weapons module init
+[15:24:15] SERVER: Vehicles module init
+[15:24:15] SERVER: Groundhold module init
+[15:24:15] SERVER: Business module init
+[15:24:15] SERVER: Housing module init
+[15:24:15] SERVER: Interior module init
+[15:24:15] SERVER: Bank module init
+[15:24:15] SERVER: Fightstyles module init
+[15:24:15] QuidemSys v2.7 initialized.
+[15:24:15] SERVER: Lottery system init
+[15:24:15] SERVER: (missions)Trucker module init
+[15:24:15] SERVER: (services)Fastfood module init
+[15:24:15] SERVER: (services)Bar module init
+[15:24:15] SERVER: (services)SkinShop module init
+[15:24:15] SERVER: (player)Level module init
+[15:24:15] SERVER: (protections)AntiIdle module init
+[15:24:15] SERVER: (protections)AntiHightPing module init
+[15:24:15] SERVER: (player)Health module init
+[15:24:15] SERVER: (player)Armour module init
+[15:24:15] SERVER: (player)Money module init
+[15:24:15] SERVER: (protections)ChatGuard(by MX_Master) module init
+[15:24:15] SERVER: (protections)AntiJetPack module init
+[15:24:15] SERVER: (protections)AntiRconHack module init
+[15:24:15] SERVER: Custom mapicons, objects and pickups init
+[15:24:15] SERVER: Timers started
+[15:24:15] SERVER: All Classes init
+[15:24:15] World save complete! Time taken: 0 seconds.
+[15:24:15] SERVER: Open-GTO v0.4 initialization complete. [15:24]
+[15:24:15] Number of vehicle models: 186
+[15:25:05] [connection] 127.0.0.1:27691 requests connection cookie.
+[15:25:06] [connection] incoming connection: 127.0.0.1:27691 id: 0
+[15:25:06] [join] OptiFine has joined the server (0:127.0.0.1)
+[15:29:45] World save complete! Time taken: 1 seconds.
+[15:34:15] player: OptiFine(0): logged in successfully.
+[15:34:57] player: OptiFine(0): player_saved successfully
+[15:34:57] [part] OptiFine has left the server (0:1)
+[15:35:14] World save complete! Time taken: 1 seconds.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[16:18:39] 
+[16:18:39] Server Plugins
+[16:18:39] --------------
+[16:18:39]  Loading plugin: pawncmd
+[16:18:39] Pawn.CMD plugin v3.2.0 by urShadow has been loaded
+[16:18:39]   Loaded.
+[16:18:39]  Loading plugin: sscanf
+[16:18:39] 
+
+[16:18:39]  ===============================
+
+[16:18:39]       sscanf plugin loaded.     
+
+[16:18:39]          Version:  2.8.2        
+
+[16:18:39]    (c) 2012 Alex "Y_Less" Cole  
+
+[16:18:39]  ===============================
+
+[16:18:39]   Loaded.
+[16:18:39]  Loading plugin: streamer
+[16:18:39] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[16:18:39]   Loaded.
+[16:18:39]  Loaded 3 plugins.
+
+[16:18:39] 
+[16:18:39] Filterscripts
+[16:18:39] ---------------
+[16:18:39]   Loaded 0 filterscripts.
+
+[16:18:39] SERVER: Lang module init(Open-GTO/Language-Russian.gto)
+[16:18:39] SERVER: Logging module init
+[16:18:39] SERVER: Base module init
+[16:18:39] SERVER: Account module init
+[16:18:39] SERVER: Player module init
+[16:18:39] SERVER: Gang module init
+[16:18:39] SERVER: Payday module init
+[16:18:39] SERVER: Weapons module init
+[16:18:39] SERVER: Vehicles module init
+[16:18:39] SERVER: Groundhold module init
+[16:18:39] SERVER: Business module init
+[16:18:39] SERVER: Housing module init
+[16:18:39] SERVER: Interior module init
+[16:18:39] SERVER: Bank module init
+[16:18:39] SERVER: Fightstyles module init
+[16:18:39] QuidemSys v2.7 initialized.
+[16:18:39] SERVER: Lottery system init
+[16:18:39] SERVER: (missions)Trucker module init
+[16:18:39] SERVER: (services)Fastfood module init
+[16:18:39] SERVER: (services)Bar module init
+[16:18:39] SERVER: (services)SkinShop module init
+[16:18:39] SERVER: (player)Level module init
+[16:18:39] SERVER: (protections)AntiIdle module init
+[16:18:39] SERVER: (protections)AntiHightPing module init
+[16:18:39] SERVER: (player)Health module init
+[16:18:39] SERVER: (player)Armour module init
+[16:18:39] SERVER: (player)Money module init
+[16:18:39] SERVER: (protections)ChatGuard(by MX_Master) module init
+[16:18:39] SERVER: (protections)AntiJetPack module init
+[16:18:39] SERVER: (protections)AntiRconHack module init
+[16:18:39] SERVER: Custom mapicons, objects and pickups init
+[16:18:39] SERVER: Timers started
+[16:18:39] SERVER: All Classes init
+[16:18:39] World save complete! Time taken: 0 seconds.
+[16:18:39] SERVER: Open-GTO v0.4 initialization complete. [16:18]
+[16:18:39] Number of vehicle models: 187

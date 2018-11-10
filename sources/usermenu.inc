@@ -670,6 +670,12 @@ stock usermenu_OnDialogResponse(playerid, dialogid, response, listitem, inputtex
 									\t\twups(Default map icons)\n\
 									\t\tY_Less(foreach)\n\
 						\n\
+						\n\
+						{00C0DD}Discord: {AFE7FF}\n\
+									\t\thttps://discord.gg/GTTUTvp\n\
+									\t\thttps://discord.gg/GTTUTvp\n\
+									\t\thttps://discord.gg/GTTUTvp\n\
+						\n\
 						"
 					);
 					return 1;
